@@ -231,8 +231,7 @@ table.wrapper {
   font-size: 4px;
   line-height: 4px;
 }
-.contents .divider,
-.footer .divider table {
+.contents .divider {
   Margin-bottom: 50px;
   Margin-top: 50px;
 }
@@ -399,8 +398,7 @@ two-col,
   border-left-width: 2px;
   padding-left: 13px;
 }
-.header,
-.footer {
+.header {
   Margin-left: auto;
   Margin-right: auto;
   width: 560px;
@@ -425,28 +423,6 @@ two-col,
 .header .logo div.logo-center img {
   Margin-left: auto;
   Margin-right: auto;
-}
-.footer div {
-  font-size: 11px;
-  font-weight: 400;
-  letter-spacing: 0.01em;
-  line-height: 17px;
-  Margin-bottom: 17px;
-}
-.footer div a {
-  font-weight: 700;
-  letter-spacing: 0.03em;
-  text-decoration: none;
-}
-.footer .divider {
-  Margin-bottom: 20px;
-}
-.footer .divider table {
-  Margin-left: auto;
-  Margin-right: auto;
-}
-.footer .divider td.spacer {
-  width: 8px;
 }
 @media only screen and (max-width: 620px) {
   [class=wrapper] .one-col .column:last-child table:nth-last-child(2) td h1:last-child,
@@ -474,8 +450,7 @@ two-col,
     font-size: 28px !important;
     line-height: 28px !important;
   }
-  [class=wrapper] .header,
-  [class=wrapper] .footer {
+  [class=wrapper] .header {
     width: 280px !important;
   }
   [class=wrapper] .logo img {
@@ -637,6 +612,10 @@ a:hover {
     background-color: #F15B4F;
     color: white;
     text-transform: uppercase;
+}
+
+.footer, .footer * {
+    font-size: 13px !important;
 }
 
 </style>
@@ -983,7 +962,7 @@ a:hover {
 
 
 
-      <table class="one-col centered">
+      <table class="one-col centered footer">
         <tbody>
           <tr>
             <td class="column" >
@@ -1003,7 +982,7 @@ a:hover {
         </tbody>
     </table><br/>
 
-      <table class="two-col">
+      <table class="two-col footer">
         <tbody>
           <tr>
             <td class="column">
@@ -1038,7 +1017,7 @@ a:hover {
       </table>
 
 
-      <table class="one-col centered">
+      <table class="one-col centered footer">
         <tbody>
           <tr>
             <td class="column" >
