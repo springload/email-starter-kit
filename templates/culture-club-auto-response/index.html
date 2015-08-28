@@ -545,7 +545,11 @@ two-col,
   .social-container {
       width: 100% !important;
   }
+
 }
+
+
+
 </style>
 
   <meta name="robots" content="noindex,nofollow" />
@@ -561,6 +565,42 @@ two-col,
 
 
   <style type="text/css">
+
+span.desktop {
+    display: inline;
+}
+
+div.desktop {
+  display: block;
+}
+
+span.mobile,
+div.mobile  { display: none !important; }
+
+@media only screen and (max-width: 620px) {
+
+  span[class~=desktop],
+  div[class~=desktop] {
+    display: none !important;
+  }
+  
+  div[class~=mobile],
+  span[class~=mobile] {
+      font-size: inherit !important;
+      max-height: none !important;
+      width: auto !important;
+      overflow: visible !important;
+  }
+
+  span[class~=mobile] {
+    display: inline !important;
+  }
+  
+  div[class~=mobile] {
+      display: block !important;
+  }
+}
+
 
 body,
 .wrapper,
@@ -688,9 +728,10 @@ p {
               <table>
                 <tbody>
                   <tr>
-                    <td class="padded" align="center">
-                      <img id="logo-desktop" src="images/logo-nzf-tcc.png" alt="The Culture Club" width="600" style="width:600px;"/>
-                      <img id="logo-mobile" src="images/logo-nzf-tcc-mobile.png" alt="The Culture Club" width="250" style="width:250px; display: none;"/>
+                    <td class="column padded" align="center" style="text-align: center;">
+
+                      <span class="desktop"><img src="images/logo-nzf-tcc.png" alt="The Culture Club" width="600" style="width:600px;"/></span><!--[if !mso]><!-- -- --><div class="mobile" style="display: inline-block !important; *display: inline !important; max-height: 0px; width: 0px; overflow: hidden; font-size: 0px;"><img src="images/logo-nzf-tcc-mobile.png" alt="The Culture Club" width="250" style="width:250px;"/></div><!--<![endif]-->
+                      
                     </td>
                   </tr>
                 </tbody>

@@ -120,6 +120,14 @@ table.wrapper {
   padding: 13px 35px 12px 35px;
   text-align: center;
   text-decoration: none !important;
+
+    display: -moz-inline-stack;
+    display: inline-block;
+    vertical-align: top;
+    zoom: 1;
+    *display: inline;
+    _height: 34px;
+
 }
 .btn a:hover {
   opacity: 0.8;
@@ -615,7 +623,7 @@ a:hover {
 }
 
 .hero-image {
-    padding: 10px;
+    /*padding: 10px;*/
     background-color: #F15B4F;
 }
 
@@ -696,28 +704,14 @@ p {
               <table width="600">
                 <tbody>
                   <tr>
-                    <td class="padded">
-                      <table style="float:left; width:200px; margin-bottom: 15px;" width="200">
-                        <tbody>
-                          <tr>
-                            <td class="nzflogo-container">
-                              <img class="nzf-logo" src="images/logo-nzf.png" alt="New Zealand Festival" width="140" />
-                            </td>
-                          </tr>
-                        </tbody>
-                    </table>
-                    <table class="social-container" style="width:380px;" width="380">
-                        <tbody>
-                          <tr>
-                            <td style="text-align: right">
-                                <span class="event-link"><singleline label="Key link">All Festival events</singleline></span>
-                                <span class="facebook-icon"><fblike><img src="images/icon-facebook-festred.png" alt="Like" title="Like this email on Facebook" width="32" height="32" align="absmiddle" /></fblike></span>
-                                <span class="twitter-icon"><tweet><img src="images/icon-twitter-festred.png" alt="Tweet" title="Tweet this email" width="32" height="32" align="absmiddle" /></tweet></span>
-                                <span class="forward-icon"><forwardtoafriend lang="en"><img src="images/icon-forward-festred.png" alt="Forward" title="Forward this email" width="32" height="32" align="absmiddle" /></forwardtoafriend></span>
-                            </td>
-                          </tr>
-                        </tbody>
-                    </table><br/>
+                    <td class="nzflogo-container column padded" style="width:200px; margin-bottom: 15px;" width="200">
+                      <img class="nzf-logo" src="images/logo-nzf.png" alt="New Zealand Festival" width="140" />
+                    </td>
+                    <td class="social-container column padded" style="text-align: right; width: 380px;" width="380">
+                      <span class="event-link"><singleline label="Key link">All Festival events</singleline></span>
+                      <span class="facebook-icon"><fblike><img src="images/icon-facebook-festred.png" alt="Like" title="Like this email on Facebook" width="32" height="32" align="absmiddle" /></fblike></span>
+                      <span class="twitter-icon"><tweet><img src="images/icon-twitter-festred.png" alt="Tweet" title="Tweet this email" width="32" height="32" align="absmiddle" /></tweet></span>
+                      <span class="forward-icon"><forwardtoafriend lang="en"><img src="images/icon-forward-festred.png" alt="Forward" title="Forward this email" width="32" height="32" align="absmiddle" /></forwardtoafriend></span>
                     </td>
                   </tr>
                 </tbody>
@@ -726,6 +720,7 @@ p {
           </tr>
         </tbody>
       </table>
+
       <div class="clear">&nbsp;</div>
       
 
@@ -768,7 +763,7 @@ p {
                   <tr>
                     <td class="padded" >
                       <div class="image hero-image" align="center">
-                        <img editable label="Hero Image" src="images/fashion-hero1.jpg" alt="" width="560" height="315" />
+                        <img style="padding: 10px;" editable label="Hero Image" src="images/fashion-hero1.jpg" alt="" width="560" height="315" />
                       </div>
                     </td>
                   </tr>
@@ -1289,7 +1284,7 @@ p {
                               <br/>
                               <br/>
                               <a href="http://wellington.govt.nz/">
-                                <img src="images/logo-abs-pos-wellington.png" width="200" alt="Absolutely Positively Wellington">
+                                <img style="background-color: transparent;" src="images/logo-abs-pos-wellington.png" width="200" alt="Absolutely Positively Wellington">
                               </a>
                           </td>
                           <td colspan="2" class="column last footer-core-funder" width="50%">
@@ -1297,7 +1292,7 @@ p {
                             <br/>
                             <br/>
                             <a href="http://www.creativenz.govt.nz/">
-                              <img src="images/logo-creative-nz.png" width="200" alt="Creative NZ">
+                              <img style="background-color: transparent;" src="images/logo-creative-nz.png" width="200" alt="Creative NZ">
                             </a>
                           </td>
                         </tr>
