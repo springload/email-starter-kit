@@ -125,6 +125,7 @@ table.wrapper {
   opacity: 0.8;
 }
 .two-col .btn {
+  Margin-top: 24px;
   Margin-bottom: 24px;
 }
 .two-col .btn a {
@@ -139,6 +140,9 @@ table.wrapper {
   font-size: 11px;
   line-height: 19px;
   padding: 6px 18px 5px 18px;
+}
+.single-item .btn {
+  Margin-top: 24px;
 }
 @media only screen and (max-width: 620px) {
   .btn {
@@ -211,6 +215,9 @@ table.wrapper {
   [class=wrapper] .image img {
     height: auto !important;
     width: 100% !important;
+  }
+  .footer-core-funder {
+    padding-top: 30px;
   }
 }
 .wrapper h1 {
@@ -566,8 +573,8 @@ body,
 .wrapper h1 {
     font-family: "Work Sans", Arial Black, Helvetica, sans-serif;
     text-transform:uppercase;
-    font-size: 64px;
-    line-height: 64px;
+    font-size: 52px;
+    line-height: 50px;
     color: #F15B4F;
     word-wrap: break-word;
     margin-top: 50px;
@@ -582,7 +589,7 @@ body,
 
 .nzf-logo,
 .nzflogo-container {
-    width: 200px;
+    width: 140px;
 }
 
 a,
@@ -693,7 +700,9 @@ p {
                       <table style="float:left; width:200px; margin-bottom: 15px;" width="200">
                         <tbody>
                           <tr>
-                            <td width="200" class="nzflogo-container"><img class="nzf-logo" src="images/NZF-horz-dates.png" alt="New Zealand Festival" width="200" /></td>
+                            <td class="nzflogo-container">
+                              <img class="nzf-logo" src="images/logo-nzf.png" alt="New Zealand Festival" width="140" />
+                            </td>
                           </tr>
                         </tbody>
                     </table>
@@ -718,9 +727,13 @@ p {
         </tbody>
       </table>
       <div class="clear">&nbsp;</div>
+      
+
       <repeater>
+      
+
       <!-- Headline Block -->
-      <layout label="Big headline block">
+      <layout label="Big headline">
       <table class="one-col centered">
         <tbody>
           <tr>
@@ -739,9 +752,10 @@ p {
           </tr>
         </tbody>
       </table>
+      <div class="clear">&nbsp;</div>
       </layout>
 
-      <div class="clear">&nbsp;</div>
+      
 
       <!-- Hero Image block -->
       <layout label="Hero image">
@@ -767,8 +781,10 @@ p {
       <div class="clear">&nbsp;</div>
       </layout>
 
-      <!-- Std. Image block -->
-      <layout label="Std. image">
+
+
+      <!-- Image block -->
+      <layout label="Image">
       <table class="one-col centered">
         <tbody>
           <tr>
@@ -791,8 +807,10 @@ p {
       <div class="clear">&nbsp;</div>
       </layout>
 
-      <!-- Std. text block  -->
-      <layout label="Std. text block">
+
+
+      <!-- Text block  -->
+      <layout label="Text block">
       <table class="one-col centered">
         <tbody>
           <tr>
@@ -815,8 +833,9 @@ p {
       <div class="clear">&nbsp;</div>
       </layout>
 
+
       <!-- Button block -->
-      <layout label="Button block">
+      <layout label="Button">
       <table class="one-col">
         <tbody>
           <tr>
@@ -839,141 +858,6 @@ p {
       <div class="clear">&nbsp;</div>
       </layout>
 
-      <!-- Single item two column layout -->
-      <layout label='Two columns - one item'>
-      <table class="two-col centered">
-        <tbody>
-          <tr>
-            <td class="column first">
-                <table class="contents">
-                  <tbody><tr>
-                    <td class="padded">
-                      <div class="image">
-                        <img editable src="images/05-newsletter02.png" label="Image" alt="" width="280" height="189" />
-                      </div>
-                    </td>
-                  </tr>
-                </tbody></table>
-            </td>
-            <td class="column second">
-                <table class="contents">
-                  <tbody><tr>
-                    <td class="padded">
-                      <h2><singleline label="Title">Title</singleline></h2>
-                    </td>
-                  </tr>
-                </tbody></table>
-                <table class="contents">
-                  <tbody><tr>
-                    <td class="padded">
-                        <multiline label="Article Body" >Enter the full text</multiline>
-                    </td>
-                  </tr>
-                </tbody></table>
-                <table class="contents">
-                  <tbody><tr>
-                    <td class="padded">
-                      <div class="btn">
-                        <singleline label="Link">Link</singleline>
-                      </div>
-                    </td>
-                  </tr>
-                </tbody></table>
-              <div class="column-bottom">&nbsp;</div>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      <div class="clear">&nbsp;</div>
-    </layout>
-
-    <!-- Two item to column layout -->
-      <layout label="Two columns - two items">
-
-      <table class="two-col-bg centered">
-        <tbody><tr>
-          <td align="center">
-            <table class="two-col centered">
-              <tbody><tr>
-                <td class="column first">
-                  <table class="contents">
-                    <tbody><tr>
-                      <td>
-                        <table width="100%">
-                          <tbody><tr>
-                            <td class="padded">
-
-                            <div class="image">
-                              <img editable label="Image" src="images/audio-headphone-hearing-1591-825x5501.jpg" alt="" width="280" height="151" />
-                            </div>
-
-                            </td>
-                          </tr></tbody>
-                        </table>
-                        <table width="100%">
-                          <tbody><tr>
-                            <td class="padded" >
-                              <h2><singleline label="Title">Heading here</singleline></h2>
-                              <multiline label="Article body">Info here</multiline>
-                           </td>
-                          </tr></tbody>
-                        </table>
-                        <table width="100%">
-                          <tbody><tr>
-                            <td class="padded">
-                              <p><singleline label="Article link">Link goes here</singleline></p>
-                            </td>
-                          </tr></tbody>
-                        </table>
-                      </td>
-                    </tr></tbody>
-                  </table>
-                </td>
-
-                <td class="column last">
-                  <table class="contents">
-                    <tbody><tr>
-                      <td>
-                        <div>
-                        </div>
-                        <table width="100%">
-                          <tbody><tr>
-                            <td class="padded">
-
-                            <div class="image">
-                              <img editable label="Image" src="images/audio-headphone-hearing-1591-825x5501.jpg" alt="" width="280" height="151" />
-                            </div>
-
-                            </td>
-                          </tr></tbody>
-                        </table>
-                        <table width="100%">
-                          <tbody><tr>
-                            <td class="padded" >
-                              <h2><singleline label="Title">Heading here</singleline></h2>
-                              <multiline label="Article Body">Info here</multiline>
-                           </td>
-                          </tr></tbody>
-                        </table>
-                        <table width="100%">
-                          <tbody><tr>
-                            <td class="padded">
-                              <p><singleline label="Article Link">Link goes here</singleline></p>
-                            </td>
-                          </tr></tbody>
-                        </table>
-                      </td>
-                    </tr></tbody>
-                  </table>
-
-                </td>
-              </tr>
-            </tbody></table>
-          </td>
-        </tr>
-      </tbody></table>
-      <div class="clear">&nbsp;</div>
-      </layout>
 
       <!-- Divider block -->
       <layout label="Divider">
@@ -986,7 +870,7 @@ p {
                   <tr>
                     <td class="padded" >
                       <div class="divider" align="center">&nbsp;</div>
-                      <p style="display: none"><singleline label="Don't fill this out"></singleline>&nbsp;</p>
+                      <p style="display: none"><singleline label="Leave this blank"></singleline>&nbsp;</p>
                     </td>
                   </tr>
                 </tbody>
@@ -1018,9 +902,318 @@ p {
         </tbody>
       </table>
       <div class="clear">&nbsp;</div>
-      </layout>
+    </layout>
 
-      </repeater>
+
+    <!-- Two item to column layout – buttons L+R -->
+    <layout label="*TEMPLATE* 2 items, buttons L+R">
+
+      <table class="two-col-bg centered">
+        <tbody><tr>
+          <td align="center">
+            <table class="two-col centered">
+              <tbody><tr>
+                <td class="column first">
+                  <table class="contents">
+                    <tbody><tr>
+                      <td>
+                        <table width="100%">
+                          <tbody><tr>
+                            <td class="padded">
+                            <div class="image">
+                              <img editable label="Image" src="images/audio-headphone-hearing-1591-825x5501.jpg" alt="" width="280" height="151" />
+                            </div>
+                            </td>
+                          </tr></tbody>
+                        </table>
+                        <table width="100%">
+                          <tbody>
+                            <tr>
+                              <td class="padded" >
+                                <h2><singleline label="Title">Heading here</singleline></h2>
+                                <multiline label="Article body">Info here</multiline>
+                                <div class="btn">
+                                  <singleline label="Link"><a href="#">Button</a></singleline>
+                                </div>
+                             </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr></tbody>
+                  </table>
+                </td>
+
+                <td class="column last">
+                  <table class="contents">
+                    <tbody><tr>
+                      <td>
+                        <div>
+                        </div>
+                        <table width="100%">
+                          <tbody><tr>
+                            <td class="padded">
+
+                            <div class="image">
+                              <img editable label="Image" src="images/audio-headphone-hearing-1591-825x5501.jpg" alt="" width="280" height="151" />
+                            </div>
+
+                            </td>
+                          </tr></tbody>
+                        </table>
+                        <table width="100%">
+                          <tbody>
+                            <tr>
+                              <td class="padded" >
+                                <h2><singleline label="Title">Heading here</singleline></h2>
+                                <multiline label="Article Body">Info here</multiline>
+                                <div class="btn">
+                                  <singleline label="Link"><a href="#">Button</a></singleline>
+                                </div>
+                             </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr></tbody>
+                  </table>
+
+                </td>
+              </tr>
+            </tbody></table>
+          </td>
+        </tr>
+      </tbody></table>
+      <div class="clear">&nbsp;</div>
+    </layout>
+
+
+
+    <!-- Two item to column layout – button L -->
+    <layout label="*TEMPLATE* – 2 items, buttons L">
+      <table class="two-col-bg centered">
+        <tbody><tr>
+          <td align="center">
+            <table class="two-col centered">
+              <tbody><tr>
+                <td class="column first">
+                  <table class="contents">
+                    <tbody>
+                      <tr>
+                        <td>
+                          <table width="100%">
+                            <tbody>
+                              <tr>
+                                <td class="padded">
+                                <div class="image">
+                                  <img editable label="Image" src="images/audio-headphone-hearing-1591-825x5501.jpg" alt="" width="280" height="151" />
+                                </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <table width="100%">
+                            <tbody>
+                              <tr>
+                                <td class="padded" >
+                                  <h2><singleline label="Title">Heading here</singleline></h2>
+                                  <multiline label="Article body">Info here</multiline>
+                                  <div class="btn">
+                                    <singleline label="Link"><a href="#">Button</a></singleline>
+                                  </div>
+                               </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+
+                <td class="column last">
+                  <table class="contents">
+                    <tbody>
+                      <tr>
+                        <td>
+                          <div>
+                          </div>
+                          <table width="100%">
+                            <tbody>
+                              <tr>
+                                <td class="padded">
+                                  <div class="image">
+                                    <img editable label="Image" src="images/audio-headphone-hearing-1591-825x5501.jpg" alt="" width="280" height="151" />
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <table width="100%">
+                            <tbody>
+                              <tr>
+                                <td class="padded" >
+                                  <h2><singleline label="Title">Heading here</singleline></h2>
+                                  <multiline label="Article Body">Info here</multiline>
+                               </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                </td>
+              </tr>
+            </tbody></table>
+          </td>
+        </tr>
+      </tbody></table>
+      <div class="clear">&nbsp;</div>
+    </layout>
+
+
+
+
+
+    <!-- Two item to column layout – button R -->
+    <layout label="*TEMPLATE* – 2 items, buttons R">
+      <table class="two-col-bg centered">
+        <tbody><tr>
+          <td align="center">
+            <table class="two-col centered">
+              <tbody><tr>
+                <td class="column first">
+                  <table class="contents">
+                    <tbody><tr>
+                      <td>
+                        <table width="100%">
+                          <tbody>
+                            <tr>
+                              <td class="padded">
+                              <div class="image">
+                                <img editable label="Image" src="images/audio-headphone-hearing-1591-825x5501.jpg" alt="" width="280" height="151" />
+                              </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <table width="100%">
+                          <tbody>
+                            <tr>
+                              <td class="padded" >
+                                <h2><singleline label="Title">Heading here</singleline></h2>
+                                <multiline label="Article body">Info here</multiline>
+                             </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr></tbody>
+                  </table>
+                </td>
+
+                <td class="column last">
+                  <table class="contents">
+                    <tbody>
+                      <tr>
+                        <td>
+                          <div>
+                          </div>
+                          <table width="100%">
+                            <tbody>
+                              <tr>
+                                <td class="padded">
+                                  <div class="image">
+                                    <img editable label="Image" src="images/audio-headphone-hearing-1591-825x5501.jpg" alt="" width="280" height="151" />
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <table width="100%">
+                            <tbody>
+                              <tr>
+                                <td class="padded" >
+                                  <h2><singleline label="Title">Heading here</singleline></h2>
+                                  <multiline label="Article Body">Info here</multiline>
+                                  <div class="btn">
+                                    <singleline label="Link"><a href="#">Button</a></singleline>
+                                  </div>
+                               </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+            </tbody></table>
+          </td>
+        </tr>
+      </tbody></table>
+      <div class="clear">&nbsp;</div>
+    </layout>
+
+    <!-- Single item two column layout -->
+    <layout label='*TEMPLATE* 1 item'>
+      <table class="two-col centered single-item">
+        <tbody>
+          <tr>
+            <td class="column first">
+                <table class="contents">
+                  <tbody><tr>
+                    <td class="padded">
+                      <div class="image">
+                        <img editable src="images/05-newsletter02.png" label="Image" alt="" width="280" height="189" />
+                      </div>
+                    </td>
+                  </tr>
+                </tbody></table>
+            </td>
+            <td class="column second">
+                <table class="contents">
+                  <tbody>
+                    <tr>
+                      <td class="padded">
+                        <h2><singleline label="Title">Enter your title</singleline></h2>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table class="contents">
+                  <tbody>
+                    <tr>
+                      <td class="padded">
+                          <multiline label="Article Body" >Enter your text here.</multiline>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table class="contents">
+                  <tbody>
+                    <tr>
+                      <td class="padded">
+                        <div class="btn">
+                          <singleline label="Link"><a href="http://www.festival.co.nz">festival.co.nz</a></singleline>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              <div class="column-bottom">&nbsp;</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="clear">&nbsp;</div>
+    </layout>
+
+
+    </repeater>
 
 
 
@@ -1050,67 +1243,106 @@ p {
     </table>
     <div class="clear">&nbsp;</div>
 
-      <table class="one-col footer">
-        <tbody>
-          <tr>
-            <td class="column">
-              <table class="contents" width="100%">
-                <tbody>
-                  <tr>
-                    <td class="padded">
-                      <table class="contents" width="100%">
-                        <tbody>
-                          <tr>
-                            <td class="column first footer-logos" width="50%">
-                                <p><a href="http://www.festival.co.nz">www.festival.co.nz</a><br/>
-                                    <a href="mailto:nzfestival@festival.co.nz">nzfestival@festival.co.nz</a><br/>
-                                    <a href="#">Facebook</a><br/>
-                                    <a href="#">Twitter</a></p>
-                            </td>
-                            <td class="column last" width="50%">
-                              <p><strong>The New Zealand Festival</strong><br/>
-                              St James Theatre, 77-87 Courtenay Place, Wellington 6011, New Zealand</p>
-                              <p>+64 4 473 0149</p>
-                            </td>
-                          </tr>
-                        </tbody>
-                    </table><br/>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-        <div class="clear">&nbsp;</div>
 
-      <table class="one-col centered footer">
-        <tbody>
-          <tr>
-            <td class="column" >
-               <table class="contents" >
-                <tbody>
-                  <tr>
-                    <td class="padded" >
-                        <p><strong>Thanks to our lead partners</strong></p>
-                        <div class="logos">
-                            <a href="#"><img src="images/logo-wellington-airport.png" height="50" alt="Wellington Airport"></a>
-                            <a href="#"><img src="images/logo-contact.png" height="50" alt="Contact"></a>
-                            <a href="#"><img src="images/logo-kiwibank.png" height="50" alt="Kiwibank"></a>
-                            <a href="#"><img src="images/logo-weta-digital.png" height="50" alt="Weta Digital"></a>
-                        </div>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </td>
-          </tr>
-        </tbody>
-      </table><br/>
+
+    <table class="one-col footer">
+      <tbody>
+        <tr>
+          <td class="column">
+            <table class="contents" width="100%">
+              <tbody>
+                <tr>
+                  <td class="padded">
+                    <table class="contents" width="100%">
+                      <tbody>
+                        <tr>
+                          <td class="column first footer-logos" width="50%">
+                            <p>
+                              <a href="http://www.festival.co.nz">www.festival.co.nz</a><br/>
+                              <a href="mailto:nzfestival@festival.co.nz">nzfestival@festival.co.nz</a><br/>
+                              <a href="https://www.facebook.com/nzfestival">Facebook</a><br/>
+                              <a href="https://twitter.com/nzfestival">Twitter</a>
+                            </p>
+                          </td>
+                          <td class="column last" width="50%">
+                            <p><strong>The New Zealand Festival</strong><br/>
+                            St James Theatre, 77-87 Courtenay Place, Wellington 6011, New Zealand</p>
+                            <p>+64 4 473 0149</p>
+                          </td>
+                        </tr>
+                      </tbody>
+                  </table><br/>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <table class="contents" width="100%">
+              <tbody>
+                <tr>
+                  <td class="padded">
+                    <table class="contents" width="100%">
+                      <tbody>
+                        <tr>
+                          <td colspan="2" class="column first footer-logos" width="50%">
+                              <strong>Core partner</strong>
+                              <br/>
+                              <br/>
+                              <a href="http://wellington.govt.nz/">
+                                <img src="images/logo-abs-pos-wellington.png" width="200" alt="Absolutely Positively Wellington">
+                              </a>
+                          </td>
+                          <td colspan="2" class="column last footer-core-funder" width="50%">
+                            <strong>Core funder</strong>
+                            <br/>
+                            <br/>
+                            <a href="http://www.creativenz.govt.nz/">
+                              <img src="images/logo-creative-nz.png" width="200" alt="Creative NZ">
+                            </a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td colspan="4" class="footer-logos" style="padding-top: 30px;">
+                            <strong>Funders</strong>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="column first" width="25%">
+                              <a href="http://www.nzct.org.nz/">
+                                <img style="background-color: transparent; padding-top: 19px;" src="images/logo-nzct.png" width="90" alt="New Zealand Community Club">
+                              </a>
+                          </td> 
+                          <td class="column" width="25%">
+                            <a href="http://www.pubcharity.org.nz/">
+                              <img style="background-color: transparent; padding-top: 10px;" src="images/logo-pub-charity.png" width="89" alt="Pub Charity">
+                            </a>
+                          </td>
+                          <td class="column" width="25%">
+                              <a href="http://www.lionfoundation.org.nz/">
+                                <img style="background-color: transparent; padding-top: 10px;" src="images/logo-lion.png" width="121" alt="The Lion Foundation">
+                              </a>
+                          </td> 
+                          <td class="column last" width="25%">
+                            <a href="http://wct.org.nz/">
+                              <img style="background-color: transparent; padding-top: 10px;" src="images/logo-wct.png" width="141" alt="Wellington Community Trust">
+                            </a>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  <br/>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
 <div class="clear">&nbsp;</div>
 
-  <div class="email-bottom">&nbsp;</div>
+<div class="email-bottom">&nbsp;</div>
 </center>
 
 </body></html>

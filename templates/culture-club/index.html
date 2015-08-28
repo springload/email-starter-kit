@@ -30,7 +30,7 @@ img {
 }
 .image {
   font-size: 12px;
-  Margin-bottom: 27px;
+  Margin-bottom: 20px;
   mso-line-height-rule: at-least;
 }
 .image img {
@@ -212,6 +212,9 @@ table.wrapper {
     height: auto !important;
     width: 100% !important;
   }
+  .footer-core-funder {
+    padding-top: 30px;
+  }
 }
 .wrapper h1 {
   font-weight: 800;
@@ -235,8 +238,8 @@ table.wrapper {
   line-height: 4px;
 }
 .contents .divider {
-  Margin-bottom: 35px;
-  Margin-top: 35px;
+  Margin-bottom: 30px;
+  Margin-top: 30px;
 }
 .divider .bullet {
   border-radius: 2px;
@@ -428,6 +431,12 @@ two-col,
   Margin-right: auto;
 }
 @media only screen and (max-width: 620px) {
+  #logo-desktop {
+    display: none !important;
+  }
+  #logo-mobile {
+    display: block !important;
+  }
   [class=wrapper] .one-col .column:last-child table:nth-last-child(2) td h1:last-child,
   [class=wrapper] .two-col .column:last-child table:nth-last-child(2) td h1:last-child,
   [class=wrapper] .three-col .column:last-child table:nth-last-child(2) td h1:last-child,
@@ -572,6 +581,7 @@ body,
     margin-top: 50px;
 }
 
+.image-block h2,
 .two-col h2 {
     font-family: "Hind", Arial Black, Helvetica, sans-serif;
     font-size: 24px;
@@ -675,20 +685,52 @@ p {
         <tbody>
           <tr>
             <td class="column">
-              <table width="600">
+              <table>
                 <tbody>
                   <tr>
                     <td class="padded" align="center">
-                      <img src="images/lockup.png" alt="The Culture Club" width="200" style="width:200px;"/>
+                      <img id="logo-desktop" src="images/logo-nzf-tcc.png" alt="The Culture Club" width="600" style="width:600px;"/>
+                      <img id="logo-mobile" src="images/logo-nzf-tcc-mobile.png" alt="The Culture Club" width="250" style="width:250px; display: none;"/>
                     </td>
                   </tr>
                 </tbody>
               </table>
+
+              <table class="one-col centered">
+                <tbody>
+                  <tr>
+                    <td class="padded" align="center">
+                      <div class="btn">&nbsp;</div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <table class="one-col centered">
+                  <tbody>
+                    <tr>
+                      <td class="column" >
+                         <table class="contents" >
+                          <tbody>
+                            <tr>
+                              <td class="padded" align="center">
+                                  <span class="facebook-icon"><fblike><img src="images/icon-facebook-tccrose.png" alt="Like" title="Like this email on Facebook" width="32" height="32" align="absmiddle" /></fblike></span>
+                                  <span class="twitter-icon"><tweet><img src="images/icon-twitter-tccrose.png" alt="Tweet" title="Tweet this email" width="32" height="32" align="absmiddle" /></tweet></span>
+                                  <span class="forward-icon"><forwardtoafriend lang="en"><img src="images/icon-forward-tccrose.png" alt="Forward" title="Forward this email" width="32" height="32" align="absmiddle" /></forwardtoafriend></span>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
             </td>
           </tr>
         </tbody>
       </table>
       <div class="clear">&nbsp;</div>
+
       <repeater>
       <!-- Headline Block -->
       <layout label="Big headline block">
@@ -700,7 +742,7 @@ p {
                   <tbody>
                     <tr>
                       <td class="padded" align="center">
-                        <h1><singleline label="Email Headline">Welcome to festival.co.nz</singleline></h1>
+                        <h1><singleline label="Email Headline">Welcome to The Culture Club</singleline></h1>
                       </td>
                     </tr>
                   </tbody>
@@ -710,11 +752,11 @@ p {
           </tr>
         </tbody>
       </table>
+      <div class="clear">&nbsp;</div>
       </layout>
 
-      <div class="clear">&nbsp;</div>
 
-      <!-- Std. text block  -->
+      <!-- Text block  -->
       <layout label="Std. text block">
       <table class="one-col centered">
         <tbody>
@@ -736,6 +778,67 @@ p {
       </table>
       <div class="clear">&nbsp;</div>
       </layout>
+
+
+      <!-- Image block (small) -->
+      <layout label="Image block (small)">
+      <table class="one-col centered">
+        <tbody>
+          <tr>
+            <td class="column" >
+                <table class="contents">
+                  <tbody>
+                    <tr>
+                      <td class="padded" align="center" style="text-align:center;">
+                        <img editable label="Image" src="images/audio-headphone-hearing-1591-825x5501.jpg" alt="" width="280" height="151" />
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="column-bottom">&nbsp;</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="clear">&nbsp;</div>
+      </layout>
+
+
+      <!-- Image block (large) -->
+      <layout label="Image block (large)">
+      <table class="one-col centered image-block">
+        <tbody>
+          <tr>
+            <td class="column" >
+               <table class="contents" >
+                <tbody>
+                  <tr>
+                    <td class="padded" >
+                      <div class="image">
+                        <img editable label="Image" src="images/black-and-white-headphones-life-3104-825x550.jpg" alt="" width="580" height="315" />
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+               <table class="contents">
+                <tbody>
+                  <tr>
+                    <td class="padded main-title" >
+                      <h2>
+                        <singleline label="Large image heading"></singleline>
+                      </h2>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="clear">&nbsp;</div>
+      </layout>
+
 
       <!-- Button block -->
       <layout label="Button block">
@@ -763,7 +866,6 @@ p {
 
     <!-- Two item to column layout -->
       <layout label="Two columns - two items">
-
       <table class="two-col-bg centered">
         <tbody><tr>
           <td align="center">
@@ -860,7 +962,7 @@ p {
                   <tr>
                     <td class="padded" >
                       <div class="divider" align="center">&nbsp;</div>
-                      <p style="display: none"><singleline label="Don't fill this out"></singleline>&nbsp;</p>
+                      <p style="display: none"><singleline label="Leave this blank"></singleline>&nbsp;</p>
                     </td>
                   </tr>
                 </tbody>
@@ -896,25 +998,6 @@ p {
 
     </repeater>
 
-      <table class="one-col centered">
-        <tbody>
-          <tr>
-            <td class="column" >
-               <table class="contents" >
-                <tbody>
-                  <tr>
-                    <td class="padded" align="center">
-                        <span class="facebook-icon"><fblike><img src="images/icon-facebook-tccrose.png" alt="Like" title="Like this email on Facebook" width="32" height="32" align="absmiddle" /></fblike></span>
-                        <span class="twitter-icon"><tweet><img src="images/icon-twitter-tccrose.png" alt="Tweet" title="Tweet this email" width="32" height="32" align="absmiddle" /></tweet></span>
-                        <span class="forward-icon"><forwardtoafriend lang="en"><img src="images/icon-forward-tccrose.png" alt="Forward" title="Forward this email" width="32" height="32" align="absmiddle" /></forwardtoafriend></span>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </td>
-          </tr>
-        </tbody>
-      </table>
       <div class="clear">&nbsp;</div>
 
       <table class="one-col centered footer">
@@ -926,8 +1009,7 @@ p {
                   <tr>
                     <td class="padded" >
                         <div class="divider">&nbsp;</div>
-                        You&rsquo;re receiving this email because at one time you subscribed to the New Zealand
-                            Festival newsletter or bought a ticket from us. <unsubscribe>Unsubscribe</unsubscribe>
+                        You&rsquo;re receiving this email because you're a supporter of The Culture Club. <unsubscribe>Unsubscribe</unsubscribe>
                     </td>
                   </tr>
                 </tbody>
@@ -950,10 +1032,12 @@ p {
                         <tbody>
                           <tr>
                             <td class="column first footer-logos" width="50%">
-                                <p><a href="http://www.festival.co.nz">www.festival.co.nz</a><br/>
-                                    <a href="mailto:nzfestival@festival.co.nz">nzfestival@festival.co.nz</a><br/>
-                                    <a href="#">Facebook</a><br/>
-                                    <a href="#">Twitter</a></p>
+                                <p>
+                                  <a href="http://www.festival.co.nz/the-culture-club/">www.festival.co.nz/the-culture-club</a><br/>
+                                  <a href="mailto:thecultureclub@festival.co.nz">thecultureclub@festival.co.nz</a><br/>
+                                  <a href="https://www.facebook.com/CultureClubNZ">Facebook</a><br/>
+                                  <a href="https://twitter.com/CultureClubNZ">Twitter</a>
+                                </p>
                             </td>
                             <td class="column last" width="50%">
                               <p><strong>The New Zealand Festival</strong><br/>
@@ -967,27 +1051,61 @@ p {
                   </tr>
                 </tbody>
               </table>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-        <div class="clear">&nbsp;</div>
 
-      <table class="one-col centered footer">
-        <tbody>
-          <tr>
-            <td class="column" >
-               <table class="contents" >
+              <table class="contents" width="100%">
                 <tbody>
                   <tr>
-                    <td class="padded" >
-                        <p><strong>Thanks to our lead partners</strong></p>
-                        <div class="logos">
-                            <a href="#"><img src="images/logo-wellington-airport.png" height="50" alt="Wellington Airport"></a>
-                            <a href="#"><img src="images/logo-contact.png" height="50" alt="Contact"></a>
-                            <a href="#"><img src="images/logo-kiwibank.png" height="50" alt="Kiwibank"></a>
-                            <a href="#"><img src="images/logo-weta-digital.png" height="50" alt="Weta Digital"></a>
-                        </div>
+                    <td class="padded">
+                      <table class="contents" width="100%">
+                        <tbody>
+                          <tr>
+                            <td colspan="2" class="column first footer-logos" width="50%">
+                                <strong>Core partner</strong>
+                                <br/>
+                                <br/>
+                                <a href="http://wellington.govt.nz/">
+                                  <img src="images/logo-abs-pos-wellington.png" width="200" alt="Absolutely Positively Wellington">
+                                </a>
+                            </td>
+                            <td colspan="2" class="column last footer-core-funder" width="50%">
+                              <strong>Core funder</strong>
+                              <br/>
+                              <br/>
+                              <a href="http://www.creativenz.govt.nz/">
+                                <img src="images/logo-creative-nz.png" width="200" alt="Creative NZ">
+                              </a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td colspan="4" class="footer-logos" style="padding-top: 30px;">
+                              <strong>Funders</strong>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="column first" width="25%">
+                                <a href="http://www.nzct.org.nz/">
+                                  <img style="padding-top: 19px;" src="images/logo-nzct.png" width="90" alt="New Zealand Community Club">
+                                </a>
+                            </td> 
+                            <td class="column" width="25%">
+                              <a href="http://www.pubcharity.org.nz/">
+                                <img style="padding-top: 10px;" src="images/logo-pub-charity.png" width="89" alt="Pub Charity">
+                              </a>
+                            </td>
+                            <td class="column" width="25%">
+                                <a href="http://www.lionfoundation.org.nz/">
+                                  <img style="padding-top: 10px;" src="images/logo-lion.png" width="121" alt="The Lion Foundation">
+                                </a>
+                            </td> 
+                            <td class="column last" width="25%">
+                              <a href="http://wct.org.nz/">
+                                <img style="padding-top: 10px;" src="images/logo-wct.png" width="141" alt="Wellington Community Trust">
+                              </a>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    <br/>
                     </td>
                   </tr>
                 </tbody>
@@ -995,7 +1113,14 @@ p {
             </td>
           </tr>
         </tbody>
-      </table><br/>
+      </table>
+
+
+
+
+
+
+      <br/>
 <div class="clear">&nbsp;</div>
 
   <div class="email-bottom">&nbsp;</div>

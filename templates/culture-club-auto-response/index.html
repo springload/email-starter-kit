@@ -15,7 +15,6 @@ table {
 td {
   padding: 0;
   vertical-align: top;
-  background-color: #282E2F;
 }
 .spacer,
 .border {
@@ -31,7 +30,7 @@ img {
 }
 .image {
   font-size: 12px;
-  Margin-bottom: 27px;
+  Margin-bottom: 20px;
   mso-line-height-rule: at-least;
 }
 .image img {
@@ -239,8 +238,8 @@ table.wrapper {
   line-height: 4px;
 }
 .contents .divider {
-  Margin-bottom: 35px;
-  Margin-top: 35px;
+  Margin-bottom: 30px;
+  Margin-top: 30px;
 }
 .divider .bullet {
   border-radius: 2px;
@@ -261,8 +260,7 @@ two-col,
   line-height: 54px;
 }
 .wrapper a {
-  color: ;
-  text-decoration: none;
+  text-decoration: underline;
 }
 .wrapper h1 {
   font-size: 32px;
@@ -276,7 +274,11 @@ two-col,
   font-size: 18px;
   Margin-bottom: 12px;
 }
-
+.wrapper h1 a,
+.wrapper h2 a,
+.wrapper h3 a {
+  text-decoration: none;
+}
 .wrapper p,
 .wrapper ol,
 .wrapper ul {
@@ -429,6 +431,12 @@ two-col,
   Margin-right: auto;
 }
 @media only screen and (max-width: 620px) {
+  #logo-desktop {
+    display: none !important;
+  }
+  #logo-mobile {
+    display: block !important;
+  }
   [class=wrapper] .one-col .column:last-child table:nth-last-child(2) td h1:last-child,
   [class=wrapper] .two-col .column:last-child table:nth-last-child(2) td h1:last-child,
   [class=wrapper] .three-col .column:last-child table:nth-last-child(2) td h1:last-child,
@@ -543,7 +551,7 @@ two-col,
   <meta name="robots" content="noindex,nofollow" />
 <meta property="og:title" content="My First Campaign" />
 </head>
-  <body style="margin: 0;mso-line-height-rule: exactly;padding: 0;min-width: 100%;background-color: #282E2F; color: white;">
+  <body style="margin: 0;mso-line-height-rule: exactly;padding: 0;min-width: 100%;background-color: #F0F0E7">
 
       <!--[if !mso]><!-->
         <style>
@@ -560,47 +568,25 @@ body,
 .one-col,
 .two-col,
 .three-col {
-    background-color: #282E2F;
+    background-color: #F0F0E7;
     font-family: "Hind", Helvetica, Arial, sans-serif;
-    color: #fff;
 }
 
-h2 {
-    color: white;
-    font-style: oblique;
-}
-
-.masthead h1 {
+.wrapper h1 {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 36px;
     line-height: 48px;
-    color: #45C79F;
+    color: #DC7C8A;
     word-wrap: break-word;
     margin-top: 50px;
-    text-transform: uppercase;
-    letter-spacing: .5em;
 }
 
+.image-block h2,
 .two-col h2 {
     font-family: "Hind", Arial Black, Helvetica, sans-serif;
     font-size: 24px;
     line-height: 24px;
-    color: #45C79F;
-    font-style: normal;
-}
-
-.main-title h2 {
-    font-family: "Hind", Arial Black, Helvetica, sans-serif;
-    font-size: 24px;
-    line-height: 24px;
-    color: #45C79F;
-    font-style: normal;
-    text-align: center;
-}
-
-h5 {
-    text-transform: uppercase;
-    margin: 1em 0;
+    color: #DC7C8A;
 }
 
 .nzf-logo,
@@ -613,8 +599,8 @@ a:link,
 a:visited,
 a:active,
 a:hover {
-    color: #45C79F !important;
-    text-decoration: none;
+    color: #DC7C8A !important;
+    text-decoration: underline;
 }
 
 .event-link,
@@ -623,7 +609,7 @@ a:hover {
 .event-link a:visited,
 .event-link a:active,
 .event-link a:hover {
-    color: #45C79F;
+    color: #DC7C8A;
     font-weight: bold;
     font-size: 110%;
     text-decoration: none;
@@ -632,7 +618,7 @@ a:hover {
 
 .hero-image {
     padding: 10px;
-    background-color: #45C79F;
+    background-color: #DC7C8A;
 }
 
 .hero-image img {
@@ -641,8 +627,8 @@ a:hover {
 
 .divider {
      width: 100%;
-     height: 1px;
-     background-color: #484848;
+     height: 3px;
+     background-color: #DC7C8A;
 }
 
 .logos img {
@@ -654,18 +640,13 @@ a:hover {
 .btn a:visited,
 .btn a:hover,
 .btn a:active {
-    background-color: #45C79F;
+    background-color: #D26577;
     color: white !important;
     text-transform: uppercase;
 }
 
 .footer, .footer * {
     font-size: 13px !important;
-    color: #A4A4A4;
-}
-
-.footer a {
-    text-decoration: none;
 }
 
 .masthead a {
@@ -686,82 +667,71 @@ p {
     line-height: 2em;
 }
 
-.footer .divider {
-    height: 3px;
-    background-color: #45C79F;
-}
-
-.image-block a {
-    font-size: 24px;
-    margin: .5em 0;
-    display: block;
-}
-
-.logo {
-    width: 300px;
-}
-
 </style>
 <center class="wrapper" >
-
       <table class="preheader" width="95%" style="margin-top: 10px;">
-        <tbody>
-          <tr>
-            <td class="intro">
-              <p style="text-align: left; font-size: 12px; color: #666"><singleline label="Tiny intro">Little intro for the email goes here.</singleline></p>
-            </td>
-            <td class="webversion" style="text-align: right; font-size: 12px; color: #666">
-              <p style="text-align: right; font-size: 12px; color: #666">No Images? <webversion>Click here</webversion></p>
-            </td>
-          </tr>
-          <tr>
-            <td class="preheader-buffer" >&nbsp;</td>
-          </tr>
-        </tbody>
-      </table>
+        <tbody><tr>
+          <td class="intro">
+            <p style="text-align: left; font-size: 12px; color: #666"><singleline label="Tiny intro">Little intro for the email goes here.</singleline></p>
+          </td>
+          <td class="webversion" style="text-align: right; font-size: 12px; color: #666">
+            <p style="text-align: right; font-size: 12px; color: #666">No Images? <webversion>Click here</webversion></p>
+          </td>
+        </tr>
+        <tr><td class="preheader-buffer" >&nbsp;</td></tr>
+      </tbody></table>
       <div class="email-top">&nbsp;</div>
       <table class="two-col centered masthead">
         <tbody>
           <tr>
-            <td class="column centered">
-              <table width="600" class="centered">
+            <td class="column">
+              <table>
                 <tbody>
                   <tr>
-                    <td class="padded centered" align="center">
-                      <img src="images/logo-article-magazine.png" alt="Article Magazine" class="logo">
-                      <h5><singleline label="Date">25 August 2015</singleline></h5>
+                    <td class="padded" align="center">
+                      <img id="logo-desktop" src="images/logo-nzf-tcc.png" alt="The Culture Club" width="600" style="width:600px;"/>
+                      <img id="logo-mobile" src="images/logo-nzf-tcc-mobile.png" alt="The Culture Club" width="250" style="width:250px; display: none;"/>
                     </td>
                   </tr>
                 </tbody>
               </table>
+
+              <table class="one-col centered">
+                <tbody>
+                  <tr>
+                    <td class="padded" align="center">
+                      <div class="btn">&nbsp;</div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <table class="one-col centered">
+                  <tbody>
+                    <tr>
+                      <td class="column" >
+                         <table class="contents" >
+                          <tbody>
+                            <tr>
+                              <td class="padded" align="center">
+                                  <span class="facebook-icon"><fblike><img src="images/icon-facebook-tccrose.png" alt="Like" title="Like this email on Facebook" width="32" height="32" align="absmiddle" /></fblike></span>
+                                  <span class="twitter-icon"><tweet><img src="images/icon-twitter-tccrose.png" alt="Tweet" title="Tweet this email" width="32" height="32" align="absmiddle" /></tweet></span>
+                                  <span class="forward-icon"><forwardtoafriend lang="en"><img src="images/icon-forward-tccrose.png" alt="Forward" title="Forward this email" width="32" height="32" align="absmiddle" /></forwardtoafriend></span>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
             </td>
           </tr>
         </tbody>
       </table>
-
-
       <div class="clear">&nbsp;</div>
-
-    <table class="one-col centered">
-      <tbody>
-        <tr>
-          <td class="column" >
-             <table class="contents" >
-              <tbody>
-                <tr>
-                  <td class="padded" align="center">
-                      <div class="divider">&nbsp;</div>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-    <div class="clear">&nbsp;</div>
-
       <repeater>
+
       <!-- Headline Block -->
       <layout label="Big headline block">
       <table class="one-col centered">
@@ -772,7 +742,7 @@ p {
                   <tbody>
                     <tr>
                       <td class="padded" align="center">
-                        <h2><singleline label="Email Headline">New on Article</singleline></h2>
+                        <h1><singleline label="Email Headline">Welcome to The Culture Club</singleline></h1>
                       </td>
                     </tr>
                   </tbody>
@@ -782,50 +752,12 @@ p {
           </tr>
         </tbody>
       </table>
-      <div class="clear">&nbsp;</div>
-      </layout>
-      
-
-
-      <!-- Image block -->
-      <layout label="Image">
-      <table class="one-col centered image-block">
-        <tbody>
-          <tr>
-            <td class="column" >
-               <table class="contents" >
-                <tbody>
-                  <tr>
-                    <td class="padded" >
-                      <div class="image">
-                        <img editable label="Image" src="images/fashion-hero1.jpg" alt="" width="580" height="315" />
-                      </div>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-               <table class="contents">
-                <tbody>
-                  <tr>
-                    <td class="padded main-title" >
-                      <h2>
-                        <singleline label="Main title heading"></singleline>
-                      </h2>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      <div class="clear">&nbsp;</div>
       </layout>
 
-
+      <div class="clear">&nbsp;</div>
 
       <!-- Text block  -->
-      <layout label="Text block">
+      <layout label="Std. text block">
       <table class="one-col centered">
         <tbody>
           <tr>
@@ -847,6 +779,65 @@ p {
       <div class="clear">&nbsp;</div>
       </layout>
 
+
+      <!-- Image block (small)  -->
+      <layout label="Image block (small)">
+      <table class="one-col centered">
+        <tbody>
+          <tr>
+            <td class="column" >
+                <table class="contents">
+                  <tbody>
+                    <tr>
+                      <td class="padded" align="center" style="text-align:center;">
+                        <img editable label="Image" src="images/audio-headphone-hearing-1591-825x5501.jpg" alt="" width="280" height="151" />
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="column-bottom">&nbsp;</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="clear">&nbsp;</div>
+      </layout>
+
+
+      <!-- Image block (large) -->
+      <layout label="Image block (large)">
+      <table class="one-col centered image-block">
+        <tbody>
+          <tr>
+            <td class="column" >
+               <table class="contents" >
+                <tbody>
+                  <tr>
+                    <td class="padded" >
+                      <div class="image">
+                        <img editable label="Image" src="images/black-and-white-headphones-life-3104-825x550.jpg" alt="" width="580" height="315" />
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+               <table class="contents">
+                <tbody>
+                  <tr>
+                    <td class="padded main-title" >
+                      <h2>
+                        <singleline label="Large image heading"></singleline>
+                      </h2>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="clear">&nbsp;</div>
+      </layout>
 
 
       <!-- Button block -->
@@ -961,57 +952,54 @@ p {
       <div class="clear">&nbsp;</div>
       </layout>
 
+      <!-- Divider block -->
+      <layout label="Divider">
+      <table class="one-col centered">
+        <tbody>
+          <tr>
+            <td class="column" >
+               <table class="contents" >
+                <tbody>
+                  <tr>
+                    <td class="padded" >
+                      <div class="divider" align="center">&nbsp;</div>
+                      <p style="display: none"><singleline label="Leave this blank"></singleline>&nbsp;</p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="clear">&nbsp;</div>
+      </layout>
 
-
-            <!-- Divider block -->
-            <layout label="Divider">
-            <table class="one-col centered">
-              <tbody>
-                <tr>
-                  <td class="column" >
-                     <table class="contents" >
-                      <tbody>
-                        <tr>
-                          <td class="padded" >
-                            <div class="divider" align="center">&nbsp;</div>
-                            <p style="display: none"><singleline label="Leave this blank"></singleline>&nbsp;</p>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-            <div class="clear">&nbsp;</div>
-            </layout>
-
-
-                  <!-- Heading block -->
-                  <layout label="Heading">
-                  <table class="one-col centered">
-                    <tbody>
-                      <tr>
-                        <td class="column" >
-                           <table class="contents" >
-                            <tbody>
-                              <tr>
-                                <td class="padded" align="center">
-                                  <h2><singleline label="Heading">H2 level heading goes here to define a section</singleline></h2>
-                                </td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                  <div class="clear">&nbsp;</div>
-                  </layout>
-
-
+      <!-- Heading block -->
+      <layout label="Heading">
+      <table class="one-col centered">
+        <tbody>
+          <tr>
+            <td class="column" >
+               <table class="contents" >
+                <tbody>
+                  <tr>
+                    <td class="padded" align="center">
+                      <h2><singleline label="Heading">H2 level heading goes here to define a section</singleline></h2>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="clear">&nbsp;</div>
+      </layout>
 
     </repeater>
+
+      <div class="clear">&nbsp;</div>
 
       <table class="one-col centered footer">
         <tbody>
@@ -1022,8 +1010,7 @@ p {
                   <tr>
                     <td class="padded" >
                         <div class="divider">&nbsp;</div>
-                        You&rsquo;re receiving this email because you subscribed to the New Zealand
-                            Festival&rsquo;s <em>ARTicle</em> newsletter. <unsubscribe>Unsubscribe</unsubscribe>
+                        You&rsquo;re receiving this email because you&rsquo;ve become a supporter of The Culture Club. If you no longer wish to receive our email updates and digital newsletters, please <unsubscribe>unsubscribe</unsubscribe>.
                     </td>
                   </tr>
                 </tbody>
@@ -1046,12 +1033,12 @@ p {
                         <tbody>
                           <tr>
                             <td class="column first footer-logos" width="50%">
-                              <p>
-                                <a href="http://www.festival.co.nz">www.festival.co.nz</a><br/>
-                                <a href="mailto:nzfestival@festival.co.nz">nzfestival@festival.co.nz</a><br/>
-                                <a href="https://www.facebook.com/nzfestival">Facebook</a><br/>
-                                <a href="https://twitter.com/nzfestival">Twitter</a>
-                              </p>
+                                <p>
+                                  <a href="http://www.festival.co.nz/the-culture-club/">www.festival.co.nz/the-culture-club</a><br/>
+                                  <a href="mailto:thecultureclub@festival.co.nz">thecultureclub@festival.co.nz</a><br/>
+                                  <a href="https://www.facebook.com/CultureClubNZ">Facebook</a><br/>
+                                  <a href="https://twitter.com/CultureClubNZ">Twitter</a>
+                                </p>
                             </td>
                             <td class="column last" width="50%">
                               <p><strong>The New Zealand Festival</strong><br/>
@@ -1118,21 +1105,24 @@ p {
                             </td>
                           </tr>
                         </tbody>
-                      </table>
+                    </table>
                     <br/>
                     </td>
                   </tr>
                 </tbody>
               </table>
-
-
-
-
             </td>
           </tr>
         </tbody>
       </table>
-      <div class="clear">&nbsp;</div>
+
+
+
+
+
+
+      <br/>
+<div class="clear">&nbsp;</div>
 
   <div class="email-bottom">&nbsp;</div>
 </center>
