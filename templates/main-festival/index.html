@@ -159,7 +159,7 @@ table.wrapper {
   .btn a {
     font-size: 14px !important;
     line-height: 24px !important;
-    padding: 13px 10px 12px 10px !important;
+    padding: 13px 15px 12px 15px !important;
   }
 }
 .two-col {
@@ -224,7 +224,7 @@ table.wrapper {
     height: auto !important;
     width: 100% !important;
   }
-  .footer-core-funder {
+  [class=wrapper] .footer-core-funder {
     padding-top: 30px;
   }
 }
@@ -482,7 +482,7 @@ two-col,
   }
   [class=wrapper] h1 {
     font-size: 32px !important;
-    line-height: 42px !important;
+    line-height: 35px !important;
     margin-bottom: 24px !important;
   }
   [class=wrapper] h2 {
@@ -548,14 +548,16 @@ two-col,
       float:left;
   }
 
-  .social-container {
-      width: 100% !important;
+  [class=wrapper] .social-container {
+    display: block;
+    float: left;
+    width: 320px !important;
   }
 }
 </style>
 
   <meta name="robots" content="noindex,nofollow" />
-<meta property="og:title" content="My First Campaign" />
+<meta property="og:title" content="New Zealand Festival" />
 </head>
   <body style="margin: 0;mso-line-height-rule: exactly;padding: 0;min-width: 100%;background-color: #fff">
 
@@ -688,20 +690,19 @@ p {
       <table class="preheader" width="95%" style="margin-top: 10px;">
         <tbody><tr>
           <td class="intro">
-            <p style="text-align: left; font-size: 12px; color: #666"><singleline label="Tiny intro">Little intro for the email goes here.</singleline></p>
-          </td>
-          <td class="webversion" style="text-align: right; font-size: 12px; color: #666">
-            <p style="text-align: right; font-size: 12px; color: #666">No Images? <webversion>Click here</webversion></p>
+            <p style="font-size: 12px; color: #666"><singleline label="Tiny intro">Little intro for the email goes here.</singleline><br><em>No images? <webversion>Click here</webversion></em></p>
           </td>
         </tr>
         <tr><td class="preheader-buffer" >&nbsp;</td></tr>
       </tbody></table>
       <div class="email-top">&nbsp;</div>
+
+
       <table class="two-col centered masthead">
         <tbody>
           <tr>
             <td class="column">
-              <table width="600">
+              <table>
                 <tbody>
                   <tr>
                     <td class="nzflogo-container column padded" style="width:200px; margin-bottom: 15px;" width="200">
@@ -721,11 +722,11 @@ p {
         </tbody>
       </table>
 
+
+
       <div class="clear">&nbsp;</div>
-      
 
       <repeater>
-      
 
       <!-- Headline Block -->
       <layout label="Big headline">
@@ -757,14 +758,20 @@ p {
       <table class="one-col centered">
         <tbody>
           <tr>
-            <td class="column" >
+            <td class="column">
                <table class="contents" >
                 <tbody>
                   <tr>
-                    <td class="padded" >
-                      <div class="image hero-image" align="center">
-                        <img style="padding: 10px;" editable label="Hero Image" src="images/fashion-hero1.jpg" alt="" width="560" height="315" />
-                      </div>
+                    <td class="padded image">
+                      <table>
+                        <tbody>
+                          <tr>
+                            <td style="border: 10px solid #F15B4F;">
+                              <img style="display: block;" editable label="Hero Image" src="images/fashion-hero1.jpg" alt="" width="560" height="315" />
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
                     </td>
                   </tr>
                 </tbody>
