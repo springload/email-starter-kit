@@ -111,9 +111,9 @@ table.wrapper {
   Margin-right: auto;
 }
 .btn {
-  Margin-bottom: 27px;
+  padding-bottom: 27px;
 }
-.btn a {
+/*.btn a {
   font-size: 14px;
   font-weight: 700;
   line-height: 24px;
@@ -131,36 +131,36 @@ table.wrapper {
 }
 .btn a:hover {
   opacity: 0.8;
-}
+}*/
 .two-col .btn {
-  Margin-top: 24px;
-  Margin-bottom: 24px;
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
-.two-col .btn a {
+/*.two-col .btn a {
   font-size: 12px;
   line-height: 22px;
   padding: 10px 28px;
-}
+}*/
 .three-col .btn {
-  Margin-bottom: 21px;
+  padding-bottom: 21px;
 }
-.three-col .btn a {
+/*.three-col .btn a {
   font-size: 11px;
   line-height: 19px;
   padding: 6px 18px 5px 18px;
-}
+}*/
 .single-item .btn {
-  Margin-top: 24px;
+  padding-top: 24px;
 }
 @media only screen and (max-width: 620px) {
   .btn {
-    margin-bottom: 27px !important;
+    padding-bottom: 27px !important;
   }
-  .btn a {
+/*  .btn a {
     font-size: 14px !important;
     line-height: 24px !important;
     padding: 13px 15px 12px 15px !important;
-  }
+  }*/
 }
 .two-col {
     margin-top: 15px;
@@ -607,8 +607,19 @@ a:link,
 a:visited,
 a:active,
 a:hover {
-    color: #F15B4F !important;
+    /*color: #F15B4F !important;*/
+    color: #F15B4F;
     text-decoration: underline;
+}
+
+.btn a,
+.btn a:link,
+.btn a:visited,
+.btn a:active,
+.btn a:hover {
+    /*color: #ffffff !important;*/
+    color: #ffffff;
+    text-decoration: none;
 }
 
 .event-link,
@@ -643,7 +654,7 @@ a:hover {
     margin: 0 10px;
 }
 
-.btn a,
+/*.btn a,
 .btn a:link,
 .btn a:visited,
 .btn a:hover,
@@ -651,7 +662,8 @@ a:hover {
     background-color: #F15B4F;
     color: white !important;
     text-transform: uppercase;
-}
+    -webkit-font-smoothing: antialiased;
+}*/
 
 .footer, .footer * {
     font-size: 13px !important;
@@ -690,7 +702,7 @@ p {
       <table class="preheader" width="95%" style="margin-top: 10px;">
         <tbody><tr>
           <td class="intro">
-            <p style="font-size: 12px; color: #666"><singleline label="Tiny intro">Little intro for the email goes here.</singleline><br><em>No images? <webversion>Click here</webversion></em></p>
+            <p style="font-size: 12px; color: #666"><singleline label="Tiny intro">Little intro for the email goes here.</singleline><br><em>No images? <webversion style="color: #F15B4F;">Click here</webversion></em></p>
           </td>
         </tr>
         <tr><td class="preheader-buffer" >&nbsp;</td></tr>
@@ -738,7 +750,7 @@ p {
                   <tbody>
                     <tr>
                       <td class="padded">
-                        <h1><singleline label="Email Headline">Welcome to festival.co.nz</singleline></h1>
+                        <h1 style="color: #F15B4F;"><singleline label="Email Headline">Welcome to festival.co.nz</singleline></h1>
                       </td>
                     </tr>
                   </tbody>
@@ -845,10 +857,14 @@ p {
               <table class="contents">
                 <tbody>
                   <tr>
-                    <td class="padded">
-                      <div class="btn">
-                        <singleline label="Link"><a href="#">Button</a></singleline>
-                      </div>
+                    <td class="padded btn">
+                      <table border="0" cellpadding="0" cellspacing="0" style="background-color:#F15B4F;">
+                          <tr>
+                              <td align="center" valign="middle" style="color:#FFFFFF; font-family:Helvetica, Arial, sans-serif; font-size:16px; font-weight:bold; letter-spacing:-.5px; line-height:150%; padding-top:12px; padding-right:25px; padding-bottom:12px; padding-left:25px;">
+                                  <singleline label="Link"><a href="http://www.festival.co.nz" target="_blank" style="color:#FFFFFF; text-transform: uppercase; letter-spacing: 0.02em; -webkit-font-smoothing: antialiased; text-decoration:none;">Button</a></singleline>
+                              </td>
+                          </tr>
+                      </table>
                     </td>
                   </tr>
                 </tbody>
@@ -859,6 +875,8 @@ p {
       </table>
       <div class="clear">&nbsp;</div>
       </layout>
+
+
 
 
       <!-- Divider block -->
@@ -934,10 +952,18 @@ p {
                               <td class="padded" >
                                 <h2><singleline label="Title">Heading here</singleline></h2>
                                 <multiline label="Article body">Info here</multiline>
-                                <div class="btn">
-                                  <singleline label="Link"><a href="#">Button</a></singleline>
-                                </div>
                              </td>
+                            </tr>
+                            <tr>
+                              <td class="padded btn">
+                                <table border="0" cellpadding="0" cellspacing="0" style="background-color:#F15B4F;">
+                                    <tr>
+                                        <td align="center" valign="middle" style="color:#FFFFFF; font-family:Helvetica, Arial, sans-serif; font-size:12px; font-weight:bold; letter-spacing:-.5px; line-height:150%; padding-top:12px; padding-right:25px; padding-bottom:12px; padding-left:25px;">
+                                            <singleline label="Link"><a href="http://www.festival.co.nz" target="_blank" style="color:#FFFFFF; text-transform: uppercase; letter-spacing: 0.02em; -webkit-font-smoothing: antialiased; text-decoration:none;">Button</a></singleline>
+                                        </td>
+                                    </tr>
+                                </table>
+                              </td>
                             </tr>
                           </tbody>
                         </table>
@@ -969,10 +995,18 @@ p {
                               <td class="padded" >
                                 <h2><singleline label="Title">Heading here</singleline></h2>
                                 <multiline label="Article Body">Info here</multiline>
-                                <div class="btn">
-                                  <singleline label="Link"><a href="#">Button</a></singleline>
-                                </div>
                              </td>
+                            </tr>
+                            <tr>
+                              <td class="padded btn">
+                                <table border="0" cellpadding="0" cellspacing="0" style="background-color:#F15B4F;">
+                                    <tr>
+                                        <td align="center" valign="middle" style="color:#FFFFFF; font-family:Helvetica, Arial, sans-serif; font-size:12px; font-weight:bold; letter-spacing:-.5px; line-height:150%; padding-top:12px; padding-right:25px; padding-bottom:12px; padding-left:25px;">
+                                            <singleline label="Link"><a href="http://www.festival.co.nz" target="_blank" style="color:#FFFFFF; text-transform: uppercase; letter-spacing: 0.02em; -webkit-font-smoothing: antialiased; text-decoration:none;">Button</a></singleline>
+                                        </td>
+                                    </tr>
+                                </table>
+                              </td>
                             </tr>
                           </tbody>
                         </table>
@@ -1020,10 +1054,18 @@ p {
                                 <td class="padded" >
                                   <h2><singleline label="Title">Heading here</singleline></h2>
                                   <multiline label="Article body">Info here</multiline>
-                                  <div class="btn">
-                                    <singleline label="Link"><a href="#">Button</a></singleline>
-                                  </div>
                                </td>
+                              </tr>
+                              <tr>
+                                <td class="padded btn">
+                                  <table border="0" cellpadding="0" cellspacing="0" style="background-color:#F15B4F;">
+                                      <tr>
+                                          <td align="center" valign="middle" style="color:#FFFFFF; font-family:Helvetica, Arial, sans-serif; font-size:12px; font-weight:bold; letter-spacing:-.5px; line-height:150%; padding-top:12px; padding-right:25px; padding-bottom:12px; padding-left:25px;">
+                                              <singleline label="Link"><a href="http://www.festival.co.nz" target="_blank" style="color:#FFFFFF; text-transform: uppercase; letter-spacing: 0.02em; -webkit-font-smoothing: antialiased; text-decoration:none;">Button</a></singleline>
+                                          </td>
+                                      </tr>
+                                  </table>
+                                </td>
                               </tr>
                             </tbody>
                           </table>
@@ -1140,10 +1182,18 @@ p {
                                 <td class="padded" >
                                   <h2><singleline label="Title">Heading here</singleline></h2>
                                   <multiline label="Article Body">Info here</multiline>
-                                  <div class="btn">
-                                    <singleline label="Link"><a href="#">Button</a></singleline>
-                                  </div>
                                </td>
+                              </tr>
+                              <tr>
+                                <td class="padded btn">
+                                  <table border="0" cellpadding="0" cellspacing="0" style="background-color:#F15B4F;">
+                                      <tr>
+                                          <td align="center" valign="middle" style="color:#FFFFFF; font-family:Helvetica, Arial, sans-serif; font-size:12px; font-weight:bold; letter-spacing:-.5px; line-height:150%; padding-top:12px; padding-right:25px; padding-bottom:12px; padding-left:25px;">
+                                              <singleline label="Link"><a href="http://www.festival.co.nz" target="_blank" style="color:#FFFFFF; text-transform: uppercase; letter-spacing: 0.02em; -webkit-font-smoothing: antialiased; text-decoration:none;">Button</a></singleline>
+                                          </td>
+                                      </tr>
+                                  </table>
+                                </td>
                               </tr>
                             </tbody>
                           </table>
@@ -1198,10 +1248,14 @@ p {
                 <table class="contents">
                   <tbody>
                     <tr>
-                      <td class="padded">
-                        <div class="btn">
-                          <singleline label="Link"><a href="http://www.festival.co.nz">festival.co.nz</a></singleline>
-                        </div>
+                      <td class="padded btn">
+                        <table border="0" cellpadding="0" cellspacing="0" style="background-color:#F15B4F;">
+                            <tr>
+                                <td align="center" valign="middle" style="color:#FFFFFF; font-family:Helvetica, Arial, sans-serif; font-size:12px; font-weight:bold; letter-spacing:-.5px; line-height:150%; padding-top:12px; padding-right:25px; padding-bottom:12px; padding-left:25px;">
+                                    <singleline label="Link"><a href="http://www.festival.co.nz" target="_blank" style="color:#FFFFFF; text-transform: uppercase; letter-spacing: 0.02em; -webkit-font-smoothing: antialiased; text-decoration:none;">Button</a></singleline>
+                                </td>
+                            </tr>
+                        </table>
                       </td>
                     </tr>
                   </tbody>

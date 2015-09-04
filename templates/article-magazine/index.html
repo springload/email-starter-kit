@@ -196,6 +196,12 @@ table.wrapper {
     float: left;
     width: 320px !important;
   }
+  [class=wrapper] .padded .column,
+  [class=wrapper] .padded .gutter {
+    display: block;
+    float: left;
+    width: 300px !important;
+  }
   [class=wrapper] .padded {
     padding-left: 10px !important;
     padding-right: 10px !important;
@@ -699,12 +705,13 @@ p {
 
 .logo {
     width: 300px;
+    max-width: 90%;
 }
 
 </style>
 <center class="wrapper" >
 
-      <table class="preheader" width="95%" style="margin-top: 10px;">
+      <table class="preheader" tyle="margin-top: 10px;">
         <tbody>
           <tr>
             <td class="intro">
@@ -724,7 +731,7 @@ p {
         <tbody>
           <tr>
             <td class="column centered">
-              <table width="600" class="centered">
+              <table class="centered">
                 <tbody>
                   <tr>
                     <td class="padded centered" align="center">
@@ -885,7 +892,7 @@ p {
                   <table class="contents">
                     <tbody><tr>
                       <td>
-                        <table width="100%">
+                        <table>
                           <tbody><tr>
                             <td class="padded">
 
@@ -896,7 +903,7 @@ p {
                             </td>
                           </tr></tbody>
                         </table>
-                        <table width="100%">
+                        <table>
                           <tbody><tr>
                             <td class="padded" >
                               <h2><singleline label="Title">Heading here</singleline></h2>
@@ -904,7 +911,7 @@ p {
                            </td>
                           </tr></tbody>
                         </table>
-                        <table width="100%">
+                        <table>
                           <tbody><tr>
                             <td class="padded">
                               <p><singleline label="Article link">Link goes here</singleline></p>
@@ -922,7 +929,7 @@ p {
                       <td>
                         <div>
                         </div>
-                        <table width="100%">
+                        <table>
                           <tbody><tr>
                             <td class="padded">
 
@@ -933,7 +940,7 @@ p {
                             </td>
                           </tr></tbody>
                         </table>
-                        <table width="100%">
+                        <table>
                           <tbody><tr>
                             <td class="padded" >
                               <h2><singleline label="Title">Heading here</singleline></h2>
@@ -941,7 +948,7 @@ p {
                            </td>
                           </tr></tbody>
                         </table>
-                        <table width="100%">
+                        <table>
                           <tbody><tr>
                             <td class="padded">
                               <p><singleline label="Article Link">Link goes here</singleline></p>
@@ -1013,39 +1020,40 @@ p {
 
     </repeater>
 
-      <table class="one-col centered footer">
-        <tbody>
-          <tr>
-            <td class="column" >
-               <table class="contents" >
-                <tbody>
-                  <tr>
-                    <td class="padded" >
-                        <div class="divider">&nbsp;</div>
-                        You&rsquo;re receiving this email because you subscribed to the New Zealand
-                            Festival&rsquo;s <em>ARTicle</em> newsletter. <unsubscribe>Unsubscribe</unsubscribe>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </td>
-          </tr>
-        </tbody>
+    <table class="one-col centered footer">
+      <tbody>
+        <tr>
+          <td class="column" >
+             <table class="contents" >
+              <tbody>
+                <tr>
+                  <td class="padded" >
+                      <div class="divider">&nbsp;</div>
+                      You&rsquo;re receiving this email because you subscribed to the New Zealand
+                          Festival&rsquo;s <em>ARTicle</em> newsletter. <unsubscribe>Unsubscribe</unsubscribe>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
     </table>
+
     <div class="clear">&nbsp;</div>
 
       <table class="one-col footer">
         <tbody>
           <tr>
             <td class="column">
-              <table class="contents" width="100%">
+              <table class="contents">
                 <tbody>
                   <tr>
                     <td class="padded">
-                      <table class="contents" width="100%">
+                      <table class="contents">
                         <tbody>
                           <tr>
-                            <td class="column first footer-logos" width="50%">
+                            <td class="column first footer-logos">
                               <p>
                                 <a href="http://www.festival.co.nz">www.festival.co.nz</a><br/>
                                 <a href="mailto:nzfestival@festival.co.nz">nzfestival@festival.co.nz</a><br/>
@@ -1053,7 +1061,7 @@ p {
                                 <a href="https://twitter.com/nzfestival">Twitter</a>
                               </p>
                             </td>
-                            <td class="column last" width="50%">
+                            <td class="column last">
                               <p><strong>The New Zealand Festival</strong><br/>
                               St James Theatre, 77-87 Courtenay Place, Wellington 6011, New Zealand</p>
                               <p>+64 4 473 0149</p>
@@ -1066,14 +1074,14 @@ p {
                 </tbody>
               </table>
 
-              <table class="contents" width="100%">
+              <table class="contents">
                 <tbody>
                   <tr>
                     <td class="padded">
-                      <table class="contents" width="100%">
+                      <table class="contents">
                         <tbody>
                           <tr>
-                            <td colspan="2" class="column first footer-logos" width="50%">
+                            <td colspan="2" class="column first footer-logos">
                                 <strong>Core partner</strong>
                                 <br/>
                                 <br/>
@@ -1081,7 +1089,7 @@ p {
                                   <img src="images/logo-abs-pos-wellington.png" width="200" alt="Absolutely Positively Wellington">
                                 </a>
                             </td>
-                            <td colspan="2" class="column last footer-core-funder" width="50%">
+                            <td colspan="2" class="column last footer-core-funder">
                               <strong>Core funder</strong>
                               <br/>
                               <br/>
