@@ -2,6 +2,12 @@
 
 > Campaign Monitor templates for New Zealand Festival.
 
+|Important links|
+|---------------|
+|[InVision prototype](https://projects.invisionapp.com/share/JFD9BW23Z#/screens/250977766)|
+|[Email template designs](https://www.dropbox.com/work/_Clients/NZ%20Festival/NZF934%20-%20Website%20Update/_Assets/Design/EDM%20template)|
+|[Campaign Monitor access](https://nzfestival.createsend.com/templates) (details in LastPass)|
+
 | Templates |
 |-----------|
 |[Main Festival template](templates/main-festival) |
