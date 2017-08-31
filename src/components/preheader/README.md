@@ -2,9 +2,9 @@
 displayName: preheader
 classBase: preheader
 schema:
-  todo:
+  layout:
     type: string
-    description: TODO
+    description: Layout of the preheader
 usage:
   - class: .preheader
     required: True
@@ -17,5 +17,8 @@ flavours:
     states:
       - title: Default
         data:
-          todo: todo
+          layout: default
+      - title: Culture Club
+        data:
+          layout: cultureclub
 ---

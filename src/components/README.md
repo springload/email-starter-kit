@@ -2,6 +2,7 @@
 components:
     - preheader
     - masthead
+    - headline_block
     - footer
 ---
 

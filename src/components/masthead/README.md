@@ -2,9 +2,9 @@
 displayName: masthead
 classBase: masthead
 schema:
-  todo:
+  layout:
     type: string
-    description: TODO
+    description: Layout of the masthead
 usage:
   - class: .masthead
     required: True
@@ -17,5 +17,8 @@ flavours:
     states:
       - title: Default
         data:
-          todo: todo
+          layout: default
+      - title: Culture Club
+        data:
+          layout: cultureclub
 ---

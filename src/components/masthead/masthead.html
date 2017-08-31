@@ -1,5 +1,23 @@
 <table class="two-col centered masthead">
   <tbody>
+  {% if props.layout == 'cultureclub' %}
+    <tr>
+      <td class="column padded" align="center" style="text-align: center; padding-bottom: 15px;">
+        <img src="/logo-nzf-long.png" alt="The Culture Club" width="201" height="35"/>
+      </td>
+    </tr>
+    <tr>
+        <td class="column padded" align="center" style="text-align: center; padding-bottom: 30px;">
+          <img src="/logo-cultureclub.png" alt="The Culture Club" width="251" height="147"/>
+        </td>
+      </tr>
+    <tr>
+      <td class="column padded" align="center" style="text-align: center;">
+        <span class="facebook-icon"><fblike><img src="/icon-facebook-{{ props.color }}.png" alt="Like" title="Like this email on Facebook" width="32" height="32" align="absmiddle" /></fblike></span>
+        <span class="forward-icon"><forwardtoafriend lang="en"><img src="/icon-forward-{{ props.color }}.png" alt="Forward" title="Forward this email" width="32" height="32" align="absmiddle" /></forwardtoafriend></span>
+      </td>
+    </tr>
+  {% else %}
     <tr>
       <td class="column">
         <table>
@@ -17,5 +35,6 @@
         </table>
       </td>
     </tr>
+  {% endif %}
   </tbody>
 </table>

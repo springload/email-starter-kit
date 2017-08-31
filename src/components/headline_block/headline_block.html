@@ -1,0 +1,21 @@
+<layout label="Big headline">
+  <table class="one-col centered">
+    <tbody>
+      <tr>
+        <td class="column">
+            <table class="contents">
+              <tbody>
+                <tr>
+                  <td class="padded" {% if props.align %}align="{{ props.align }}"{% endif %}>
+                    <h1><singleline label="Email Headline">{{ props.text }}</singleline></h1>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          <div class="column-bottom">&nbsp;</div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="clear">&nbsp;</div>
+</layout>

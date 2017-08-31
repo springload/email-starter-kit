@@ -4,6 +4,7 @@
 {# {% import "components.html" as components %} #}
 {# Example: {{ components.button(icon="logo") }} #}
 
-{% macro preheader() %}{{ _component({ 'id': 'preheader', 'label': 'preheader' }, kwargs, caller()) }}{% endmacro %}
-{% macro masthead() %}{{ _component({ 'id': 'masthead', 'label': 'masthead' }, kwargs, caller()) }}{% endmacro %}
-{% macro footer() %}{{ _component({ 'id': 'footer', 'label': 'footer' }, kwargs, caller()) }}{% endmacro %}
+{% macro preheader() %}{{ _component({ 'id': 'preheader' }, kwargs, caller()) }}{% endmacro %}
+{% macro masthead() %}{{ _component({ 'id': 'masthead' }, kwargs, caller()) }}{% endmacro %}
+{% macro footer() %}{{ _component({ 'id': 'footer' }, kwargs, caller()) }}{% endmacro %}
+{% macro headline_block() %}{{ _component({ 'id': 'headline_block' }, kwargs, caller()) }}{% endmacro %}

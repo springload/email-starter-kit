@@ -13,28 +13,7 @@
   <div class="clear">&nbsp;</div>
   <repeater>
 
-  <!-- Headline Block -->
-  <layout label="Big headline">
-    <table class="one-col centered">
-      <tbody>
-        <tr>
-          <td class="column">
-              <table class="contents">
-                <tbody>
-                  <tr>
-                    <td class="padded">
-                      <h1><singleline label="Email Headline">Email title to go here</singleline></h1>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            <div class="column-bottom">&nbsp;</div>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  <div class="clear">&nbsp;</div>
-  </layout>
+  {{ components.headline_block(text="Email title to go here") }}
 
   <!-- Image block -->
   <layout label="Image">
