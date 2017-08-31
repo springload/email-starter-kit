@@ -30,6 +30,14 @@ $themes: (
         .u-current-text-color {
             color: $text-color;
         }
+
+        a,
+        a:link,
+        a:visited,
+        a:active,
+        a:hover {
+            color: $theme-color;
+        }
     }
 
     .u-color-#{$alias} {
