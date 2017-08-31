@@ -17,123 +17,27 @@
 
     {{ components.headline_block(text="Welcome to The Culture Club", align="center") }}
 
-  <!-- Text block  -->
-  <layout label="Std. text block">
-  <table class="one-col centered">
-    <tbody>
-      <tr>
-        <td class="column" >
-            <table class="contents">
-              <tbody>
-                <tr>
-                  <td class="padded" align="center" style="text-align:center;">
-                    <multiline label="Text"></multiline>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <div class="column-bottom">&nbsp;</div>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-  <div class="clear">&nbsp;</div>
-  </layout>
+    {{ components.text_centered_block() }}
 
+    {{ components.image_small_block() }}
 
-  <!-- Image block (small) -->
-  <layout label="Image block (small)">
-  <table class="one-col centered">
-    <tbody>
-      <tr>
-        <td class="column" >
-            <table class="contents">
-              <tbody>
-                <tr>
-                  <td class="padded" align="center" style="text-align:center;">
-                    <img editable label="Image" src="/audio-headphone-hearing-1591-825x5501.jpg" alt="" width="280" height="151" />
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <div class="column-bottom">&nbsp;</div>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-  <div class="clear">&nbsp;</div>
-  </layout>
+    {{ components.image_block() }}
 
+    {{ components.heading_three_block() }}
 
-  <!-- Image block (large) -->
-  <layout label="Image block (large)">
-  <table class="one-col centered image-block">
-    <tbody>
-      <tr>
-        <td class="column" >
-            <table class="contents" >
-            <tbody>
-              <tr>
-                <td class="padded" >
-                  <div class="image">
-                    <img editable label="Image" src="/black-and-white-headphones-life-3104-825x550.jpg" alt="" width="580" height="315" />
-                  </div>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-            <table class="contents">
-            <tbody>
-              <tr>
-                <td class="padded main-title" >
-                  <h2>
-                    <singleline label="Large image heading"></singleline>
-                  </h2>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-  <div class="clear">&nbsp;</div>
-  </layout>
+    {{ components.button_centered_block() }}
 
-  {{ components.heading_three_block() }}
+    {{ components.divider_block() }}
 
+    {{ components.text_block() }}
 
-  <!-- Button block -->
-  <layout label="Button block">
-  <table class="one-col">
-    <tbody>
-      <tr>
-        <td class="column" >
-          <table class="contents">
-            <tbody>
-              <tr>
-                <td class="padded" align="center">
-                  <div class="btn">
-                    <singleline label="Link"><a href="#">Button</a></singleline>
-                  </div>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-  <div class="clear">&nbsp;</div>
-  </layout>
+    {{ components.button_block() }}
 
-  {{ components.divider_block() }}
+    {{ components.heading_two_block(layout="cultureclub") }}
 
-  {{ components.heading_two_block(layout="cultureclub") }}
+    {{ components.two_columns_block() }}
 
-  {{ components.two_columns_block() }}
-
-</repeater>
+  </repeater>
 
   {% call components.footer(
     unsubscribe_text="You&rsquo;re receiving this email because you&rsquo;re a supporter of The Culture Club.",

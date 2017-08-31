@@ -11,97 +11,24 @@
   {{ components.masthead(color="green") }}
 
   <div class="clear">&nbsp;</div>
+
   <repeater>
 
     {{ components.headline_block(text="Email title to go here") }}
 
-  <!-- Image block -->
-  <layout label="Image">
-    <table class="one-col centered">
-      <tbody>
-        <tr>
-          <td class="column">
-              <table class="contents">
-              <tbody>
-                <tr>
-                  <td class="padded">
-                    <div class="image" align="center">
-                      <img class="u-current-bg-color" editable label="Image" src="/bettrofenheit-580x321.jpg" alt="" width="580" height="321" />
-                    </div>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-    <div class="clear">&nbsp;</div>
-  </layout>
+    {{ components.image_block() }}
 
-  <!-- Text block  -->
-  <layout label="Text block">
-    <table class="one-col centered">
-      <tbody>
-        <tr>
-          <td class="column">
-              <table class="contents">
-                <tbody>
-                  <tr>
-                    <td class="padded">
-                      <div>
-                        <multiline label="Text">
-                          <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, <strong>vel illum dolore</strong> eu feugiat.</p>
-                          <p>nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
-                          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna <a href="#">aliquam erat volupat.</a></p>
-                        </multiline>
-                      </div>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-    <div class="clear">&nbsp;</div>
-  </layout>
+    {{ components.text_block() }}
 
-  <!-- Button block -->
-  <layout label="Button">
-    <table class="one-col">
-      <tbody>
-        <tr>
-          <td class="column">
-            <table class="contents">
-              <tbody>
-                <tr>
-                  <td class="padded btn">
-                    <table border="0" cellpadding="0" cellspacing="0" class="u-current-bg-color">
-                        <tr>
-                            <td align="center" valign="middle" style="color:#FFFFFF; font-family:Helvetica, Arial, sans-serif; font-size:16px; font-weight:600; letter-spacing:-.5px; line-height:150%; padding-top:12px; padding-right:25px; padding-bottom:12px; padding-left:25px;">
-                                <singleline label="Link"><a href="http://www.festival.co.nz" target="_blank" style="color:#FFFFFF; text-transform: uppercase; letter-spacing: 0.02em; -webkit-font-smoothing: antialiased; text-decoration:none;">Button</a></singleline>
-                            </td>
-                        </tr>
-                    </table>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-    <div class="clear">&nbsp;</div>
-  </layout>
+    {{ components.button_block() }}
 
-  {{ components.divider_block() }}
+    {{ components.divider_block() }}
 
-  {{ components.heading_two_block() }}
+    {{ components.heading_two_block() }}
 
-  {{ components.two_columns_block() }}
+    {{ components.two_columns_block() }}
 
-  {{ components.heading_three_block() }}
+    {{ components.heading_three_block() }}
 
   <!-- Single item two column layout -->
   <layout label='*TEMPLATE* 1 item'>
