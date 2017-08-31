@@ -8,11 +8,13 @@ components:
     - button_block
     - heading_two_block
     - two_columns_block
+    - one_column_block
     - text_centered_block
     - text_block
     - image_block
     - image_small_block
     - button_block
+    - button
     - footer
 ---
 

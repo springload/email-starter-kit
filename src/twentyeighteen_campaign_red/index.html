@@ -10,8 +10,6 @@
 
   {{ components.masthead(color="red") }}
 
-  <div class="clear">&nbsp;</div>
-
   <repeater>
 
     {{ components.headline_block(text="Email title to go here") }}
@@ -30,63 +28,8 @@
 
     {{ components.heading_three_block() }}
 
-  <!-- Single item two column layout -->
-  <layout label='*TEMPLATE* 1 item'>
-    <table class="two-col centered single-item">
-      <tbody>
-        <tr>
-          <td class="column first">
-              <table class="contents">
-                <tbody><tr>
-                  <td class="padded">
-                    <div class="image">
-                      <img class="u-current-bg-color" editable src="/bettrofenheit.jpg" label="Image" alt="" width="280" height="187" />
-                    </div>
-                  </td>
-                </tr>
-              </tbody></table>
-          </td>
-          <td class="column second">
-              <table class="contents">
-                <tbody>
-                  <tr>
-                    <td class="padded">
-                      <h3><singleline label="Title">Enter your title</singleline></h3>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-              <table class="contents">
-                <tbody>
-                  <tr>
-                    <td class="padded">
-                        <multiline label="Article Body"><p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p></multiline>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-              <table class="contents">
-                <tbody>
-                  <tr>
-                    <td class="padded btn">
-                      <table border="0" cellpadding="0" cellspacing="0" class="u-current-bg-color">
-                          <tr>
-                              <td align="center" valign="middle" style="color:#FFFFFF; font-family:Helvetica, Arial, sans-serif; font-size:12px; font-weight:600; letter-spacing:-.5px; line-height:150%; padding-top:12px; padding-right:25px; padding-bottom:12px; padding-left:25px;">
-                                  <singleline label="Link"><a href="http://www.festival.co.nz" target="_blank" style="color:#FFFFFF; text-transform: uppercase; letter-spacing: 0.02em; -webkit-font-smoothing: antialiased; text-decoration:none;">Button</a></singleline>
-                              </td>
-                          </tr>
-                      </table>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            <div class="column-bottom">&nbsp;</div>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-    <div class="clear">&nbsp;</div>
-  </layout>
+    {{ components.one_column_block() }}
+
   </repeater>
 
   {% call components.footer(

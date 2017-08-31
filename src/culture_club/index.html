@@ -11,8 +11,6 @@
 
   {{ components.masthead(layout="cultureclub", color="tccgreen") }}
 
-  <div class="clear">&nbsp;</div>
-
   <repeater>
 
     {{ components.headline_block(text="Welcome to The Culture Club", align="center") }}
@@ -27,8 +25,6 @@
 
     {{ components.button_centered_block() }}
 
-    {{ components.divider_block() }}
-
     {{ components.text_block() }}
 
     {{ components.button_block() }}
@@ -36,6 +32,10 @@
     {{ components.heading_two_block(layout="cultureclub") }}
 
     {{ components.two_columns_block() }}
+
+    {{ components.divider_block() }}
+
+    {{ components.one_column_block() }}
 
   </repeater>
 
