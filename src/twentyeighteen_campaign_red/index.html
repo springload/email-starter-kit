@@ -493,7 +493,16 @@
   </layout>
   </repeater>
 
-  {{ components.footer() }}
+  {% call components.footer(
+    unsubscribe_text="You&rsquo;re receiving this email because at one time you subscribed to the New Zealand Festival newsletter or bought a ticket from us.",
+    unsubscribe_label="You can unsubscribe."
+  ) %}
+    <p>
+      <a href="http://www.festival.co.nz">www.festival.co.nz</a><br />
+      <a href="mailto:nzfestival@festival.co.nz">nzfestival@festival.co.nz</a><br />
+      <a href="https://www.facebook.com/nzfestival">Facebook</a><br />
+    </p>
+  {% endcall %}
 
   <div class="clear">&nbsp;</div>
 </center>
