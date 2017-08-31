@@ -17,6 +17,9 @@ indent_size = 4
 [{package.json, *.yml, *.yaml}]
 indent_size = 2
 
+[*.html]
+indent_size = 2
+
 # Rules for markdown documents.
 [*.md]
 trim_trailing_whitespace = false
