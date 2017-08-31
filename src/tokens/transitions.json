@@ -1,0 +1,9 @@
+{
+  "global": {
+    "category": "transition",
+    "comment": "Available transitions"
+  },
+  "props": {
+
+  }
+}

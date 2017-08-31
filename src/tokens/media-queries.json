@@ -1,0 +1,13 @@
+{
+  "global": {
+    "category": "media-query",
+    "type": "media-query",
+    "format": "string"
+  },
+  "imports": [
+    "./breakpoints.json"
+  ],
+  "props": {
+
+  }
+}

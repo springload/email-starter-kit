@@ -1,5 +1,7 @@
 {# Internal macro to be used by component macro definitions. #}
-{% macro _component(component, props, children) -%}{% include "components/%s.html" % (component.id) %}{%- endmacro %}
+{% macro _component(component, props, children) -%}{% include "components/" + component.id + "/" + component.id + ".html" %}{%- endmacro %}
 
 {# {% import "components.html" as components %} #}
 {# Example: {{ components.button(icon="logo") }} #}
+
+{% macro preheader() %}{{ _component({ 'id': 'preheader', 'label': 'preheader' }, kwargs, caller()) }}{% endmacro %}
