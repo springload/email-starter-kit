@@ -1,0 +1,46 @@
+$themes: (
+    'twentyeighteen-green': (
+        theme-color: $color-twentyeighteen-green,
+        text-color: #333
+    ),
+    'twentyeighteen-red': (
+        theme-color: $color-twentyeighteen-red,
+        text-color: #333
+    ),
+);
+
+@each $alias, $colors in $themes {
+    $theme-color: map-get($colors, theme-color);
+    $text-color: map-get($colors, text-color);
+
+    .t-#{$alias} {
+
+        .u-current-color {
+            color: $theme-color;
+        }
+
+        // Only use the --bg modifier when you want to apply background
+        // color to the container you have set the theme class on.
+        // eg. <div class-"t-green t-green--bg"></div>
+        &.t-#{$alias}--bg,
+        .u-current-bg-color {
+            background-color: $theme-color;
+        }
+
+        .u-current-text-color {
+            color: $text-color;
+        }
+    }
+
+    .u-color-#{$alias} {
+        color: $theme-color;
+    }
+
+    .u-bg-color-#{$alias} {
+        background-color: $theme-color;
+    }
+
+    .u-text-color-#{$alias} {
+        color: $text-color;
+    }
+}

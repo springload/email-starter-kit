@@ -1,6 +1,7 @@
 ---
 components:
     - preheader
+    - masthead
 ---
 
 # NZ Festival email templates pattern library manifest

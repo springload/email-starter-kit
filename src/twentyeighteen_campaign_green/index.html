@@ -2,31 +2,16 @@
 
 {% import "components.html" as components %}
 
+{% block body_class %}t-twentyeighteen-green{% endblock %}
+
 {% block content %}
+<link rel="stylesheet" href="/styles.css">
 
 <center class="wrapper">
   {{ components.preheader() }}
-  <table class="two-col centered masthead">
-    <tbody>
-      <tr>
-        <td class="column">
-          <table>
-            <tbody>
-              <tr>
-                <td class="nzflogo-container column padded" style="width:200px; margin-bottom: 15px;" width="200">
-                  <a href="http://www.festival.co.nz/"><img class="nzf-logo" src="/logo-nzf.png" alt="New Zealand Festival" width="189" height="90" /></a>
-                </td>
-                <td class="social-container column padded" style="text-align: right; width: 380px;" width="380">
-                  <span class="facebook-icon"><fblike><img src="/icon-facebook-red.png" alt="Like" title="Like this email on Facebook" width="32" height="32" align="absmiddle" /></fblike></span>
-                  <span class="forward-icon"><forwardtoafriend lang="en"><img src="/icon-forward-red.png" alt="Forward" title="Forward this email" width="32" height="32" align="absmiddle" /></forwardtoafriend></span>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+
+  {{ components.masthead(color="green") }}
+
   <div class="clear">&nbsp;</div>
   <repeater>
 
@@ -64,7 +49,7 @@
                 <tr>
                   <td class="padded">
                     <div class="image" align="center">
-                      <img editable label="Image" src="/bettrofenheit-580x321.jpg" alt="" width="580" height="321" />
+                      <img class="u-current-bg-color" editable label="Image" src="/bettrofenheit-580x321.jpg" alt="" width="580" height="321" />
                     </div>
                   </td>
                 </tr>
@@ -115,7 +100,7 @@
               <tbody>
                 <tr>
                   <td class="padded btn">
-                    <table border="0" cellpadding="0" cellspacing="0" style="background-color:#ED1C24;">
+                    <table border="0" cellpadding="0" cellspacing="0" class="u-current-bg-color">
                         <tr>
                             <td align="center" valign="middle" style="color:#FFFFFF; font-family:Helvetica, Arial, sans-serif; font-size:16px; font-weight:600; letter-spacing:-.5px; line-height:150%; padding-top:12px; padding-right:25px; padding-bottom:12px; padding-left:25px;">
                                 <singleline label="Link"><a href="http://www.festival.co.nz" target="_blank" style="color:#FFFFFF; text-transform: uppercase; letter-spacing: 0.02em; -webkit-font-smoothing: antialiased; text-decoration:none;">Button</a></singleline>
@@ -193,7 +178,7 @@
                         <tbody><tr>
                           <td class="padded">
                           <div class="image">
-                            <img editable label="Image" src="/bettrofenheit.jpg" alt="" width="280" height="187" />
+                            <img class="u-current-bg-color" editable label="Image" src="/bettrofenheit.jpg" alt="" width="280" height="187" />
                           </div>
                           </td>
                         </tr></tbody>
@@ -208,7 +193,7 @@
                           </tr>
                           <tr>
                             <td class="padded btn">
-                              <table border="0" cellpadding="0" cellspacing="0" style="background-color:#ED1C24;">
+                              <table border="0" cellpadding="0" cellspacing="0" class="u-current-bg-color">
                                   <tr>
                                       <td align="center" valign="middle" style="color:#FFFFFF; font-family:Helvetica, Arial, sans-serif; font-size:12px; font-weight:600; letter-spacing:-.5px; line-height:150%; padding-top:12px; padding-right:25px; padding-bottom:12px; padding-left:25px;">
                                           <singleline label="Link"><a href="http://www.festival.co.nz" target="_blank" style="color:#FFFFFF; text-transform: uppercase; letter-spacing: 0.02em; -webkit-font-smoothing: antialiased; text-decoration:none;">Button</a></singleline>
@@ -233,7 +218,7 @@
                         <tbody><tr>
                           <td class="padded">
                           <div class="image">
-                            <img editable label="Image" src="/bettrofenheit.jpg" alt="" width="280" height="187" />
+                            <img class="u-current-bg-color" editable label="Image" src="/bettrofenheit.jpg" alt="" width="280" height="187" />
                           </div>
                           </td>
                         </tr></tbody>
@@ -248,7 +233,7 @@
                           </tr>
                           <tr>
                             <td class="padded btn">
-                              <table border="0" cellpadding="0" cellspacing="0" style="background-color:#ED1C24;">
+                              <table border="0" cellpadding="0" cellspacing="0" class="u-current-bg-color">
                                   <tr>
                                       <td align="center" valign="middle" style="color:#FFFFFF; font-family:Helvetica, Arial, sans-serif; font-size:12px; font-weight:600; letter-spacing:-.5px; line-height:150%; padding-top:12px; padding-right:25px; padding-bottom:12px; padding-left:25px;">
                                           <singleline label="Link"><a href="http://www.festival.co.nz" target="_blank" style="color:#FFFFFF; text-transform: uppercase; letter-spacing: 0.02em; -webkit-font-smoothing: antialiased; text-decoration:none;">Button</a></singleline>
@@ -288,7 +273,7 @@
                             <tr>
                               <td class="padded">
                               <div class="image">
-                                <img editable label="Image" src="/bettrofenheit.jpg" alt="" width="280" height="187" />
+                                <img class="u-current-bg-color" editable label="Image" src="/bettrofenheit.jpg" alt="" width="280" height="187" />
                               </div>
                               </td>
                             </tr>
@@ -304,7 +289,7 @@
                             </tr>
                             <tr>
                               <td class="padded btn">
-                                <table border="0" cellpadding="0" cellspacing="0" style="background-color:#ED1C24;">
+                                <table border="0" cellpadding="0" cellspacing="0" class="u-current-bg-color">
                                     <tr>
                                         <td align="center" valign="middle" style="color:#FFFFFF; font-family:Helvetica, Arial, sans-serif; font-size:12px; font-weight:600; letter-spacing:-.5px; line-height:150%; padding-top:12px; padding-right:25px; padding-bottom:12px; padding-left:25px;">
                                             <singleline label="Link"><a href="http://www.festival.co.nz" target="_blank" style="color:#FFFFFF; text-transform: uppercase; letter-spacing: 0.02em; -webkit-font-smoothing: antialiased; text-decoration:none;">Button</a></singleline>
@@ -332,7 +317,7 @@
                             <tr>
                               <td class="padded">
                                 <div class="image">
-                                  <img editable label="Image" src="/bettrofenheit.jpg" alt="" width="280" height="187" />
+                                  <img class="u-current-bg-color" editable label="Image" src="/bettrofenheit.jpg" alt="" width="280" height="187" />
                                 </div>
                               </td>
                             </tr>
@@ -377,7 +362,7 @@
                           <tr>
                             <td class="padded">
                             <div class="image">
-                              <img editable label="Image" src="/bettrofenheit.jpg" alt="" width="280" height="187" />
+                              <img class="u-current-bg-color" editable label="Image" src="/bettrofenheit.jpg" alt="" width="280" height="187" />
                             </div>
                             </td>
                           </tr>
@@ -411,7 +396,7 @@
                             <tr>
                               <td class="padded">
                                 <div class="image">
-                                  <img editable label="Image" src="/bettrofenheit.jpg" alt="" width="280" height="187" />
+                                  <img class="u-current-bg-color" editable label="Image" src="/bettrofenheit.jpg" alt="" width="280" height="187" />
                                 </div>
                               </td>
                             </tr>
@@ -427,7 +412,7 @@
                             </tr>
                             <tr>
                               <td class="padded btn">
-                                <table border="0" cellpadding="0" cellspacing="0" style="background-color:#ED1C24;">
+                                <table border="0" cellpadding="0" cellspacing="0" class="u-current-bg-color">
                                     <tr>
                                         <td align="center" valign="middle" style="color:#FFFFFF; font-family:Helvetica, Arial, sans-serif; font-size:12px; font-weight:600; letter-spacing:-.5px; line-height:150%; padding-top:12px; padding-right:25px; padding-bottom:12px; padding-left:25px;">
                                             <singleline label="Link"><a href="http://www.festival.co.nz" target="_blank" style="color:#FFFFFF; text-transform: uppercase; letter-spacing: 0.02em; -webkit-font-smoothing: antialiased; text-decoration:none;">Button</a></singleline>
@@ -482,7 +467,7 @@
                 <tbody><tr>
                   <td class="padded">
                     <div class="image">
-                      <img editable src="/bettrofenheit.jpg" label="Image" alt="" width="280" height="187" />
+                      <img class="u-current-bg-color" editable src="/bettrofenheit.jpg" label="Image" alt="" width="280" height="187" />
                     </div>
                   </td>
                 </tr>
@@ -511,7 +496,7 @@
                 <tbody>
                   <tr>
                     <td class="padded btn">
-                      <table border="0" cellpadding="0" cellspacing="0" style="background-color:#ED1C24;">
+                      <table border="0" cellpadding="0" cellspacing="0" class="u-current-bg-color">
                           <tr>
                               <td align="center" valign="middle" style="color:#FFFFFF; font-family:Helvetica, Arial, sans-serif; font-size:12px; font-weight:600; letter-spacing:-.5px; line-height:150%; padding-top:12px; padding-right:25px; padding-bottom:12px; padding-left:25px;">
                                   <singleline label="Link"><a href="http://www.festival.co.nz" target="_blank" style="color:#FFFFFF; text-transform: uppercase; letter-spacing: 0.02em; -webkit-font-smoothing: antialiased; text-decoration:none;">Button</a></singleline>
@@ -593,7 +578,7 @@
                             <br />
                             <br />
                             <a href="https://wellington.govt.nz/">
-                              <img style="background-color: transparent;" src="/logo-abs-pos-wellington.png" width="106" height="73" alt="Absolutely Positively Wellington">
+                              <img class="u-current-bg-color" style="background-color: transparent;" src="/logo-abs-pos-wellington.png" width="106" height="73" alt="Absolutely Positively Wellington">
                             </a>
                         </td>
                         <td colspan="2" class="column last footer-core-funder" width="50%">
@@ -601,7 +586,7 @@
                           <br />
                           <br />
                           <a href="http://www.creativenz.govt.nz/">
-                            <img style="background-color: transparent;" src="/logo-creative-nz.png" width="168" height="40" alt="Creative NZ">
+                            <img class="u-current-bg-color" style="background-color: transparent;" src="/logo-creative-nz.png" width="168" height="40" alt="Creative NZ">
                           </a>
                         </td>
                       </tr>
@@ -617,17 +602,17 @@
                       <tr>
                         <td class="column first">
                           <a href="http://www.nzct.org.nz/">
-                            <img style="background-color: transparent; padding-top: 19px;" src="/logo-nzct.png" width="104" height="41" alt="New Zealand Community Trust">
+                            <img class="u-current-bg-color" style="background-color: transparent; padding-top: 19px;" src="/logo-nzct.png" width="104" height="41" alt="New Zealand Community Trust">
                           </a>
                         </td>
                         <td class="column">
                           <a href="http://www.lionfoundation.org.nz/">
-                            <img style="background-color: transparent; padding-top: 19px;" src="/logo-lion.png" width="147" height="55" alt="The Lion Foundation">
+                            <img class="u-current-bg-color" style="background-color: transparent; padding-top: 19px;" src="/logo-lion.png" width="147" height="55" alt="The Lion Foundation">
                           </a>
                         </td>
                         <td class="column last">
                           <a href="http://wct.org.nz/">
-                            <img style="background-color: transparent; padding-top: 19px;" src="/logo-wct.png" width="160" height="53" alt="Wellington Community Trust">
+                            <img class="u-current-bg-color" style="background-color: transparent; padding-top: 19px;" src="/logo-wct.png" width="160" height="53" alt="Wellington Community Trust">
                           </a>
                         </td>
                     </tr>

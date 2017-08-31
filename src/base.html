@@ -531,7 +531,7 @@
     <meta name="robots" content="noindex,nofollow" />
   <meta property="og:title" content="New Zealand Festival" />
   </head>
-    <body style="margin: 0;mso-line-height-rule: exactly;padding: 0;min-width: 100%;background-color: #fff">
+    <body style="margin: 0;mso-line-height-rule: exactly;padding: 0;min-width: 100%;background-color: #fff" class="{% block body_class %}{% endblock %}">
         <!--[if !mso]><!-->
           <style>
           @import url(https://fonts.googleapis.com/css?family=Work+Sans:800|Hind:400,500,600,700,800);
@@ -629,7 +629,6 @@
     font-weight: 500;
   }
   .contents img {
-      background-color: #ED1C24;
       color: white;
   }
   .contents p {
@@ -637,7 +636,6 @@
   }
   .masthead img {
       background-color: white;
-      color: #ED1C24;
   }
   .masthead a {
       text-decoration: none !important;

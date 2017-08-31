@@ -1,0 +1,631 @@
+{% extends "base.html" %}
+
+{% import "components.html" as components %}
+
+{% block body_class %}t-twentyeighteen-red{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="/styles.css">
+
+<center class="wrapper">
+  {{ components.preheader() }}
+
+  {{ components.masthead(color="red") }}
+
+  <div class="clear">&nbsp;</div>
+  <repeater>
+
+  <!-- Headline Block -->
+  <layout label="Big headline">
+    <table class="one-col centered">
+      <tbody>
+        <tr>
+          <td class="column">
+              <table class="contents">
+                <tbody>
+                  <tr>
+                    <td class="padded">
+                      <h1><singleline label="Email Headline">Email title to go here</singleline></h1>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            <div class="column-bottom">&nbsp;</div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  <div class="clear">&nbsp;</div>
+  </layout>
+
+  <!-- Image block -->
+  <layout label="Image">
+    <table class="one-col centered">
+      <tbody>
+        <tr>
+          <td class="column">
+              <table class="contents">
+              <tbody>
+                <tr>
+                  <td class="padded">
+                    <div class="image" align="center">
+                      <img class="u-current-bg-color" editable label="Image" src="/bettrofenheit-580x321.jpg" alt="" width="580" height="321" />
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="clear">&nbsp;</div>
+  </layout>
+
+  <!-- Text block  -->
+  <layout label="Text block">
+    <table class="one-col centered">
+      <tbody>
+        <tr>
+          <td class="column">
+              <table class="contents">
+                <tbody>
+                  <tr>
+                    <td class="padded">
+                      <div>
+                        <multiline label="Text">
+                          <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, <strong>vel illum dolore</strong> eu feugiat.</p>
+                          <p>nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+                          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna <a href="#">aliquam erat volupat.</a></p>
+                        </multiline>
+                      </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="clear">&nbsp;</div>
+  </layout>
+
+  <!-- Button block -->
+  <layout label="Button">
+    <table class="one-col">
+      <tbody>
+        <tr>
+          <td class="column">
+            <table class="contents">
+              <tbody>
+                <tr>
+                  <td class="padded btn">
+                    <table border="0" cellpadding="0" cellspacing="0" class="u-current-bg-color">
+                        <tr>
+                            <td align="center" valign="middle" style="color:#FFFFFF; font-family:Helvetica, Arial, sans-serif; font-size:16px; font-weight:600; letter-spacing:-.5px; line-height:150%; padding-top:12px; padding-right:25px; padding-bottom:12px; padding-left:25px;">
+                                <singleline label="Link"><a href="http://www.festival.co.nz" target="_blank" style="color:#FFFFFF; text-transform: uppercase; letter-spacing: 0.02em; -webkit-font-smoothing: antialiased; text-decoration:none;">Button</a></singleline>
+                            </td>
+                        </tr>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="clear">&nbsp;</div>
+  </layout>
+
+  <!-- Divider block -->
+  <layout label="Divider">
+    <table class="one-col centered">
+      <tbody>
+        <tr>
+          <td class="column">
+              <table class="contents">
+              <tbody>
+                <tr>
+                  <td class="padded">
+                    <div class="divider" align="center">&nbsp;</div>
+                    <p style="display: none"><singleline label="Leave this blank"></singleline>&nbsp;</p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="clear">&nbsp;</div>
+    </layout>
+
+  <!-- Heading 2 block -->
+  <layout label="Heading 2">
+    <table class="one-col centered">
+      <tbody>
+        <tr>
+          <td class="column">
+              <table class="contents">
+              <tbody>
+                <tr>
+                  <td class="padded">
+                    <h2><singleline label="Heading 2">H2 level heading goes here to define a new section</singleline></h2>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="clear">&nbsp;</div>
+  </layout>
+
+  <!-- Two item to column layout – buttons L+R -->
+  <layout label="*TEMPLATE* 2 items, buttons L+R">
+    <table class="two-col-bg centered">
+      <tbody><tr>
+        <td align="center">
+          <table class="two-col centered">
+            <tbody><tr>
+              <td class="column first">
+                <table class="contents">
+                  <tbody><tr>
+                    <td>
+                      <table width="100%">
+                        <tbody><tr>
+                          <td class="padded">
+                          <div class="image">
+                            <img class="u-current-bg-color" editable label="Image" src="/bettrofenheit.jpg" alt="" width="280" height="187" />
+                          </div>
+                          </td>
+                        </tr></tbody>
+                      </table>
+                      <table width="100%">
+                        <tbody>
+                          <tr>
+                            <td class="padded">
+                              <h3><singleline label="Title">Heading here</singleline></h3>
+                              <multiline label="Article body"><p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p></multiline>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="padded btn">
+                              <table border="0" cellpadding="0" cellspacing="0" class="u-current-bg-color">
+                                  <tr>
+                                      <td align="center" valign="middle" style="color:#FFFFFF; font-family:Helvetica, Arial, sans-serif; font-size:12px; font-weight:600; letter-spacing:-.5px; line-height:150%; padding-top:12px; padding-right:25px; padding-bottom:12px; padding-left:25px;">
+                                          <singleline label="Link"><a href="http://www.festival.co.nz" target="_blank" style="color:#FFFFFF; text-transform: uppercase; letter-spacing: 0.02em; -webkit-font-smoothing: antialiased; text-decoration:none;">Button</a></singleline>
+                                      </td>
+                                  </tr>
+                              </table>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                  </tr></tbody>
+                </table>
+              </td>
+              <td class="column last">
+                <table class="contents">
+                  <tbody><tr>
+                    <td>
+                      <div>
+                      </div>
+                      <table width="100%">
+                        <tbody><tr>
+                          <td class="padded">
+                          <div class="image">
+                            <img class="u-current-bg-color" editable label="Image" src="/bettrofenheit.jpg" alt="" width="280" height="187" />
+                          </div>
+                          </td>
+                        </tr></tbody>
+                      </table>
+                      <table width="100%">
+                        <tbody>
+                          <tr>
+                            <td class="padded">
+                              <h3><singleline label="Title">Heading here</singleline></h3>
+                              <multiline label="Article Body"><p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p></multiline>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="padded btn">
+                              <table border="0" cellpadding="0" cellspacing="0" class="u-current-bg-color">
+                                  <tr>
+                                      <td align="center" valign="middle" style="color:#FFFFFF; font-family:Helvetica, Arial, sans-serif; font-size:12px; font-weight:600; letter-spacing:-.5px; line-height:150%; padding-top:12px; padding-right:25px; padding-bottom:12px; padding-left:25px;">
+                                          <singleline label="Link"><a href="http://www.festival.co.nz" target="_blank" style="color:#FFFFFF; text-transform: uppercase; letter-spacing: 0.02em; -webkit-font-smoothing: antialiased; text-decoration:none;">Button</a></singleline>
+                                      </td>
+                                  </tr>
+                              </table>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                  </tr></tbody>
+                </table>
+              </td>
+            </tr>
+          </tbody></table>
+        </td>
+      </tr>
+    </tbody></table>
+    <div class="clear">&nbsp;</div>
+  </layout>
+
+  <!-- Two item to column layout – button L -->
+  <layout label="*TEMPLATE* – 2 items, buttons L">
+    <table class="two-col-bg centered">
+      <tbody><tr>
+        <td align="center">
+          <table class="two-col centered">
+            <tbody><tr>
+              <td class="column first">
+                <table class="contents">
+                  <tbody>
+                    <tr>
+                      <td>
+                        <table width="100%">
+                          <tbody>
+                            <tr>
+                              <td class="padded">
+                              <div class="image">
+                                <img class="u-current-bg-color" editable label="Image" src="/bettrofenheit.jpg" alt="" width="280" height="187" />
+                              </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <table width="100%">
+                          <tbody>
+                            <tr>
+                              <td class="padded">
+                                <h3><singleline label="Title">Heading here</singleline></h3>
+                                <multiline label="Article body"><p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p></multiline>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="padded btn">
+                                <table border="0" cellpadding="0" cellspacing="0" class="u-current-bg-color">
+                                    <tr>
+                                        <td align="center" valign="middle" style="color:#FFFFFF; font-family:Helvetica, Arial, sans-serif; font-size:12px; font-weight:600; letter-spacing:-.5px; line-height:150%; padding-top:12px; padding-right:25px; padding-bottom:12px; padding-left:25px;">
+                                            <singleline label="Link"><a href="http://www.festival.co.nz" target="_blank" style="color:#FFFFFF; text-transform: uppercase; letter-spacing: 0.02em; -webkit-font-smoothing: antialiased; text-decoration:none;">Button</a></singleline>
+                                        </td>
+                                    </tr>
+                                </table>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+              <td class="column last">
+                <table class="contents">
+                  <tbody>
+                    <tr>
+                      <td>
+                        <div>
+                        </div>
+                        <table width="100%">
+                          <tbody>
+                            <tr>
+                              <td class="padded">
+                                <div class="image">
+                                  <img class="u-current-bg-color" editable label="Image" src="/bettrofenheit.jpg" alt="" width="280" height="187" />
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <table width="100%">
+                          <tbody>
+                            <tr>
+                              <td class="padded">
+                                <h3><singleline label="Title">Heading here</singleline></h3>
+                                <multiline label="Article Body"><p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p></multiline>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+          </tbody></table>
+        </td>
+      </tr>
+    </tbody></table>
+    <div class="clear">&nbsp;</div>
+  </layout>
+
+  <!-- Two item to column layout – button R -->
+  <layout label="*TEMPLATE* – 2 items, buttons R">
+    <table class="two-col-bg centered">
+      <tbody><tr>
+        <td align="center">
+          <table class="two-col centered">
+            <tbody><tr>
+              <td class="column first">
+                <table class="contents">
+                  <tbody><tr>
+                    <td>
+                      <table width="100%">
+                        <tbody>
+                          <tr>
+                            <td class="padded">
+                            <div class="image">
+                              <img class="u-current-bg-color" editable label="Image" src="/bettrofenheit.jpg" alt="" width="280" height="187" />
+                            </div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <table width="100%">
+                        <tbody>
+                          <tr>
+                            <td class="padded">
+                              <h3><singleline label="Title">Heading here</singleline></h3>
+                              <multiline label="Article body">
+                                <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p>
+                              </multiline>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                  </tr></tbody>
+                </table>
+              </td>
+              <td class="column last">
+                <table class="contents">
+                  <tbody>
+                    <tr>
+                      <td>
+                        <div>
+                        </div>
+                        <table width="100%">
+                          <tbody>
+                            <tr>
+                              <td class="padded">
+                                <div class="image">
+                                  <img class="u-current-bg-color" editable label="Image" src="/bettrofenheit.jpg" alt="" width="280" height="187" />
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <table width="100%">
+                          <tbody>
+                            <tr>
+                              <td class="padded">
+                                <h3><singleline label="Title">Heading here</singleline></h3>
+                                <multiline label="Article Body"><p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p></multiline>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="padded btn">
+                                <table border="0" cellpadding="0" cellspacing="0" class="u-current-bg-color">
+                                    <tr>
+                                        <td align="center" valign="middle" style="color:#FFFFFF; font-family:Helvetica, Arial, sans-serif; font-size:12px; font-weight:600; letter-spacing:-.5px; line-height:150%; padding-top:12px; padding-right:25px; padding-bottom:12px; padding-left:25px;">
+                                            <singleline label="Link"><a href="http://www.festival.co.nz" target="_blank" style="color:#FFFFFF; text-transform: uppercase; letter-spacing: 0.02em; -webkit-font-smoothing: antialiased; text-decoration:none;">Button</a></singleline>
+                                        </td>
+                                    </tr>
+                                </table>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+          </tbody></table>
+        </td>
+      </tr>
+    </tbody></table>
+    <div class="clear">&nbsp;</div>
+  </layout>
+
+  <layout label="Heading 3">
+    <table class="one-col centered">
+      <tbody>
+        <tr>
+          <td class="column">
+              <table class="contents">
+              <tbody>
+                <tr>
+                  <td class="padded">
+                    <h3><singleline label="Heading 3">H3 - Article heading would look like this</singleline></h3>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="clear">&nbsp;</div>
+  </layout>
+
+  <!-- Single item two column layout -->
+  <layout label='*TEMPLATE* 1 item'>
+    <table class="two-col centered single-item">
+      <tbody>
+        <tr>
+          <td class="column first">
+              <table class="contents">
+                <tbody><tr>
+                  <td class="padded">
+                    <div class="image">
+                      <img class="u-current-bg-color" editable src="/bettrofenheit.jpg" label="Image" alt="" width="280" height="187" />
+                    </div>
+                  </td>
+                </tr>
+              </tbody></table>
+          </td>
+          <td class="column second">
+              <table class="contents">
+                <tbody>
+                  <tr>
+                    <td class="padded">
+                      <h3><singleline label="Title">Enter your title</singleline></h3>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="contents">
+                <tbody>
+                  <tr>
+                    <td class="padded">
+                        <multiline label="Article Body"><p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p></multiline>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="contents">
+                <tbody>
+                  <tr>
+                    <td class="padded btn">
+                      <table border="0" cellpadding="0" cellspacing="0" class="u-current-bg-color">
+                          <tr>
+                              <td align="center" valign="middle" style="color:#FFFFFF; font-family:Helvetica, Arial, sans-serif; font-size:12px; font-weight:600; letter-spacing:-.5px; line-height:150%; padding-top:12px; padding-right:25px; padding-bottom:12px; padding-left:25px;">
+                                  <singleline label="Link"><a href="http://www.festival.co.nz" target="_blank" style="color:#FFFFFF; text-transform: uppercase; letter-spacing: 0.02em; -webkit-font-smoothing: antialiased; text-decoration:none;">Button</a></singleline>
+                              </td>
+                          </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            <div class="column-bottom">&nbsp;</div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="clear">&nbsp;</div>
+  </layout>
+  </repeater>
+    <table class="one-col centered footer">
+      <tbody>
+        <tr>
+          <td class="column">
+              <table class="contents">
+              <tbody>
+                <tr>
+                  <td class="padded">
+                      <div class="divider">&nbsp;</div>
+                      <singleline label="Unsubscribe text">You&rsquo;re receiving this email because at one time you subscribed to the New Zealand Festival newsletter or bought a ticket from us.</singleline>
+                      <unsubscribe style="color: #ED1C24; text-decoration:underline;">You can unsubscribe.</unsubscribe>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+  </table>
+  <div class="clear">&nbsp;</div>
+  <table class="one-col footer">
+    <tbody>
+      <tr>
+        <td class="column">
+          <table class="contents" width="100%">
+            <tbody>
+              <tr>
+                <td class="padded">
+                  <table class="contents" width="100%">
+                    <tbody>
+                      <tr>
+                        <td class="column first footer-logos" width="50%">
+                          <p>
+                            <a href="http://www.festival.co.nz">www.festival.co.nz</a><br />
+                            <a href="mailto:nzfestival@festival.co.nz">nzfestival@festival.co.nz</a><br />
+                            <a href="https://www.facebook.com/nzfestival">Facebook</a><br />
+                          </p>
+                        </td>
+                        <td class="column last" width="50%">
+                          <p><strong>The New Zealand Festival</strong><br />
+                          The New Zealand Festival<br />
+                          St James Theatre, 77-87 Courtenay Place, Wellington 6011, New Zealand</p>
+                          <p>+64 4 473 0149</p>
+                        </td>
+                      </tr>
+                    </tbody>
+                </table><br />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="contents" width="100%">
+            <tbody>
+              <tr>
+                <td class="padded">
+                  <table class="contents" width="100%">
+                    <tbody>
+                      <tr>
+                        <td colspan="2" class="column first footer-logos" width="50%">
+                            <strong>Core partner</strong>
+                            <br />
+                            <br />
+                            <a href="https://wellington.govt.nz/">
+                              <img class="u-current-bg-color" style="background-color: transparent;" src="/logo-abs-pos-wellington.png" width="106" height="73" alt="Absolutely Positively Wellington">
+                            </a>
+                        </td>
+                        <td colspan="2" class="column last footer-core-funder" width="50%">
+                          <strong>Core funder</strong>
+                          <br />
+                          <br />
+                          <a href="http://www.creativenz.govt.nz/">
+                            <img class="u-current-bg-color" style="background-color: transparent;" src="/logo-creative-nz.png" width="168" height="40" alt="Creative NZ">
+                          </a>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <table class="contents" width="100%">
+                    <tbody>
+                      <tr>
+                        <td class="footer-logos" style="padding-top: 30px;">
+                          <strong>Funders</strong>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="column first">
+                          <a href="http://www.nzct.org.nz/">
+                            <img class="u-current-bg-color" style="background-color: transparent; padding-top: 19px;" src="/logo-nzct.png" width="104" height="41" alt="New Zealand Community Trust">
+                          </a>
+                        </td>
+                        <td class="column">
+                          <a href="http://www.lionfoundation.org.nz/">
+                            <img class="u-current-bg-color" style="background-color: transparent; padding-top: 19px;" src="/logo-lion.png" width="147" height="55" alt="The Lion Foundation">
+                          </a>
+                        </td>
+                        <td class="column last">
+                          <a href="http://wct.org.nz/">
+                            <img class="u-current-bg-color" style="background-color: transparent; padding-top: 19px;" src="/logo-wct.png" width="160" height="53" alt="Wellington Community Trust">
+                          </a>
+                        </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="clear">&nbsp;</div>
+</center>
+
+{% endblock %}
