@@ -34,3 +34,8 @@ npm run start
 ```
 
 ## Publishing the templates
+
+```sh
+# Prepare the templates for deployment
+npm run deploy
+```

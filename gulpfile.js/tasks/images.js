@@ -2,6 +2,7 @@ const config = require('../config');
 const gulp = require('gulp');
 const path = require('path');
 const size = require('gulp-size');
+const shell = require('gulp-shell');
 const bs = require('browser-sync').get('main');
 
 gulp.task('images', () => {
@@ -11,3 +12,7 @@ gulp.task('images', () => {
         .pipe(gulp.dest(config.paths.www))
         .pipe(bs.stream());
 });
+
+gulp.task('images:zip', shell.task([
+    `zip -r --junk-paths ${path.join(config.paths.www, 'images.zip')} ${config.paths.imagesSrc}`,
+]));

@@ -7,3 +7,5 @@ const gulp = require('gulp');
 
 gulp.task('build', ['css', 'images', 'content']);
 gulp.task('default', ['build']);
+
+gulp.task('deploy', ['content:inline', 'images:zip']);

@@ -49,6 +49,7 @@
     "watch": "gulp watch",
     "patterns:start": "rikki start",
     "test": "npm run test:ci -s",
-    "test:ci": "./bin/ci-test.sh"
+    "test:ci": "./bin/ci-test.sh",
+    "deploy": "npm run dist -s && gulp deploy"
   }
 }

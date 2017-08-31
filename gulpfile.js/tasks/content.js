@@ -14,7 +14,7 @@ gulp.task('content', shell.task([
 
 
 gulp.task('content:inline', function() {
-    return gulp.src(path.join(config.paths.www, 'index.html'))
+    return gulp.src(path.join(config.paths.www, '*', '*.html'))
         .pipe(inlineCSS({
             applyStyleTags: true,
             applyLinkTags: true,
