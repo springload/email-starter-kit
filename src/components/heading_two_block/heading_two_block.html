@@ -1,0 +1,27 @@
+<!-- Heading 2 block -->
+<layout label="Heading 2">
+  <table class="one-col centered">
+    <tbody>
+      <tr>
+        <td class="column">
+            <table class="contents">
+            <tbody>
+              <tr>
+                <td class="padded">
+                  {% if props.layout == 'cultureclub' %}
+                    <div class="divider divider--small u-current-bg-color">&nbsp;</div>
+                    <h2><singleline label="Heading 2">H2 - level heading goes here to define a new section</singleline></h2>
+                    <div class="divider divider--small u-current-bg-color">&nbsp;</div>
+                  {% else %}
+                    <h2><singleline label="Heading 2">H2 - level heading goes here to define a new section</singleline></h2>
+                  {% endif %}
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="clear">&nbsp;</div>
+</layout>

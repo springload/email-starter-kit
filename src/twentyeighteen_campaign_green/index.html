@@ -95,73 +95,13 @@
     <div class="clear">&nbsp;</div>
   </layout>
 
-  <!-- Divider block -->
-  <layout label="Divider">
-    <table class="one-col centered">
-      <tbody>
-        <tr>
-          <td class="column">
-              <table class="contents">
-              <tbody>
-                <tr>
-                  <td class="padded">
-                    <div class="divider u-current-bg-color" align="center">&nbsp;</div>
-                    <p style="display: none"><singleline label="Leave this blank"></singleline>&nbsp;</p>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-    <div class="clear">&nbsp;</div>
-    </layout>
+  {{ components.divider_block() }}
 
-  <!-- Heading 2 block -->
-  <layout label="Heading 2">
-    <table class="one-col centered">
-      <tbody>
-        <tr>
-          <td class="column">
-              <table class="contents">
-              <tbody>
-                <tr>
-                  <td class="padded">
-                    <h2><singleline label="Heading 2">H2 level heading goes here to define a new section</singleline></h2>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-    <div class="clear">&nbsp;</div>
-  </layout>
+  {{ components.heading_two_block() }}
 
   {{ components.two_columns_block() }}
 
-  <layout label="Heading 3">
-    <table class="one-col centered">
-      <tbody>
-        <tr>
-          <td class="column">
-              <table class="contents">
-              <tbody>
-                <tr>
-                  <td class="padded">
-                    <h3><singleline label="Heading 3">H3 - Article heading would look like this</singleline></h3>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-    <div class="clear">&nbsp;</div>
-  </layout>
+  {{ components.heading_three_block() }}
 
   <!-- Single item two column layout -->
   <layout label='*TEMPLATE* 1 item'>

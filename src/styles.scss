@@ -1,3 +1,8 @@
 @import 'scss/tokens';
 @import 'scss/theming';
 @import 'scss/cultureclub';
+
+.divider--small {
+    width: 28px;
+    margin: 25px auto !important;
+}

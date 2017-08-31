@@ -100,6 +100,8 @@
   <div class="clear">&nbsp;</div>
   </layout>
 
+  {{ components.heading_three_block() }}
+
 
   <!-- Button block -->
   <layout label="Button block">
@@ -125,52 +127,11 @@
   <div class="clear">&nbsp;</div>
   </layout>
 
+  {{ components.divider_block() }}
+
+  {{ components.heading_two_block(layout="cultureclub") }}
+
   {{ components.two_columns_block() }}
-
-  <!-- Divider block -->
-  <layout label="Divider">
-  <table class="one-col centered">
-    <tbody>
-      <tr>
-        <td class="column" >
-            <table class="contents" >
-            <tbody>
-              <tr>
-                <td class="padded" >
-                  <div class="divider" align="center">&nbsp;</div>
-                  <p style="display: none"><singleline label="Leave this blank"></singleline>&nbsp;</p>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-  <div class="clear">&nbsp;</div>
-  </layout>
-
-  <!-- Heading block -->
-  <layout label="Heading">
-  <table class="one-col centered">
-    <tbody>
-      <tr>
-        <td class="column" >
-            <table class="contents" >
-            <tbody>
-              <tr>
-                <td class="padded" align="center">
-                  <h2><singleline label="Heading">H2 level heading goes here to define a section</singleline></h2>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-  <div class="clear">&nbsp;</div>
-  </layout>
 
 </repeater>
 

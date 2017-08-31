@@ -3,6 +3,11 @@ components:
     - preheader
     - masthead
     - headline_block
+    - divider_block
+    - heading_three_block
+    - button_block
+    - heading_two_block
+    - two_columns_block
     - footer
 ---
 
