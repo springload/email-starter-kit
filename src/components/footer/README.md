@@ -1,16 +1,16 @@
 ---
-displayName: preheader
-classBase: preheader
+displayName: footer
+classBase: footer
 schema:
   todo:
     type: string
     description: TODO
 usage:
-  - class: .preheader
+  - class: .footer
     required: True
     elements:
       - table
-    outcome: Defines the preheader component
+    outcome: Defines the footer component
 flavours:
   - title: Base
     status: production

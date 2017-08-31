@@ -1,16 +1,16 @@
 ---
-displayName: preheader
-classBase: preheader
+displayName: masthead
+classBase: masthead
 schema:
   todo:
     type: string
     description: TODO
 usage:
-  - class: .preheader
+  - class: .masthead
     required: True
     elements:
       - table
-    outcome: Defines the preheader component
+    outcome: Defines the masthead component
 flavours:
   - title: Base
     status: production
