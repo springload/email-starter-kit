@@ -7,7 +7,7 @@
 {% block content %}
 
 <center class="wrapper" >
-  {{ components.preheader(layout="cultureclub") }}
+  {{ components.preheader(layout="cultureclub", color="#99c7a1") }}
 
   {{ components.masthead(layout="cultureclub", color="tccgreen") }}
 
@@ -41,7 +41,8 @@
 
   {% call components.footer(
     unsubscribe_text="You&rsquo;re receiving this email because you&rsquo;re a supporter of The Culture Club.",
-    unsubscribe_label="Unsubscribe"
+    unsubscribe_label="Unsubscribe",
+    color="#99c7a1",
   ) %}
     <p>
       <a href="http://www.festival.co.nz/the-culture-club/">www.festival.co.nz/the-culture-club</a><br/>

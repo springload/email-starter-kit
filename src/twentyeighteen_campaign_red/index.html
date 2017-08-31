@@ -6,7 +6,7 @@
 
 {% block content %}
 <center class="wrapper">
-  {{ components.preheader() }}
+  {{ components.preheader(color="#ed1c24") }}
 
   {{ components.masthead(color="red") }}
 
@@ -34,7 +34,8 @@
 
   {% call components.footer(
     unsubscribe_text="You&rsquo;re receiving this email because at one time you subscribed to the New Zealand Festival newsletter or bought a ticket from us.",
-    unsubscribe_label="You can unsubscribe."
+    unsubscribe_label="You can unsubscribe.",
+    color="#ed1c24",
   ) %}
     <p>
       <a href="http://www.festival.co.nz">www.festival.co.nz</a><br />
