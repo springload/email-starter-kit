@@ -5,7 +5,8 @@ var bs = require('browser-sync').create('main');
 
 gulp.task('watch', ['build'], function() {
     bs.init({
-        open: true,
+        open: false,
+        notify: false,
         server: config.paths.www,
     });
 
