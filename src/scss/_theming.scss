@@ -7,6 +7,10 @@ $themes: (
         theme-color: $color-twentyeighteen-red,
         text-color: #333
     ),
+    'twentyeighteen-tccgreen': (
+        theme-color: $color-twentyeighteen-tccgreen,
+        text-color: #333
+    ),
 );
 
 @each $alias, $colors in $themes {

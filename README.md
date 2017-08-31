@@ -8,15 +8,6 @@
 |[Email template designs](https://www.dropbox.com/work/_Clients/NZ%20Festival/NZF934%20-%20Website%20Update/_Assets/Design/EDM%20template)|
 |[Campaign Monitor access](https://nzfestival.createsend.com/templates) (details in LastPass)|
 
-## Templates
-
-| Templates |
-|-----------|
-|[Main Festival template](templates/main-festival) |
-|[Themed variation for Article Magazine](templates/article-magazine) |
-|[Themed variation for Culture Club](templates/culture-club) |
-|[Themed variation for Culture Club, auto response](templates/culture-club-auto-response) |
-
 ## Installation
 
 > Clone the project on your computer, and install [Node](https://nodejs.org). This project also uses [nvm](https://github.com/creationix/nvm).
