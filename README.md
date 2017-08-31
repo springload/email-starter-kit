@@ -1,4 +1,4 @@
-# festival_email_templates
+# NZ Festival email templates [![Codeship Status for springload/festival_email_templates](https://app.codeship.com/projects/a73e1ac0-7051-0135-accf-6ebbf3e26980/status?branch=master)](https://app.codeship.com/projects/243065)
 
 > Campaign Monitor templates for New Zealand Festival.
 
@@ -9,7 +9,7 @@
 |[Themed variation for Culture Club](templates/culture-club) |
 |[Themed variation for Culture Club, auto response](templates/culture-club-auto-response) |
 
-### Installation
+## Installation
 
 > Clone the project on your computer, and install [Node](https://nodejs.org). This project also uses [nvm](https://github.com/creationix/nvm).
 
@@ -25,7 +25,7 @@ nvm install
 npm install
 ```
 
-### Working on the project
+## Working on the project
 
 First, have a look at the Campaign Monitor's [template building documentation](https://www.campaignmonitor.com/create/) and guidelines on [CSS support in email clients](https://www.campaignmonitor.com/css/).
 
