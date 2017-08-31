@@ -1,0 +1,5 @@
+{# Internal macro to be used by component macro definitions. #}
+{% macro _component(component, props, children) -%}{% include "components/%s.html" % (component.id) %}{%- endmacro %}
+
+{# {% import "components.html" as components %} #}
+{# Example: {{ components.button(icon="logo") }} #}

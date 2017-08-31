@@ -15,13 +15,39 @@
     "type": "git",
     "url": "git+https://github.com/springload/festival_email_templates.git"
   },
-  "dependencies": {},
+  "rikki": {
+    "name": "Festival EDM pattern library",
+    "rootDir": "src",
+    "staticDir": "dist/patterns"
+  },
   "devDependencies": {
     "browser-sync": "^2.18.13",
-    "hyperlink": "^3.0.0"
+    "gulp": "^3.9.1",
+    "gulp-inline-css": "^3.1.0",
+    "gulp-pleeease": "^2.0.2",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.2",
+    "gulp-shell": "^0.5.2",
+    "gulp-size": "^2.1.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-util": "^3.0.7",
+    "hyperlink": "^3.0.0",
+    "rikki-patterns": "^0.4.0",
+    "sass-module-importer": "^1.4.0",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0"
   },
+  "dependencies": {},
   "scripts": {
-    "start": "browser-sync start --server 'templates' --files 'templates' --directory --no-open --no-notify",
+    "start": "npm run lint:versions -s && npm run watch -s",
+    "lint:versions": "NVM_VERSION=$(cat .nvmrc); NODE_VERSION=$(node --version); echo $NODE_VERSION | grep -q $NVM_VERSION && echo \"✓ running node $NODE_VERSION - all clear\" || (echo \"✗ running node $NODE_VERSION - expected $NVM_VERSION. Use nvm to install the right version.\" && exit 1)",
+    "lint": "npm run lint:versions -s",
+    "css": "gulp css",
+    "content": "gulp content",
+    "build": "gulp build",
+    "dist": "NODE_ENV=production npm run build",
+    "watch": "gulp watch",
+    "patterns:start": "rikki start",
     "test": "npm run test:ci -s",
     "test:ci": "./bin/ci-test.sh"
   }

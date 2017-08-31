@@ -1,0 +1,20 @@
+{% import "components.html" as components %}
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html style="margin: 0;padding: 0;" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8">
+    <!--[if !mso]><!--><meta http-equiv="X-UA-Compatible" content="IE=edge" /><!--<![endif]-->
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="https://unpkg.com/basscss@8.0.2/css/basscss.min.css">
+    <link rel="stylesheet" href="{{ site.paths.css }}/site.css?{{ extensions.cachebuster }}" />
+</head>
+<body class="{% block body_class %}{% endblock %}">
+    {% call components.container(width="100%", bgcolor="#ffffff") %}
+        <td>
+            {% block content %}{% endblock %}
+        </td>
+    {% endcall %}
+</body>
+</html>
