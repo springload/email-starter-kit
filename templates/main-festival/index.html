@@ -43,7 +43,7 @@ img {
   display: block;
 }
 strong {
-  font-weight: bold;
+  font-weight: 600;
 }
 h1,
 h2,
@@ -113,24 +113,6 @@ table.wrapper {
 .btn {
   padding-bottom: 27px;
 }
-/*.btn a {
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 24px;
-  padding: 13px 35px 12px 35px;
-  text-align: center;
-  text-decoration: none !important;
-
-    display: -moz-inline-stack;
-    display: inline-block;
-    vertical-align: top;
-    zoom: 1;
-    *display: inline;
-    _height: 34px;
-}
-.btn a:hover {
-  opacity: 0.8;
-}*/
 .two-col .btn {
   padding-top: 24px;
   padding-bottom: 24px;
@@ -232,10 +214,11 @@ table.wrapper {
 }
 .wrapper h2 {
   text-transform: uppercase;
-  font-weight: 700;
+  font-weight: 800;
+  letter-spacing: -0.7px;
 }
 .wrapper h3 {
-  font-weight: 700;
+  font-weight: 600;
 }
 .wrapper p,
 .wrapper ol,
@@ -279,12 +262,13 @@ two-col,
   Margin-bottom: 24px;
 }
 .wrapper h2 {
-  font-size: 22px;
+  font-size: 28px;
+  line-height: 27px;
   Margin-bottom: 16px;
 }
 .wrapper h3 {
   font-size: 22px;
-  Margin-bottom: 12px;
+  Margin-bottom: 0;
 }
 .wrapper h1 a,
 .wrapper h2 a,
@@ -338,10 +322,6 @@ two-col,
 .two-col h2 {
   Margin-bottom: 5px;
 }
-.two-col h3 {
-  font-size: 22px;
-  Margin-bottom: 10px;
-}
 .two-col p,
 .two-col ol,
 .two-col ul {
@@ -380,14 +360,6 @@ two-col,
 .three-col h1 {
   font-size: 24px;
   Margin-bottom: 16px;
-}
-.three-col h2 {
-  font-size: 16px;
-  Margin-bottom: 12px;
-}
-.three-col h3 {
-  font-size: 14px;
-  Margin-bottom: 8px;
 }
 .three-col p,
 .three-col ol,
@@ -428,7 +400,7 @@ two-col,
   padding-bottom: 27px;
 }
 .header .logo div {
-  font-weight: bold;
+  font-weight: 600;
   font-size: 32px;
   line-height: 40px;
 }
@@ -560,7 +532,7 @@ two-col,
   <body style="margin: 0;mso-line-height-rule: exactly;padding: 0;min-width: 100%;background-color: #fff">
       <!--[if !mso]><!-->
         <style>
-        @import url(https://fonts.googleapis.com/css?family=Work+Sans:800|Hind:400,500,600);
+        @import url(https://fonts.googleapis.com/css?family=Work+Sans:800|Hind:400,500,600,700,800);
         </style>
       <!--<![endif]-->
   <style type="text/css">
@@ -617,7 +589,7 @@ a:hover {
 .event-link a:active,
 .event-link a:hover {
     color: #ED1C24;
-    font-weight: bold;
+    font-weight: 600;
     font-size: 110%;
     text-decoration: none;
     margin-right: 5px;
@@ -674,7 +646,8 @@ a:hover {
     visibility: hidden;
 }
 p {
-    margin: .5em 0;
+    margin: 0;
+    margin-bottom: .5em;
 }
 .footer-logos p {
     line-height: 2em;
@@ -748,7 +721,7 @@ p {
                   <tr>
                     <td class="padded">
                       <div class="image" align="center">
-                        <img editable label="Image" src="../images/fashion-hero1.jpg" alt="" width="580" height="315" />
+                        <img editable label="Image" src="../images/bettrofenheit-580x321.jpg" alt="" width="580" height="321" />
                       </div>
                     </td>
                   </tr>
@@ -801,7 +774,7 @@ p {
                     <td class="padded btn">
                       <table border="0" cellpadding="0" cellspacing="0" style="background-color:#ED1C24;">
                           <tr>
-                              <td align="center" valign="middle" style="color:#FFFFFF; font-family:Helvetica, Arial, sans-serif; font-size:16px; font-weight:bold; letter-spacing:-.5px; line-height:150%; padding-top:12px; padding-right:25px; padding-bottom:12px; padding-left:25px;">
+                              <td align="center" valign="middle" style="color:#FFFFFF; font-family:Helvetica, Arial, sans-serif; font-size:16px; font-weight:600; letter-spacing:-.5px; line-height:150%; padding-top:12px; padding-right:25px; padding-bottom:12px; padding-left:25px;">
                                   <singleline label="Link"><a href="http://www.festival.co.nz" target="_blank" style="color:#FFFFFF; text-transform: uppercase; letter-spacing: 0.02em; -webkit-font-smoothing: antialiased; text-decoration:none;">Button</a></singleline>
                               </td>
                           </tr>
@@ -840,8 +813,8 @@ p {
       <div class="clear">&nbsp;</div>
       </layout>
 
-      <!-- Heading block -->
-      <layout label="Heading">
+      <!-- Heading 2 block -->
+      <layout label="Heading 2">
       <table class="one-col centered">
         <tbody>
           <tr>
@@ -850,7 +823,7 @@ p {
                 <tbody>
                   <tr>
                     <td class="padded">
-                      <h2><singleline label="Heading">H2 level heading goes here to define a section</singleline></h2>
+                      <h2><singleline label="Heading 2">H2 level heading goes here to define a new section</singleline></h2>
                     </td>
                   </tr>
                 </tbody>
@@ -894,7 +867,7 @@ p {
                               <td class="padded btn">
                                 <table border="0" cellpadding="0" cellspacing="0" style="background-color:#ED1C24;">
                                     <tr>
-                                        <td align="center" valign="middle" style="color:#FFFFFF; font-family:Helvetica, Arial, sans-serif; font-size:12px; font-weight:bold; letter-spacing:-.5px; line-height:150%; padding-top:12px; padding-right:25px; padding-bottom:12px; padding-left:25px;">
+                                        <td align="center" valign="middle" style="color:#FFFFFF; font-family:Helvetica, Arial, sans-serif; font-size:12px; font-weight:600; letter-spacing:-.5px; line-height:150%; padding-top:12px; padding-right:25px; padding-bottom:12px; padding-left:25px;">
                                             <singleline label="Link"><a href="http://www.festival.co.nz" target="_blank" style="color:#FFFFFF; text-transform: uppercase; letter-spacing: 0.02em; -webkit-font-smoothing: antialiased; text-decoration:none;">Button</a></singleline>
                                         </td>
                                     </tr>
@@ -934,7 +907,7 @@ p {
                               <td class="padded btn">
                                 <table border="0" cellpadding="0" cellspacing="0" style="background-color:#ED1C24;">
                                     <tr>
-                                        <td align="center" valign="middle" style="color:#FFFFFF; font-family:Helvetica, Arial, sans-serif; font-size:12px; font-weight:bold; letter-spacing:-.5px; line-height:150%; padding-top:12px; padding-right:25px; padding-bottom:12px; padding-left:25px;">
+                                        <td align="center" valign="middle" style="color:#FFFFFF; font-family:Helvetica, Arial, sans-serif; font-size:12px; font-weight:600; letter-spacing:-.5px; line-height:150%; padding-top:12px; padding-right:25px; padding-bottom:12px; padding-left:25px;">
                                             <singleline label="Link"><a href="http://www.festival.co.nz" target="_blank" style="color:#FFFFFF; text-transform: uppercase; letter-spacing: 0.02em; -webkit-font-smoothing: antialiased; text-decoration:none;">Button</a></singleline>
                                         </td>
                                     </tr>
@@ -990,7 +963,7 @@ p {
                                 <td class="padded btn">
                                   <table border="0" cellpadding="0" cellspacing="0" style="background-color:#ED1C24;">
                                       <tr>
-                                          <td align="center" valign="middle" style="color:#FFFFFF; font-family:Helvetica, Arial, sans-serif; font-size:12px; font-weight:bold; letter-spacing:-.5px; line-height:150%; padding-top:12px; padding-right:25px; padding-bottom:12px; padding-left:25px;">
+                                          <td align="center" valign="middle" style="color:#FFFFFF; font-family:Helvetica, Arial, sans-serif; font-size:12px; font-weight:600; letter-spacing:-.5px; line-height:150%; padding-top:12px; padding-right:25px; padding-bottom:12px; padding-left:25px;">
                                               <singleline label="Link"><a href="http://www.festival.co.nz" target="_blank" style="color:#FFFFFF; text-transform: uppercase; letter-spacing: 0.02em; -webkit-font-smoothing: antialiased; text-decoration:none;">Button</a></singleline>
                                           </td>
                                       </tr>
@@ -1077,17 +1050,6 @@ p {
                                 </multiline>
                              </td>
                             </tr>
-                            <tr>
-                              <td class="padded btn">
-                                <table border="0" cellpadding="0" cellspacing="0" style="background-color:#ED1C24;">
-                                    <tr>
-                                        <td align="center" valign="middle" style="color:#FFFFFF; font-family:Helvetica, Arial, sans-serif; font-size:12px; font-weight:bold; letter-spacing:-.5px; line-height:150%; padding-top:12px; padding-right:25px; padding-bottom:12px; padding-left:25px;">
-                                            <singleline label="Link"><a href="http://www.festival.co.nz" target="_blank" style="color:#FFFFFF; text-transform: uppercase; letter-spacing: 0.02em; -webkit-font-smoothing: antialiased; text-decoration:none;">Button</a></singleline>
-                                        </td>
-                                    </tr>
-                                </table>
-                              </td>
-                            </tr>
                           </tbody>
                         </table>
                       </td>
@@ -1124,7 +1086,7 @@ p {
                                 <td class="padded btn">
                                   <table border="0" cellpadding="0" cellspacing="0" style="background-color:#ED1C24;">
                                       <tr>
-                                          <td align="center" valign="middle" style="color:#FFFFFF; font-family:Helvetica, Arial, sans-serif; font-size:12px; font-weight:bold; letter-spacing:-.5px; line-height:150%; padding-top:12px; padding-right:25px; padding-bottom:12px; padding-left:25px;">
+                                          <td align="center" valign="middle" style="color:#FFFFFF; font-family:Helvetica, Arial, sans-serif; font-size:12px; font-weight:600; letter-spacing:-.5px; line-height:150%; padding-top:12px; padding-right:25px; padding-bottom:12px; padding-left:25px;">
                                               <singleline label="Link"><a href="http://www.festival.co.nz" target="_blank" style="color:#FFFFFF; text-transform: uppercase; letter-spacing: 0.02em; -webkit-font-smoothing: antialiased; text-decoration:none;">Button</a></singleline>
                                           </td>
                                       </tr>
@@ -1143,6 +1105,27 @@ p {
           </td>
         </tr>
       </tbody></table>
+      <div class="clear">&nbsp;</div>
+    </layout>
+
+    <layout label="Heading 3">
+      <table class="one-col centered">
+        <tbody>
+          <tr>
+            <td class="column">
+                <table class="contents">
+                <tbody>
+                  <tr>
+                    <td class="padded">
+                      <h3><singleline label="Heading 3">H3 - Article heading would look like this</singleline></h3>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </td>
+          </tr>
+        </tbody>
+      </table>
       <div class="clear">&nbsp;</div>
     </layout>
 
@@ -1167,7 +1150,7 @@ p {
                   <tbody>
                     <tr>
                       <td class="padded">
-                        <h2><singleline label="Title">Enter your title</singleline></h2>
+                        <h3><singleline label="Title">Enter your title</singleline></h3>
                       </td>
                     </tr>
                   </tbody>
@@ -1187,7 +1170,7 @@ p {
                       <td class="padded btn">
                         <table border="0" cellpadding="0" cellspacing="0" style="background-color:#ED1C24;">
                             <tr>
-                                <td align="center" valign="middle" style="color:#FFFFFF; font-family:Helvetica, Arial, sans-serif; font-size:12px; font-weight:bold; letter-spacing:-.5px; line-height:150%; padding-top:12px; padding-right:25px; padding-bottom:12px; padding-left:25px;">
+                                <td align="center" valign="middle" style="color:#FFFFFF; font-family:Helvetica, Arial, sans-serif; font-size:12px; font-weight:600; letter-spacing:-.5px; line-height:150%; padding-top:12px; padding-right:25px; padding-bottom:12px; padding-left:25px;">
                                     <singleline label="Link"><a href="http://www.festival.co.nz" target="_blank" style="color:#FFFFFF; text-transform: uppercase; letter-spacing: 0.02em; -webkit-font-smoothing: antialiased; text-decoration:none;">Button</a></singleline>
                                 </td>
                             </tr>
@@ -1314,7 +1297,6 @@ p {
         </tr>
       </tbody>
     </table>
-<div class="clear">&nbsp;</div>
-<div class="email-bottom">&nbsp;</div>
+    <div class="clear">&nbsp;</div>
 </center>
 </body></html>
