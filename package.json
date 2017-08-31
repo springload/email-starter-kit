@@ -1,0 +1,25 @@
+{
+  "name": "festival_email_templates",
+  "version": "0.1.0",
+  "private": true,
+  "license": "UNLICENSED",
+  "description": "Campaign Monitor templates for New Zealand Festival",
+  "main": "README.md",
+  "author": "Springload",
+  "keywords": [],
+  "homepage": "https://github.com/springload/festival_email_templates#readme",
+  "bugs": {
+    "url": "https://github.com/springload/festival_email_templates/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/springload/festival_email_templates.git"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "browser-sync": "^2.18.13"
+  },
+  "scripts": {
+    "start": "browser-sync start --server --files 'templates' 'images' --directory"
+  }
+}
