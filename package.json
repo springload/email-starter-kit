@@ -20,6 +20,6 @@
     "browser-sync": "^2.18.13"
   },
   "scripts": {
-    "start": "browser-sync start --server --files 'templates' 'images' --directory"
+    "start": "browser-sync start --server --files 'templates' 'images' --directory --no-open --no-notify"
   }
 }
