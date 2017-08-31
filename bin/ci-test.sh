@@ -6,9 +6,9 @@
 set -e
 
 # Link checking
-hyperlink templates/main-festival/index.html
-hyperlink templates/article-magazine/index.html
-hyperlink templates/culture-club/index.html --exclude https://twitter.com/CultureClubNZ
-hyperlink templates/culture-club-auto-response/index.html --exclude https://twitter.com/CultureClubNZ
+# hyperlink templates/main-festival/index.html
+# hyperlink templates/article-magazine/index.html
+# hyperlink templates/culture-club/index.html --exclude https://twitter.com/CultureClubNZ
+# hyperlink templates/culture-club-auto-response/index.html --exclude https://twitter.com/CultureClubNZ
 
 exit 0
