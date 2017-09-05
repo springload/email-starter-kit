@@ -2,11 +2,12 @@
 
 {% import "components.html" as components %}
 
-{% block body_class %}t-content t-twentyeighteen-tccgreen cultureclub{% endblock %}
+{% block body_class %}t-twentyeighteen-tccgreen cultureclub{% endblock %}
+{% block body_background %}background-color: #f0f0e6;{% endblock %}
 
 {% block content %}
 
-<center class="wrapper" >
+<center class="wrapper u-current-bg" >
   {{ components.preheader(layout="cultureclub", color="#99c7a1") }}
 
   {{ components.masthead(layout="cultureclub", color="tccgreen") }}

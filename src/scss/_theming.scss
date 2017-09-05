@@ -1,15 +1,23 @@
 $themes: (
     'twentyeighteen-green': (
         theme-color: $color-twentyeighteen-green,
-        text-color: #333
+        text-color: #333,
+        background-color: white
     ),
     'twentyeighteen-red': (
         theme-color: $color-twentyeighteen-red,
-        text-color: #333
+        text-color: #333,
+        background-color: white
     ),
     'twentyeighteen-tccgreen': (
         theme-color: $color-twentyeighteen-tccgreen,
-        text-color: #333
+        text-color: #333,
+        background-color:  #f0f0e6
+    ),
+    'twentyeighteen-magazine': (
+        theme-color: $color-twentyeighteen-magazine,
+        text-color: #fff,
+        background-color:  #282E2F
     ),
     'article': (
         theme-color: $color-article,
@@ -20,6 +28,7 @@ $themes: (
 @each $alias, $colors in $themes {
     $theme-color: map-get($colors, theme-color);
     $text-color: map-get($colors, text-color);
+    $background-color: map-get($colors, background-color);
 
     .t-#{$alias} {
 
@@ -33,6 +42,10 @@ $themes: (
         &.t-#{$alias}--bg,
         .u-current-bg-color {
             background-color: $theme-color;
+        }
+
+        .u-current-bg {
+            background-color: $background-color;
         }
 
         .u-current-text-color {

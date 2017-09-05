@@ -1,5 +1,5 @@
 {% import "components.html" as components %}
-<table class="one-col centered footer">
+<table class="one-col centered">
   <tbody>
     <tr>
       <td class="column">
@@ -8,8 +8,9 @@
             <tr>
               <td class="padded">
                   <div class="divider u-current-bg-color">&nbsp;</div>
-                  <singleline label="Unsubscribe text">{{ props.unsubscribe_text }}</singleline>
-                  <unsubscribe style="color: {{ props.color }}; text-decoration:underline;">{{ props.unsubscribe_label }}</unsubscribe>
+                  <p style="display: none">&nbsp;</p>
+                  <p style="font-size: 13px; line-height: 22px; font-weight: 500;"><singleline label="Unsubscribe text">{{ props.unsubscribe_text }}</singleline>
+                    <unsubscribe style="color: {{ props.color }}; text-decoration:underline;">{{ props.unsubscribe_label }}</unsubscribe></p>
               </td>
             </tr>
           </tbody>
@@ -37,7 +38,6 @@
                       </td>
                       <td class="column last" width="50%">
                         <p><strong>The New Zealand Festival</strong><br />
-                        The New Zealand Festival<br />
                         St James Theatre, 77-87 Courtenay Place, Wellington 6011, New Zealand</p>
                         <p>+64 4 473 0149</p>
                       </td>
