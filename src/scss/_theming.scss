@@ -11,6 +11,10 @@ $themes: (
         theme-color: $color-twentyeighteen-tccgreen,
         text-color: #333
     ),
+    'article': (
+        theme-color: $color-article,
+        text-color: $color-white
+    ),
 );
 
 @each $alias, $colors in $themes {

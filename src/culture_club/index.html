@@ -2,7 +2,7 @@
 
 {% import "components.html" as components %}
 
-{% block body_class %}t-twentyeighteen-tccgreen cultureclub{% endblock %}
+{% block body_class %}t-content t-twentyeighteen-tccgreen cultureclub{% endblock %}
 
 {% block content %}
 
@@ -29,7 +29,7 @@
 
     {{ components.button_block() }}
 
-    {{ components.heading_two_block(layout="cultureclub") }}
+    {{ components.heading_two_block(layout="cultureclub", uppercase=true ) }}
 
     {{ components.two_columns_block() }}
 
@@ -42,7 +42,7 @@
   {% call components.footer(
     unsubscribe_text="You&rsquo;re receiving this email because you&rsquo;re a supporter of The Culture Club.",
     unsubscribe_label="Unsubscribe",
-    color="#99c7a1",
+    color="#99c7a1"
   ) %}
     <p>
       <a href="http://www.festival.co.nz/the-culture-club/">www.festival.co.nz/the-culture-club</a><br/>

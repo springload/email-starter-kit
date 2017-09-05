@@ -2,7 +2,7 @@
 
 {% import "components.html" as components %}
 
-{% block body_class %}t-twentyeighteen-red{% endblock %}
+{% block body_class %}t-content t-twentyeighteen-red {% endblock %}
 
 {% block content %}
 <center class="wrapper">
@@ -22,7 +22,7 @@
 
     {{ components.divider_block() }}
 
-    {{ components.heading_two_block() }}
+    {{ components.heading_two_block(uppercase=true) }}
 
     {{ components.two_columns_block() }}
 
