@@ -1,3 +1,4 @@
+{% import "components.html" as components %}
 <table class="one-col centered">
   <tbody>
     <tr>
@@ -59,7 +60,7 @@
                           <br />
                           <br />
                           <a href="https://wellington.govt.nz/">
-                            <img class="u-current-bg-color" style="background-color: transparent;" src="/logo-abs-pos-wellington.png" width="106" height="73" alt="Absolutely Positively Wellington">
+                            <img class="u-current-bg-color" style="background-color: transparent;" src="{% if props.inverse %}/logo-abs-pos-wellington-inverse.png{% else %}/logo-abs-pos-wellington.png{% endif %}" width="106" height="73" alt="Absolutely Positively Wellington">
                           </a>
                       </td>
                       <td colspan="2" class="column last footer-core-funder" width="50%">
@@ -67,7 +68,7 @@
                         <br />
                         <br />
                         <a href="http://www.creativenz.govt.nz/">
-                          <img class="u-current-bg-color" style="background-color: transparent;" src="/logo-creative-nz.png" width="168" height="40" alt="Creative NZ">
+                          <img class="u-current-bg-color" style="background-color: transparent;" src="/{% if props.inverse %}logo-creative-nz-white.png{% else %}logo-creative-nz.png{% endif %}" width="168" height="40" alt="Creative NZ">
                         </a>
                       </td>
                     </tr>
@@ -83,17 +84,17 @@
                     <tr>
                       <td class="column first">
                         <a href="http://www.nzct.org.nz/">
-                          <img class="u-current-bg-color" style="background-color: transparent; padding-top: 19px;" src="/logo-nzct.png" width="104" height="41" alt="New Zealand Community Trust">
+                          <img class="u-current-bg-color" style="background-color: transparent; padding-top: 19px;" src="/{% if props.inverse %}logo-nzct-white.png{% else %}logo-nzct.png{% endif %}" width="104" height="41" alt="New Zealand Community Trust">
                         </a>
                       </td>
                       <td class="column">
                         <a href="http://www.lionfoundation.org.nz/">
-                          <img class="u-current-bg-color" style="background-color: transparent; padding-top: 19px;" src="/logo-lion.png" width="147" height="55" alt="The Lion Foundation">
+                          <img class="u-current-bg-color" style="background-color: transparent; padding-top: 19px;" src="/{% if props.inverse %}logo-lion-white.png{% else %}logo-lion.png{% endif %}" width="147" height="55" alt="The Lion Foundation">
                         </a>
                       </td>
                       <td class="column last">
                         <a href="http://wct.org.nz/">
-                          <img class="u-current-bg-color" style="background-color: transparent; padding-top: 19px;" src="/logo-wct.png" width="160" height="53" alt="Wellington Community Trust">
+                          <img class="u-current-bg-color" style="background-color: transparent; padding-top: 19px;" src="/{% if props.inverse %}logo-wct-white.png{% else %}logo-wct.png{% endif %}" width="160" height="53" alt="Wellington Community Trust">
                         </a>
                       </td>
                   </tr>

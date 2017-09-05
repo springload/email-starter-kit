@@ -1,5 +1,5 @@
 <!-- Heading 2 block -->
-<layout label="Heading 2">
+<layout label="Heading 2 {% if props.theme == true %} with theme colour {% endif %}">
   <table class="one-col centered">
     <tbody>
       <tr>
@@ -10,10 +10,10 @@
                 <td class="padded">
                   {% if props.layout == 'cultureclub' %}
                     <div class="divider divider--small u-current-bg-color">&nbsp;</div>
-                    <h2><singleline label="Heading 2">H2 - level heading goes here to define a new section</singleline></h2>
+                    <h2><singleline label="Heading 2">{% if props.text %}{{props.text}}{% else %} H2 - level heading goes here to define a new section {% endif %}</singleline></h2>
                     <div class="divider divider--small u-current-bg-color">&nbsp;</div>
                   {% else %}
-                    <h2><singleline label="Heading 2">H2 - level heading goes here to define a new section</singleline></h2>
+                    <h2 class='{% if props.theme == true %}u-current-color{% endif %} {% if props.uppercase == true %} u-uppercase {% endif %}'><singleline label="Heading 2">{% if props.text %}{{props.text}}{% else %} H2 - level heading goes here to define a new section {% endif %} </singleline></h2>
                   {% endif %}
                 </td>
               </tr>

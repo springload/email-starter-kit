@@ -17,6 +17,25 @@
         <span class="forward-icon"><forwardtoafriend lang="en"><img src="/icon-forward-{{ props.color }}.png" alt="Forward" title="Forward this email" width="32" height="32" align="absmiddle" /></forwardtoafriend></span>
       </td>
     </tr>
+  {% elif props.layout == 'article' %}
+    <tr>
+      <td class="column padded" align="center" style="text-align: center; padding-bottom: 15px;">
+        <img src="/logo-nzf-wide.png" alt="Article Magazine" width="167" height="16"/>
+      </td>
+    </tr>
+    <tr>
+        <td class="column padded" align="center" style="text-align: center; padding-bottom: 30px;">
+          <img src="/logo-article-magazine.png" alt="Article magazine" width="271" height="74"/>
+          <h4 class='u-uppercase'><singleline label="Date">25 August 2015</singleline></h4>
+        </td>
+      </tr>
+    <tr>
+      <td class="column padded" align="center" style="text-align: center;">
+        <span class="facebook-icon"><fblike><img src="/icon-facebook-{{ props.color }}.png" alt="Like" title="Like this email on Facebook" width="32" height="32" align="absmiddle" /></fblike></span>
+        <span class="twitter-icon"><tweet><img src="/icon-twitter-{{ props.color }}.png" alt="Like" title="Tweet this email" width="32" height="32" align="absmiddle" /></tweet></span>
+        <span class="forward-icon"><forwardtoafriend lang="en"><img src="/icon-forward-{{ props.color }}.png" alt="Forward" title="Forward this email" width="32" height="32" align="absmiddle" /></forwardtoafriend></span>
+      </td>
+    </tr>
   {% else %}
     <tr>
       <td class="column">
