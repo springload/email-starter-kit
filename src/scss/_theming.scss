@@ -14,14 +14,10 @@ $themes: (
         text-color: #333,
         background-color:  #f0f0e6
     ),
-    'twentyeighteen-magazine': (
-        theme-color: $color-twentyeighteen-magazine,
-        text-color: #fff,
-        background-color:  #282E2F
-    ),
     'article': (
         theme-color: $color-article,
-        text-color: $color-white
+        text-color: $color-white,
+        background-color: $color-article-bg
     ),
 );
 
