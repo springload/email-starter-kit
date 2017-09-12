@@ -18,7 +18,7 @@ gulp.task('content:inline', function() {
         .pipe(inlineCSS({
             applyStyleTags: true,
             applyLinkTags: true,
-            removeStyleTags: true,
+            removeStyleTags: false,
             removeLinkTags: true
         }))
         .pipe(gulp.dest(config.paths.www));
