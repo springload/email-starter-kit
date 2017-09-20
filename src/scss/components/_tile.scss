@@ -1,0 +1,18 @@
+$tile-content-section-weight: 8px; 
+$tile-content-gutter-weight: 10px;
+$tile-content-color: #F0F0F1;
+
+.tile {
+    &__img {
+        display: block;
+    }
+
+    &__content {
+        margin-bottom: 10px; 
+    	background-color: $tile-content-color;
+        border-top: $tile-content-section-weight solid $tile-content-color; 
+	    border-bottom: $tile-content-section-weight solid $tile-content-color;
+	    border-left: $tile-content-gutter-weight solid $tile-content-color;
+	    border-right: $tile-content-gutter-weight solid $tile-content-color;  
+    }
+}

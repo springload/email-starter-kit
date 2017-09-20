@@ -1,0 +1,13 @@
+{% import "components.html" as components %}
+
+{{ components.example(label=component.label) }}
+
+<layout label="{{ component.label }}">
+
+	{% call components.container() %}
+		<td>
+			{{ components.button() }}
+		</td>
+	{% endcall %}
+
+</layout>

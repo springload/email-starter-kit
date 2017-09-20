@@ -1,0 +1,80 @@
+ /* What it does: Remove spaces around the email design added by some email clients. */
+    /* Beware: It can remove the padding / margin and add a background color to the compose a reply window. */
+    html, body {
+      margin: 0 !important;
+      padding: 0 !important;
+      height: 100% !important;
+      width: 100% !important;
+    }
+    /* What it does: Stops email clients resizing small text. */
+    * {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    }
+     /* Prevent Webkit and Windows Mobile platforms from changing default font sizes.*/
+    /* Force Hotmail to display emails at full width */
+    .ExternalClass {
+        width:100%;
+    }
+    .ExternalClass,
+    .ExternalClass p,
+    .ExternalClass span,
+    .ExternalClass font,
+    .ExternalClass td,
+    .ExternalClass div {
+        line-height: 100%;
+    }
+
+    /* What it does: Centers email on Android 4.4 */
+    div[style*="margin: 16px 0"] {
+      margin:0 !important;
+    }
+    /* What it does: Stops Outlook from adding extra spacing to tables. */
+    table, td {
+      mso-table-lspace: 0pt !important;
+      mso-table-rspace: 0pt !important;
+    }
+    /* What it does: Fixes webkit padding issue. Fix for Yahoo mail table alignment bug. Applies table-layout to the first 2 tables then removes for anything nested deeper. */
+    table {
+      border-spacing: 0 !important;
+      border-collapse: collapse !important;
+      table-layout: fixed !important;
+      margin: 0 auto !important;
+      mso-table-lspace:0pt; 
+      mso-table-rspace:0pt;
+    }
+  
+    table table table {
+      table-layout: auto;
+    }
+    /** Outlook 07, 10 Padding issue: These "newer" versions of Outlook add some padding around table cells potentially throwing off your perfectly pixeled table.  The issue can cause added space and also throw off borders completely.  Use this fix in your header or inline to safely fix your table woes.
+    More info: http://www.ianhoar.com/2008/04/29/outlook-2007-borders-and-1px-padding-on-table-cells/
+    http://www.campaignmonitor.com/blog/post/3392/1px-borders-padding-on-table-cells-in-outlook-07/
+    H/T @edmelly
+    Bring inline: No.
+    **/
+    table td {border-collapse: collapse;}
+    td { 
+      padding: 0;
+      //display: inline-block; 
+     }
+
+    /* What it does: Uses a better rendering method when resizing images in IE. */
+    img {outline:none; text-decoration:none; -ms-interpolation-mode: bicubic;}
+
+    img {
+      display: block; 
+      width: 100%; 
+      max-width: 100%;
+    }
+
+    a img {border:none;}
+    /* What it does: Overrides styles added when Yahoo's auto-senses a link. */
+    .yshortcuts a {
+      border-bottom: none !important;
+    }
+    /* What it does: A work-around for iOS meddling in triggered links. */
+    .mobile-link--footer a, a[x-apple-data-detectors] {
+      color:inherit !important;
+      text-decoration: underline !important;
+    }

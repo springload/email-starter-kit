@@ -1,0 +1,13 @@
+{% import "components.html" as components %}
+
+<table class="media {{ props.container }}" cellpadding="0" cellspacing="0" border="0">
+    <tbody>
+        <tr>
+            <td valign="top" class="media-picture stack-column" width="{{props.width}}">
+                {{ components.image(width="150") }}
+            </td>
+
+            {{ children }}
+        </tr>
+    </tbody>
+</table>

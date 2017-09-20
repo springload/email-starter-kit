@@ -1,0 +1,13 @@
+{% import "components.html" as components %}
+
+{{ components.example(label=component.label) }}
+
+<layout label="{{ component.label }}">
+
+	{% call components.container() %}
+		<td>
+			{{ components.image(label="Picture (560px wide)", picture="/placeholder.jpg") }}
+		</td>
+	{% endcall %}
+
+</layout>

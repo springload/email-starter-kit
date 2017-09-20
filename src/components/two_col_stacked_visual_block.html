@@ -1,0 +1,30 @@
+{% import "components.html" as components %}
+
+{{ components.example(label=component.label) }}
+
+<layout label="{{ component.label }} ">
+
+    {% call components.container() %}
+        <td >
+            {% call components.internal_container() %}
+
+                <td valign="top" width="47.5%" class='stack-column'>
+                   {{ components.stacked_visual(picture="/placeholder.jpg", width="220")}}
+                </td>
+
+                {{ components.internal_gutter() }}
+
+                {{ components.stacked_space_mobile() }}
+
+                <td valign="top" width="47.5%" class='stack-column'>
+                    {{ components.stacked_visual(picture="/placeholder.jpg", width="220")}}
+                </td>
+
+                {{ components.stacked_space_mobile() }}
+
+            {% endcall %}
+           
+        </td>
+     {% endcall %}
+     
+ </layout>

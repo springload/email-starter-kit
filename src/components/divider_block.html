@@ -1,0 +1,12 @@
+{% import "components.html" as components %}
+
+{{ components.example(label=component.label) }}
+
+<layout label="Divider">
+	{% call components.container( height="0" ) %}
+	    <td>
+			<hr>
+			<p style="display: none"><singleline label="Add some text"></singleline>&nbsp;</p>
+		</td>
+	{% endcall %}
+</layout>

@@ -1,0 +1,10 @@
+{% import "components.html" as components %}
+
+ {% call components.internal_container(class="tile") %}
+ 	<td>
+ 		{{ components.image(class="tile__img") }}
+	     <p class="tile__content">
+	        {{ children }}
+	    </p>
+	</td>
+{% endcall %}

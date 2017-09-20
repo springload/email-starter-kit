@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% import "components.html" as components %}
+
+{% block body_class %}{% endblock %}
+{% block body_background %}{% endblock %}
+
+{% block content %}
+             
+  {{ components.multiline_block() }}
+
+ {{ components.h2_heading_block() }}
+          
+  {{ components.button_block() }}
+
+  {{ components.heading_and_content() }}
+  
+  {{ components.image_block() }}
+
+  {{ components.profile_block() }}
+        
+  {{ components.stacked_visual_block(bgcolor="#e5b748") }}
+          
+  {{ components.two_col_stacked_visual_block() }}
+
+  {{ components.divider_block() }}
+
+  {{ components.media_block(bgcolor="#e5b748") }}
+
+{% endblock %}

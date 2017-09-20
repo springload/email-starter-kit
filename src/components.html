@@ -1,24 +1,36 @@
 {# Internal macro to be used by component macro definitions. #}
-{% macro _component(component, props, children) -%}{% include "components/" + component.id + "/" + component.id + ".html" %}{%- endmacro %}
+{% macro _component(component, props, children) -%}{% include "components/%s.html" % (component.id) %}{%- endmacro %}
 
 {# {% import "components.html" as components %} #}
 {# Example: {{ components.button(icon="logo") }} #}
 
-{% macro preheader() %}{{ _component({ 'id': 'preheader' }, kwargs, caller()) }}{% endmacro %}
-{% macro masthead() %}{{ _component({ 'id': 'masthead' }, kwargs, caller()) }}{% endmacro %}
-{% macro footer() %}{{ _component({ 'id': 'footer' }, kwargs, caller()) }}{% endmacro %}
-{% macro button() %}{{ _component({ 'id': 'button' }, kwargs, caller()) }}{% endmacro %}
-{% macro link() %}{{ _component({ 'id': 'link' }, kwargs, caller()) }}{% endmacro %}
-{% macro headline_block() %}{{ _component({ 'id': 'headline_block' }, kwargs, caller()) }}{% endmacro %}
-{% macro divider_block() %}{{ _component({ 'id': 'divider_block' }, kwargs, caller()) }}{% endmacro %}
-{% macro heading_three_block() %}{{ _component({ 'id': 'heading_three_block' }, kwargs, caller()) }}{% endmacro %}
-{% macro heading_two_block() %}{{ _component({ 'id': 'heading_two_block' }, kwargs, caller()) }}{% endmacro %}
-{% macro two_columns_block() %}{{ _component({ 'id': 'two_columns_block' }, kwargs, caller()) }}{% endmacro %}
-{% macro two_columns_block_with_links() %}{{ _component({ 'id': 'two_columns_block_with_links' }, kwargs, caller()) }}{% endmacro %}
-{% macro one_column_block() %}{{ _component({ 'id': 'one_column_block' }, kwargs, caller()) }}{% endmacro %}
-{% macro text_centered_block() %}{{ _component({ 'id': 'text_centered_block' }, kwargs, caller()) }}{% endmacro %}
-{% macro text_block() %}{{ _component({ 'id': 'text_block' }, kwargs, caller()) }}{% endmacro %}
-{% macro image_block() %}{{ _component({ 'id': 'image_block' }, kwargs, caller()) }}{% endmacro %}
-{% macro image_small_block() %}{{ _component({ 'id': 'image_small_block' }, kwargs, caller()) }}{% endmacro %}
-{% macro button_block() %}{{ _component({ 'id': 'button_block' }, kwargs, caller()) }}{% endmacro %}
-{% macro button_centered_block() %}{{ _component({ 'id': 'button_centered_block' }, kwargs, caller()) }}{% endmacro %}
+{% macro container() %}{{ _component({ 'id': 'container', 'label': 'Container' }, kwargs, caller()) }}{% endmacro %}
+{% macro internal_container() %}{{ _component({ 'id': 'internal_container', 'label': 'internal container' }, kwargs, caller()) }}{% endmacro %}
+{% macro media() %}{{ _component({ 'id': 'media', 'label': 'media' }, kwargs, caller()) }}{% endmacro %}
+{% macro heading() %}{{ _component({ 'id': 'heading', 'label': 'heading' }, kwargs, caller()) }}{% endmacro %}
+{% macro image() %}{{ _component({ 'id': 'image', 'label': 'image' }, kwargs, caller()) }}{% endmacro %}
+{% macro multiline() %}{{ _component({ 'id': 'multiline', 'label': 'Multiline' }, kwargs, caller()) }}{% endmacro %}
+{% macro singleline() %}{{ _component({ 'id': 'singleline', 'label': 'singleline text area' }, kwargs, caller()) }}{% endmacro %}
+{% macro profile() %}{{ _component({ 'id': 'profile', 'label': 'profile' }, kwargs, caller()) }}{% endmacro %}
+{% macro button() %}{{ _component({ 'id': 'button', 'label': 'button' }, kwargs, caller()) }}{% endmacro %}
+{% macro tile() %}{{ _component({ 'id': 'tile', 'label': 'tile' }, kwargs, caller()) }}{% endmacro %}
+{% macro stacked_visual() %}{{ _component({ 'id': 'stacked_visual', 'label': 'stacked visual' }, kwargs, caller()) }}{% endmacro %}
+
+{% macro header() %}{{ _component({ 'id': 'header', 'label': 'header' }, kwargs, caller()) }}{% endmacro %}
+{% macro profile_block() %}{{ _component({ 'id': 'profile_block', 'label': 'profile block' }, kwargs, caller()) }}{% endmacro %}
+{% macro button_block() %}{{ _component({ 'id': 'button_block', 'label': 'button' }, kwargs, caller()) }}{% endmacro %}
+{% macro divider_block() %}{{ _component({ 'id': 'divider_block', 'label': 'divider' }, kwargs, caller()) }}{% endmacro %}
+{% macro h2_heading_block() %}{{ _component({ 'id': 'h2_heading_block', 'label': 'h2 heading block' }, kwargs, caller()) }}{% endmacro %}
+{% macro heading_and_content() %}{{ _component({ 'id': 'heading_and_content', 'label': 'Heading and content' }, kwargs, caller()) }}{% endmacro %}
+{% macro stacked_visual_block() %}{{ _component({ 'id': 'stacked_visual_block', 'label': 'stacked block with full-width image' }, kwargs, caller()) }}{% endmacro %}
+{% macro media_block() %}{{ _component({ 'id': 'media_block', 'label': 'media block (small image)' }, kwargs, caller()) }}{% endmacro %}
+{% macro two_col_stacked_visual_block() %}{{ _component({ 'id': 'two_col_stacked_visual_block', 'label': 'two column stacked visual block' }, kwargs, caller()) }}{% endmacro %}
+{% macro multiline_block() %}{{ _component({ 'id': 'multiline_block', 'label': 'Multiline' }, kwargs, caller()) }}{% endmacro %}
+{% macro spacer() %}{{ _component({ 'id': 'spacer', 'label': 'spacer' }, kwargs, caller()) }}{% endmacro %}
+{% macro image_block() %}{{ _component({ 'id': 'image_block', 'label': 'image block' }, kwargs, caller()) }}{% endmacro %}
+{% macro example() %}{{ _component({ 'id': 'example', 'label': 'example' }, kwargs, caller()) }}{% endmacro %}
+
+
+{% macro stacked_space() %}{{ _component({ 'id': 'stacked_space', 'label': 'stacked_space' }, kwargs, caller()) }}{% endmacro %}
+{% macro stacked_space_mobile() %}{{ _component({ 'id': 'stacked_space_mobile', 'label': 'stacked space mobile' }, kwargs, caller()) }}{% endmacro %}
+{% macro internal_gutter() %}{{ _component({ 'id': 'internal_gutter', 'label': 'internal gutter' }, kwargs, caller()) }}{% endmacro %}

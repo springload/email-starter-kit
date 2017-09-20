@@ -1,0 +1,24 @@
+{% import "components.html" as components %}
+
+
+{% call components.internal_container() %}
+	
+    <td valign="top" width="20%">
+    	
+    	{{ components.image(class="u-circle", picture="/placeholder.jpg", width="100") }}
+
+    </td>
+
+    {{ components.spacer(width="5%") }}
+				
+	<td class="middle">
+	    
+        <strong>{{ components.singleline(label="profile name") }}</strong>
+        <br>
+        {{ components.singleline(label="profile title") }}
+	   
+	</td>
+		       
+{% endcall %}
+
+

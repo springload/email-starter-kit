@@ -1,0 +1,33 @@
+{% import "components.html" as components %}
+
+{# {% if props.picture %}
+	{% set pic = props.picture %}
+    
+{% else %}
+	{% set pic = "/placeholder.jpg" %}
+{% endif %}
+ #}
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" class="{{props.class}}">
+    <tbody>
+        <tr>
+            <td>
+		    	{{ components.image(label="Picture", picture=props.picture, width=props.width) }}
+			</td>
+        </tr>
+        <tr>
+		    {{ components.stacked_space() }}
+        </tr>
+        <tr>
+            <td>
+		   		{{ components.heading(level="h3") }}
+
+			    {{ components.multiline() }}
+
+			    {{ components.button(text="Read more", url=props.url) }}
+			</td>
+            {{ components.stacked_space_mobile() }}
+        </tr>
+    </tbody>
+</table>
+

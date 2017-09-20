@@ -1,0 +1,43 @@
+// Fonts
+// ----------------------------------------------------------------------------
+$font-family-default-sans-serif: 'Metric', sans-serif;
+// $font-family-default-serif: 'Georgia', 'Times New Roman', Times, serif;
+
+$base-font-size:        16px;
+$base-line-height:      24px;
+
+$line-height-headline:  1.2;
+
+$font-weight-light:     300;
+$font-weight-normal:    400;
+$font-weight-medium:    500;
+$font-weight-bold:      700;
+$font-weight-black:     900;
+
+
+
+// Spacing
+// ----------------------------------------------------------------------------
+
+$base-spacing-unit:     1.5rem; // 24px
+
+$base-padding:          $base-spacing-unit;
+
+$spacing-grid:          $base-spacing-unit;
+
+$spacing:               $base-spacing-unit;
+// Smaller
+$spacing-half:          ($spacing / 2);
+// Larger
+$spacing-double:        ($spacing * 2);
+
+
+//content and section spacinf
+$spacing-content: 27px;
+$spacing-section: $spacing-double;
+// Others
+// ----------------------------------------------------------------------------
+
+$base-radius:           3px;
+
+

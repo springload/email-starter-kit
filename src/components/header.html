@@ -1,0 +1,15 @@
+{% import "components.html" as components %}
+{{ components.example(label=component.label) }}
+
+{% call components.container( bgcolor="#e5b748") %}
+    <td width="30%">
+    	{{ components.image(picture="/willsmith.png") }}
+    </td>
+    
+    {{ components.internal_gutter() }}
+    
+    <td align='left' >
+    	{{ components.heading(level="h1", text="Email Templates hello") }}
+    	{{ components.singleline(level="h1", label="Code like it's the 90's") }}
+    </td>
+{% endcall %}

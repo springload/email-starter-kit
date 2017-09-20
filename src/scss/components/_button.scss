@@ -1,0 +1,20 @@
+$border-section-padding: 14px; 
+$border-gutter-padding: 22px;
+
+// .btn {
+//     padding-top: 12px;
+// }
+
+.btn a {
+	display: inline-block;
+    text-decoration: none;
+    background-color: $color-brand-primary;
+    color: $color-white;
+    font-size: 12px;
+    font-weight: 900;
+    text-transform: uppercase;
+    border-left: $border-gutter-padding solid $color-brand-primary; 
+    border-right: $border-gutter-padding solid $color-brand-primary;
+    border-top: $border-section-padding solid $color-brand-primary;
+    border-bottom: $border-section-padding solid $color-brand-primary;  
+}

@@ -1,0 +1,29 @@
+{% import "components.html" as components %}
+
+{{ components.example(label=component.label) }}
+
+<layout label="{{ component.label }} " >
+    {% call components.container() %}
+        <td>
+            {% call components.media(label="Picture (160px wide)", width="30%") %}
+                
+                {{ components.internal_gutter() }}
+
+                {{ components.stacked_space_mobile() }}
+
+                <td valign="top" width="65%" class='stack-column'>
+               
+                    {{ components.heading(level="h3") }}
+
+                    {{ components.multiline() }}
+                    
+                    {{ components.button(text="Read more", url=props.url) }}
+                 
+                </td>
+
+                {{ components.stacked_space_mobile() }}
+                
+            {% endcall %}
+        </td>
+    {% endcall %}
+ </layout>

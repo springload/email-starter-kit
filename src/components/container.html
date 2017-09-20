@@ -1,0 +1,25 @@
+<table width="600" cellpadding="0" cellspacing="0" border="0" {% if props.bgcolor %} bgcolor="{{ props.bgcolor }}"{% else %} bgcolor="{% if props.bgcolor %}{{props.bgcolor}}{% else %}#fffffe{% endif %}" {% endif %} class="{% if props.class %}{{ props.class }}{% endif %} " style="max-width: 600px;">
+    <tbody>
+        <tr>
+            <td valign="top" height="{% if props.height %}{{ props.height }}{% else %}45{% endif %}" style="font-size: 1px;" class='section-height'>
+                &nbsp; 
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                <table width="{% if props.width %}{{ props.width }}{% else %} 75% {% endif %}" cellpadding="0" cellspacing="0" border="0" class='gutters'>
+                    <tbody>
+                        <tr>
+                            {{ children }}
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td valign="top" height="{% if props.height %}{{ props.height }}{% else %}45{% endif %}" style="font-size: 1px;" class='section-height'>
+                &nbsp; 
+            </td>
+        </tr>
+    </tbody>
+</table>

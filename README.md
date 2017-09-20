@@ -1,12 +1,15 @@
-# NZ Festival email templates [![Codeship Status for springload/festival_email_templates](https://app.codeship.com/projects/a73e1ac0-7051-0135-accf-6ebbf3e26980/status?branch=master)](https://app.codeship.com/projects/243065)
+#Email starter kit 
 
-> Campaign Monitor templates for New Zealand Festival.
+Coding for HTML emails is like coding for Internet browsers from 10 years ago. 
+Picture a website from a decade ago: that’s the level of design complexity we can reasonably shoot for.
+Tables Are Your Best Friend
+
+> Campaign Monitor template starter kit.
 
 |Important links|
 |---------------|
-|[InVision prototype](https://projects.invisionapp.com/share/JFD9BW23Z#/screens/250977766)|
-|[Email template designs](https://www.dropbox.com/work/_Clients/NZ%20Festival/NZF934%20-%20Website%20Update/_Assets/Design/EDM%20template)|
-|[Campaign Monitor access](https://nzfestival.createsend.com/templates) (details in LastPass)|
+|[name](link here)|
+
 
 ## Installation
 
@@ -16,8 +19,8 @@ From the command-line:
 
 ```sh
 cd ~/Development/sites/
-git clone git@github.com:springload/festival_email_templates.git
-cd festival_email_templates
+git clone git@github.com:springload/email_starter_kit.git
+cd email_starter_kit
 # Install the required Node and npm versions.
 nvm install
 # Then, install all project dependencies.
@@ -39,3 +42,31 @@ npm run start
 # Prepare the templates for deployment
 npm run deploy
 ```
+
+For designer 
+
+600px wide
+
+Bugs you need to be aware of
+
+outlook does not like #ffffff but if you change it to #fffffe then it will work :) 
+Cache strings break in campaign monitor
+If you want to use retina images you need to declare a m
+
+USING RETINA IMAGES IN OUTLOOK
+
+Some versions of Microsoft Outlook still display the retina images at their full size, despite the explicit sizes set by the width and height attributes. To get around this, you can include a max-width rule in the style attribute of the image.
+
+DO NOT USE * it can cause all sorts of mess, in this case it will cause the height of the images to be 20px;
+
+.footer *  {
+	line-height:20px;
+}
+
+browser support: 
+
+| x             | x           | x  |
+| ------------- |:-------------:| -----:|
+| x             | x             |       |
+| x             | x             |       |
+| x             | x             |       |

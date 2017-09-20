@@ -1,655 +1,245 @@
 {% import "components.html" as components %}
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html><head>
-  <title></title>
-      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-      <style type="text/css">
-  body {
-    margin: 0;
-    mso-line-height-rule: exactly;
-    padding: 0;
-    min-width: 100%;
-    font-family: "Hind", Helvetica, Arial, sans-serif;
-    line-height: 1.5;
-  }
-  
-  table {
-    border-collapse: collapse;
-    border-spacing: 0;
-  }
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+   <meta charset="utf-8" />
+    <!-- utf-8 works for most cases -->
+    <meta name="viewport" content="width=device-width" />
+    <!-- Forcing initial-scale shouldn't be necessary -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Use the latest (edge) version of IE rendering engine -->
+    <title></title>
+    <!-- The title tag shows in email notifications, like Android 4.4. -->
+    <!-- Web Font / @font-face : BEGIN -->
+    <!-- NOTE: If web fonts are not required, lines 16 - 31 can be safely removed. -->
 
-  td {
-    padding: 0;
-    vertical-align: top;
-    font-family: "Hind", Helvetica, Arial, sans-serif;
-    line-height: 1.5;
-  }
-  .spacer,
-  .border {
-    font-size: 1px;
-    line-height: 1px;
-  }
-  .spacer {
-    width: 100%;
-  }
-  img {
-    border: 0;
-    -ms-interpolation-mode: bicubic;
-  }
-  .image {
-    font-size: 12px;
-    margin-bottom: 10px;
-    mso-line-height-rule: at-least;
-  }
-  .image img {
-    display: block;
-  }
-  .logo {
-    mso-line-height-rule: at-least;
-  }
-  .logo img {
-    display: block;
-  }
-  strong {
-    font-weight: 600;
-  }
-  h1,
-  h2 {
-    font-family: "Work Sans", Arial Black, Helvetica, sans-serif;
-  }
-  h2,
-  h3 {
-    line-height: 1.25;
-  }
-  h3, 
-  p {
-    font-family: "Hind", Helvetica, Arial, sans-serif !important;
-  }
-  p {
-    line-height: 1.5;
-  }
-  h1,
-  h2,
-  h3,
-  p,
-  ol,
-  ul,
-  li {
-    margin-top: 0;
-  }
-  ol,
-  ul,
-  li {
-    padding-left: 0;
-  }
-  blockquote {
-    margin-top: 0;
-    margin-right: 0;
-    margin-bottom: 0;
-    padding-right: 0;
-  }
-  .column-top {
-    font-size: 20px;
-    line-height: 20px;
-  }
-  .column-bottom {
-    font-size: 3px;
-    line-height: 3px;
-  }
-  .column {
-    text-align: left;
-  }
-  .contents {
-    table-layout: fixed;
-    width: 100%;
-  }
-  .padded {
-    padding-left: 10px;
-    padding-right: 10px;
-    word-break: break-word;
-    word-wrap: break-word;
-  }
-  .wrapper {
-    display: table;
-    table-layout: fixed;
-    width: 100%;
-    min-width: 620px;
-    -webkit-text-size-adjust: 100%;
+    <!-- Desktop Outlook chokes on web font references and defaults to Times New Roman, so we force a safe fallback font. -->
+    <!--[if mso]>
+    <style>
+      * {
+        font-family: sans-serif !important;
+      }
+    </style>
+  <![endif]-->
+
+    <!-- All other clients get the webfont reference; some will render the font and others will silently fail to the fallbacks. More on that here: http://stylecampaign.com/blog/2015/02/webfont-support-in-email/ -->
+    <!--[if !mso]><!-->
+    <!-- insert web font reference, eg: <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'> -->
+  <!--<![endif]-->
+
+  <!-- Web Font / @font-face : END -->
+  <!-- CSS Reset -->
+  <style type="text/css">
+    /* What it does: Remove spaces around the email design added by some email clients. */
+    /* Beware: It can remove the padding / margin and add a background color to the compose a reply window. */
+    html, body {
+      Margin: 0 !important;
+      padding: 0 !important;
+      height: 100% !important;
+      width: 100% !important;
+    }
+    /* What it does: Stops email clients resizing small text. */
+    * {
     -ms-text-size-adjust: 100%;
-  }
-  .wrapper a {
-    transition: opacity 0.2s ease-in;
-  }
-  table.wrapper {
-    table-layout: fixed;
-  }
-  .one-col,
-  .two-col,
-  .three-col {
-    margin: 10px auto;
-    width: 600px;
-  }
-  .centered {
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .btn {
-    padding-bottom: 27px;
-  }
-  .two-col .btn {
-    padding-top: 24px;
-    padding-bottom: 24px;
-  }
-
-  .three-col .btn {
-    padding-bottom: 21px;
-  }
-
-  .single-item .btn {
-    padding-top: 24px;
-  }
-  @media only screen and (max-width: 620px) {
-    .btn {
-      padding-bottom: 27px !important;
+    -webkit-text-size-adjust: 100%;
     }
-
-  }
-  .two-col {
-      margin-top: 15px;
-      margin-bottom: 15px;
-  }
-  .two-col .image {
-    margin-bottom: 10px;
-  }
-  .two-col .column-bottom {
-    font-size: 0;
-    line-height: 0;
-  }
-  .two-col .column {
-    width: 300px;
-  }
-  .three-col .image {
-    margin-bottom: 21px;
-  }
-  .three-col .column-bottom {
-    font-size: 0;
-    line-height: 0;
-  }
-  .three-col .column {
-    width: 200px;
-  }
-  @media only screen and (min-width: 0) {
-    .wrapper {
-      text-rendering: optimizeLegibility;
+    /* What it does: Forces Outlook.com to display emails full width. */
+    .ExternalClass {
+      width: 100%;
     }
-  }
-  @media only screen and (max-width: 620px) {
-    [class=wrapper] {
-      min-width: 320px !important;
-      width: 100% !important;
+    /* What it does: Centers email on Android 4.4 */
+    div[style*="margin: 16px 0"] {
+      margin:0 !important;
     }
-    [class=wrapper] .one-col,
-    [class=wrapper] .two-col,
-    [class=wrapper] .three-col {
-      width: 320px !important;
+    /* What it does: Stops Outlook from adding extra spacing to tables. */
+    table, td {
+      mso-table-lspace: 0pt !important;
+      mso-table-rspace: 0pt !important;
     }
-    [class=wrapper] .column,
-    [class=wrapper] .gutter {
-      display: block;
-      float: left;
-      width: 320px !important;
+    /* What it does: Fixes webkit padding issue. Fix for Yahoo mail table alignment bug. Applies table-layout to the first 2 tables then removes for anything nested deeper. */
+    table {
+      border-spacing: 0 !important;
+      border-collapse: collapse !important;
+      table-layout: fixed !important;
+      margin: 0 auto !important;
     }
-    [class=wrapper] .padded {
-      padding-left: 10px !important;
-      padding-right: 10px !important;
+    table table table {
+      table-layout: auto;
     }
-    [class=wrapper] .block {
-      display: block !important;
+    /* What it does: Uses a better rendering method when resizing images in IE. */
+    img {
+    -ms-interpolation-mode:bicubic;
     }
-    [class=wrapper] .hide {
-      display: none !important;
+    /* What it does: Overrides styles added when Yahoo's auto-senses a link. */
+    .yshortcuts a {
+      border-bottom: none !important;
     }
-    [class=wrapper] .image {
-      margin-bottom: 27px !important;
+    /* What it does: A work-around for iOS meddling in triggered links. */
+    .mobile-link--footer a, a[x-apple-data-detectors] {
+      color:inherit !important;
+      text-decoration: underline !important;
     }
-    [class=wrapper] .image img {
-      height: auto !important;
-      width: 100% !important;
-    }
-    [class=wrapper] .footer-core-funder {
-      padding-top: 30px;
-    }
-  }
-  .wrapper h1 {
-    font-weight: 800;
-  }
-  .wrapper h2 {
-    font-family: "Work Sans", Arial Black, Helvetica, sans-serif;
-    /*text-transform: uppercase;*/
-    font-weight: 800;
-    letter-spacing: -0.7px;
-  }
-  .wrapper h3 {
-    font-weight: 600;
-  }
-  .wrapper p,
-  .wrapper ol,
-  .wrapper ul {
-    font-weight: 400;
-  }
-  .wrapper blockquote {
-    font-style: italic;
-  }
-  .divider {
-    font-size: 4px;
-    line-height: 4px;
-  }
-  .contents .divider {
-    margin-bottom: 35px;
-    margin-top: 35px;
-  }
-  .divider .bullet {
-    border-radius: 2px;
-    display: inline-block;
-    font-size: 4px;
-    height: 4px;
-    line-height: 4px;
-    width: 4px;
-  }
-  .one-col,
-  .two-col,
-  .three-col {
-    table-layout: fixed;
-  }
-  .email-top,
-  .email-bottom {
-    font-size: 54px;
-    line-height: 54px;
-  }
-  .wrapper a {
-    text-decoration: underline;
-  }
-  .wrapper h1 {
-    font-size: 32px;
-    margin-bottom: 24px;
-  }
-  .wrapper h2 {
-    font-size: 28px;
-    line-height: 28px;
-    margin-bottom: 16px;
-  }
-  .wrapper h3 {
-    font-size: 24px;
-    margin-bottom: 0;
-  }
-  .wrapper h1 a,
-  .wrapper h2 a,
-  .wrapper h3 a {
-    text-decoration: none;
-  }
-  .wrapper p,
-  .wrapper ol,
-  .wrapper ul {
-    font-size: 17px;
-  }
-  .wrapper li {
-    margin-bottom: 14px;
-  }
-  .wrapper ol {
-    margin-left: 24px;
-  }
-  .wrapper ol li {
-    padding-left: 4px;
-  }
-  .wrapper ul {
-    margin-left: 18px;
-  }
-  .wrapper ul li {
-    padding-left: 9px;
-  }
-  .wrapper blockquote {
-    margin-left: 0;
-    padding-left: 17px;
-  }
-  .one-col .column table:nth-last-child(2) td h1:last-child,
-  .one-col .column table:nth-last-child(2) td h2:last-child,
-  .one-col .column table:nth-last-child(2) td h3:last-child,
-  .one-col .column table:nth-last-child(2) td p:last-child,
-  .one-col .column table:nth-last-child(2) td ol:last-child,
-  .one-col .column table:nth-last-child(2) td ul:last-child {
-    margin-bottom: 27px;
-  }
-  .two-col .column table:nth-last-child(2) td h1:last-child,
-  .two-col .column table:nth-last-child(2) td h2:last-child,
-  .two-col .column table:nth-last-child(2) td h3:last-child,
-  .two-col .column table:nth-last-child(2) td p:last-child,
-  .two-col .column table:nth-last-child(2) td ol:last-child,
-  .two-col .column table:nth-last-child(2) td ul:last-child {
-    margin-bottom: 24px;
-  }
-  .two-col h1 {
-    font-size: 28px;
-    margin-bottom: 20px;
-  }
-  .two-col h2 {
-    margin-bottom: 5px;
-  }
-  .two-col p,
-  .two-col ol,
-  .two-col ul {
-    font-size: 15px;
-  }
-  .two-col ol {
-    margin-left: 21px;
-  }
-  .two-col ol li {
-    padding-left: 3px;
-  }
-  .two-col ul {
-    margin-left: 18px;
-  }
-  .two-col ul li {
-    padding-left: 6px;
-  }
-  .two-col li {
-    margin-bottom: 12px;
-  }
-  .two-col .divider {
-    margin-bottom: 24px;
-  }
-  .two-col blockquote {
-    border-left-width: 3px;
-    padding-left: 15px;
-  }
-  .three-col .column table:nth-last-child(2) td h1:last-child,
-  .three-col .column table:nth-last-child(2) td h2:last-child,
-  .three-col .column table:nth-last-child(2) td h3:last-child,
-  .three-col .column table:nth-last-child(2) td p:last-child,
-  .three-col .column table:nth-last-child(2) td ol:last-child,
-  .three-col .column table:nth-last-child(2) td ul:last-child {
-    margin-bottom: 21px;
-  }
-  .three-col h1 {
-    font-size: 24px;
-    margin-bottom: 16px;
-  }
-  .three-col p,
-  .three-col ol,
-  .three-col ul {
-    font-size: 13px;
-  }
-  .three-col ul {
-    margin-left: 16px;
-  }
-  .three-col ul li {
-    padding-left: 6px;
-  }
-  .three-col ol {
-    margin-left: 18px;
-  }
-  .three-col ol li {
-    padding-left: 4px;
-  }
-  .three-col li {
-    margin-bottom: 10px;
-  }
-  .three-col .divider {
-    margin-bottom: 21px;
-  }
-  .three-col blockquote {
-    border-left-width: 2px;
-    padding-left: 13px;
-  }
-  .header {
-    margin-left: auto;
-    margin-right: auto;
-    width: 560px;
-  }
-  .header td {
-    font-size: 24px;
-  }
-  .header .logo {
-    padding-bottom: 27px;
-  }
-  .header .logo div {
-    font-weight: 600;
-    font-size: 32px;
-    line-height: 40px;
-  }
-  .header .logo div a {
-    text-decoration: none;
-  }
-  .header .logo div.logo-center {
-    text-align: center;
-  }
-  .header .logo div.logo-center img {
-    margin-left: auto;
-    margin-right: auto;
-  }
-  @media only screen and (max-width: 620px) {
-    [class=wrapper] .one-col .column:last-child table:nth-last-child(2) td h1:last-child,
-    [class=wrapper] .two-col .column:last-child table:nth-last-child(2) td h1:last-child,
-    [class=wrapper] .three-col .column:last-child table:nth-last-child(2) td h1:last-child,
-    [class=wrapper] .one-col .column:last-child table:nth-last-child(2) td h2:last-child,
-    [class=wrapper] .two-col .column:last-child table:nth-last-child(2) td h2:last-child,
-    [class=wrapper] .three-col .column:last-child table:nth-last-child(2) td h2:last-child,
-    [class=wrapper] .one-col .column:last-child table:nth-last-child(2) td h3:last-child,
-    [class=wrapper] .two-col .column:last-child table:nth-last-child(2) td h3:last-child,
-    [class=wrapper] .three-col .column:last-child table:nth-last-child(2) td h3:last-child,
-    [class=wrapper] .one-col .column:last-child table:nth-last-child(2) td p:last-child,
-    [class=wrapper] .two-col .column:last-child table:nth-last-child(2) td p:last-child,
-    [class=wrapper] .three-col .column:last-child table:nth-last-child(2) td p:last-child,
-    [class=wrapper] .one-col .column:last-child table:nth-last-child(2) td ol:last-child,
-    [class=wrapper] .two-col .column:last-child table:nth-last-child(2) td ol:last-child,
-    [class=wrapper] .three-col .column:last-child table:nth-last-child(2) td ol:last-child,
-    [class=wrapper] .one-col .column:last-child table:nth-last-child(2) td ul:last-child,
-    [class=wrapper] .two-col .column:last-child table:nth-last-child(2) td ul:last-child,
-    [class=wrapper] .three-col .column:last-child table:nth-last-child(2) td ul:last-child {
-      margin-bottom: 27px !important;
-    }
-    [class=wrapper] .email-top,
-    [class=wrapper] .email-bottom {
-      font-size: 28px !important;
-      line-height: 28px !important;
-    }
-    [class=wrapper] .header {
-      width: 280px !important;
-    }
-    [class=wrapper] .logo img {
-      max-width: 280px !important;
-      height: auto !important;
-    }
-    [class=wrapper] blockquote {
-      border-left-width: 4px !important;
-      margin-left: 0 !important;
-      padding-left: 14px !important;
-    }
-    [class=wrapper] h1 {
-      font-size: 32px !important;
-      line-height: 35px !important;
-      margin-bottom: 24px !important;
-    }
-    [class=wrapper] h2 {
-      font-size: 22px !important;
-      line-height: 30px !important;
-      margin-bottom: 16px !important;
-    }
-    [class=wrapper] h3 {
-      font-size: 18px !important;
-      line-height: 26px !important;
-      margin-bottom: 12px !important;
-    }
-    [class=wrapper] .one-col p,
-    [class=wrapper] .two-col p,
-    [class=wrapper] .three-col p,
-    [class=wrapper] .one-col ol,
-    [class=wrapper] .two-col ol,
-    [class=wrapper] .three-col ol,
-    [class=wrapper] .one-col ul,
-    [class=wrapper] .two-col ul,
-    [class=wrapper] .three-col ul {
-      font-size: 17px !important;
-      line-height: 27px !important;
-      margin-bottom: 27px !important;
-    }
-    [class=wrapper] ol {
-      margin-left: 24px !important;
-    }
-    [class=wrapper] ol li {
-      padding-left: 4px !important;
-    }
-    [class=wrapper] ul {
-      margin-left: 19px !important;
-    }
-    [class=wrapper] ul li {
-      padding-left: 9px !important;
-    }
-    [class=wrapper] li {
-      margin-bottom: 14px !important;
-    }
-    [class=wrapper] .divider {
-      margin-bottom: 27px !important;
-    }
-    [class=wrapper] .column-bottom {
-      font-size: 3px !important;
-      line-height: 3px !important;
-    }
-    [class=wrapper] .first .column-bottom,
-    [class=wrapper] .second .column-top,
-    [class=wrapper] .three-col .second .column-bottom,
-    [class=wrapper] .third .column-top {
-      display: none;
-    }
-    [class=wrapper] .show {
-      display: block !important;
-      font-size: 1px;
-      line-height: 1px;
-    }
-    [class=wrapper] .hide {
-      display: none !important;
-    }
-    [class=wrapper] .social-container {
-      display: block;
-      float: left;
-      width: 320px !important;
-    }
-  }
   </style>
-    <meta name="robots" content="noindex,nofollow" />
-  <meta property="og:title" content="New Zealand Festival" />
-  </head>
-    <body style="margin: 0;mso-line-height-rule: exactly;padding: 0;min-width: 100%; {% block body_background %}{% endblock %}" class="{% block body_class %}{% endblock %}">
-        <!--[if !mso]><!-->
-          <style>
-          @import url(https://fonts.googleapis.com/css?family=Work+Sans:800|Hind:400,500,600,700,800|Raleway:600);
-          </style>
-        <!--<![endif]-->
-    <style type="text/css">
-  body,
-
-  .t-content {
-    background-color: #fff;
-    color: #222;
-  }
-  .wrapper,
-  .emb-editor-canvas,
-  .one-col,
-  .two-col,
-  .three-col {
-      font-family: "Hind", Helvetica, Arial, sans-serif;
-  }
-  .wrapper h1 {
-      color: #222;
-      font-family: "Work Sans", Arial Black, Helvetica, sans-serif;
-      text-transform:uppercase;
-      font-size: 60px;
-      line-height: 55px;
-      word-wrap: break-word;
-      margin-top: 50px;
-  }
-  .two-col h2 {
-      color: #222;
-      font-family: "Work Sans", Arial Black, Helvetica, sans-serif;
-      font-size: 24px;
-      line-height: 24px;
-  }
-  .nzf-logo,
-  .nzflogo-container {
-      width: 189px;
-  }
-  a,
-  a:link,
-  a:visited,
-  a:active,
-  a:hover {
-      text-decoration: underline;
-  }
-  .btn a,
-  .btn a:link,
-  .btn a:visited,
-  .btn a:active,
-  .btn a:hover {
-      /*color: #ffffff !important;*/
-      color: #ffffff;
-      text-decoration: none;
-  }
-  .divider {
+  <link rel="stylesheet" href="/styles.css">
+    <!-- Progressive Enhancements -->
+  <style>
+      .u-hidden\@desktop {
+        display: none;
+      }
+    /*Use @media queries with care.  You should not bring these styles inline -- so it's recommended to apply them AFTER you bring the other stlying inline. */
+    /* Media Queries */
+    @media screen and (max-width: 480px) {
+    
+      /* What it does: Forces elements to resize to the full width of their container. Useful for resizing images beyond their max-width. */
+      .fluid,  .fluid-centered {
         width: 100% !important;
-        height: 3px;
-  }
-  .divider--soft {
-    height: 1px;
-    background-color:#a4a4a4;
-  }
-  .logos img {
-      margin: 0 10px;
-  }
+        max-width: 100% !important;
+        height: auto !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+      }
+      /* And center justify these ones. */
+      .fluid-centered {
+        margin-left: auto !important;
+        margin-right: auto !important;
+      }
+      
+      /* What it does: Forces table cells into full-width rows. */
+      .stack-column,  .stack-column-center {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        direction: ltr !important;
+      }
+      /* And center justify these ones. */
+      .stack-column-center {
+        text-align: center !important;
+      }
+      tr, td {
+        display:block; 
+      }
+      /* What it does: Generic utility class for centering. Useful for images, buttons, and nested tables. */
+      .center-on-narrow {
+        text-align: center !important;
+        display: block !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        float: none !important;
+      }
+      table.center-on-narrow {
+        display: inline-block !important;
+      }
+      .u-hidden\@desktop {
+        display:block;
+      }
+      table {
+        width:100% !important;
+      }
+      .gutters {
+        width: 90%!important;
+      }
+    }
+    </style>
+  </head>
+  <body class="{% block body_class %}{% endblock %}">
+    <div style='background-color:#fff; color:#fff'>
+      <div style='width:85%; margin: 0 auto; padding:10px; clear: both; overflow:hidden'>
+        <img src="/springload-logo.png" style='width:auto; float:right'>
+      </div>
+    </div>
+    <div style='width:45%; margin:0 auto; padding:30px 0; '>
+    
+        <h1>
+          Email starter kit
+        </h1> 
+        <p>
+          If you are a <strong>designer</strong> please check out or <a href=''>list of constraints</a> before designing for an email template
+        </p>
+        <p>
+          If you are a <strong>developer</strong> please read the <a href="">readme</a> file before starting
+        </p>
+        <p>
+          Coding email templates can be a lot of work as they need to work across multiple clients (<a href="">List of clients here</a>) and the markup we normally use for websites won't work in emails. Emails still requires the extensive use of tables.
+        </p>
+        <p>
+          Here is a list of all the buildign blocks we have in the starter kit:
+        </p>
+     
+    </div>
+   <center style=" border:40px solid #353535; border-radius:20px; width: 85%; margin:0 auto ">
+    <table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#efefef" >
+      <tr valign="top">
+        <td align="center">
+           
+      
+            <div style="display:none;font-size:1px;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;mso-hide:all;font-family: sans-serif;"> (Optional) This text will appear in the inbox preview, but not the email body. </div>
+         
+          
+          {% block preheader %}
 
-  .footer, .footer * {
-      font-size: 13px !important;
-      color: #888;
-  }
-  .footer p {
-    font-weight: 500;
-  }
-  .contents img {
-      /* color: white; */
-  }
-  .contents p {
-    font-size: 17px;
-  }
-  .masthead img {
-      /* background-color: white; */
-  }
-  .masthead a {
-      text-decoration: none !important;
-  }
+            {% call components.container(width="75%", height="10") %}
+              <td>
+                  <webversion style="color:#cccccc; text-decoration:underline;">View as a Web Page</webversion>
+              </td>
 
-  .t-article .masthead img {
-      background-color: transparent !important;
-  }
+            {% endcall %}
 
-  .clear {
-      display: block;
-      height: 0;
-      visibility: hidden;
-  }
-  p {
-      margin: 0;
-      margin-bottom: .5em;
-      line-height: 1.5;
-  }
-  .footer-logos p {
-      line-height: 2em;
-  }
+          {% endblock %}
 
-  .u-uppercase {
-    text-transform: uppercase;
-  }
-  </style>
+          {% block header %}
+            {{ components.header() }}
+          {% endblock %}
 
-  <link rel="stylesheet" href="../styles.css">
+          <repeater>
 
-{% block content %}{% endblock %}
+            {% block content %}
+            {% endblock %}
 
+          </repeater>
+
+            {% block footer %}
+               {% call components.container(width="75%", height="0") %}
+                  <td>
+                      <hr>
+                  </td>
+              {% endcall %}
+
+              {% call components.container(width="75%", height="24") %}
+                  <td class='mt28'>
+                      <unsubscribe>
+                          Unsubscribe
+                      </unsubscribe>
+                  </td>
+              {% endcall %}
+
+              {% call components.container(width="75%", bgcolor="#e5b748", height="24") %}
+                  <td style="color: #ffffff; u-font-size-14">
+                      <p style="color: #ffffff;">P<a href="tel:+6448018205" style='color: #ffffff;' class='link'><span style='color: #ffffff;'>+64 4 801 8205</span></a>  |  E <a href="mailto:hello@springload.co.nz" style='color: #ffffff;' class='link'><span style='color: #ffffff;'>hello@springload.co.nz</span></a></p>
+
+                      <multiline label="address">
+                          <p>
+                          Springload
+                          <br/>
+                          Level 7, Hope Gibbons Building.
+                          <br/>
+                          7 Dixon Street, 
+                          <br/>
+                          Te Aro,
+                          <br/>
+                          Wellington 6011</p>
+                      </multiline>
+                  </td>
+              {% endcall %}
+
+            {% endblock %}
+
+           
+        </td>
+      </tr>
+    </table>
+         
+  </center>
+     
+  
 </body></html>
