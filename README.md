@@ -42,13 +42,28 @@ npm run deploy
 
 #For designers
 
-600px wide
+if you want your email to render well in every email client, stick to using a width of 600px. Plus this is what our default starter kit uses.
 
 #For developers
 
-Bugs you need to be aware of
+Please if you come across any of your own please document them here 
+
+< Bugs you need to be aware of
+
+Divs have positioning and box model issues in different clients, in particular those that use Microsoft Word (Outlook) to render. You can use divs if you want but safer to code like it’s the 90's and stick to tables.
+
+#ffffff instead of #fff
+
+In general it’s easier to stick with standard system fonts. That includes Helvetica, Arial etc.
+
+However, we can use web fonts like Google fonts. You should put them behind a WebKit conditional media query otherwise Outlook will mess up your type e.g.
+
+If you want to use margins you need to have a capital M for example Margin: 30px; as this is the only way it works in Outlook
+Inline CSS instead of stylesheets
 
 Cache strings break when importing a template into campaign monitor
+
+Images always need the width defined 
 
 USING RETINA IMAGES IN OUTLOOK
 
