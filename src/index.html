@@ -1,11 +1,56 @@
 {% extends "base.html" %}
+{% import "components.html" as components %}
 
-{% block email %}
-<div style="margin: 1rem auto; max-width: 40rem;">
-  <h1>Email starter kit</h1>
-  <ul>
-    <li><a href="/starter-template/index.html">Satrter kit</a></li>
-  </ul>
- 
-</div>
+{% block body_class %}{% endblock %}
+{% block body_background %}{% endblock %}
+
+{% block intro %}
+  <div style='background-color:#fff; color:#fff'>
+    <div style='width:85%; margin: 0 auto; padding:10px; clear: both; overflow:hidden'>
+      <img src="/springload-logo.png" style='width:auto; float:right'>
+    </div>
+  </div>
+  <div style='width:45%; margin:0 auto; padding:30px 0; '>
+  
+      <h1>
+        Email starter kit
+      </h1> 
+      <p>
+        If you are a <strong>designer</strong> please check out or <a href=''>list of constraints</a> before designing for an email template
+      </p>
+      <p>
+        If you are a <strong>developer</strong> please read the <a href="">readme</a> file before starting
+      </p>
+      <p>
+        Coding email templates can be a lot of work as they need to work across multiple clients (<a href="">List of clients here</a>) and the markup we normally use for websites won't work in emails. Emails still requires the extensive use of tables.
+      </p>
+      <p>
+        Here is a list of all the buildign blocks we have in the starter kit:
+      </p>
+   
+  </div>
+{% endblock %}
+
+{% block content %}
+             
+	{{ components.multiline_block() }}
+
+	{{ components.h2_heading_block() }}
+          
+	{{ components.button_block() }}
+
+	{{ components.heading_and_content() }}
+  
+	{{ components.image_block() }}
+
+	{{ components.profile_block() }}
+        
+	{{ components.stacked_visual_block(bgcolor="#e5b748") }}
+          
+	{{ components.two_col_stacked_visual_block() }}
+
+	{{ components.divider_block() }}
+
+	{{ components.media_block(bgcolor="#e5b748") }}
+
 {% endblock %}
