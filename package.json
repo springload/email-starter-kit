@@ -1,55 +1,55 @@
 {
-  "name": "festival_email_templates",
-  "version": "0.1.0",
-  "private": true,
-  "license": "UNLICENSED",
-  "description": "Campaign Monitor templates for New Zealand Festival",
-  "main": "README.md",
-  "author": "Springload",
-  "keywords": [],
-  "homepage": "https://github.com/springload/festival_email_templates#readme",
-  "bugs": {
-    "url": "https://github.com/springload/festival_email_templates/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/springload/festival_email_templates.git"
-  },
-  "rikki": {
-    "name": "Festival EDM pattern library",
-    "rootDir": "src",
-    "staticDir": "dist/patterns"
-  },
-  "devDependencies": {
-    "browser-sync": "^2.18.13",
-    "gulp": "^3.9.1",
-    "gulp-inline-css": "^3.1.0",
-    "gulp-pleeease": "^2.0.2",
-    "gulp-rename": "^1.2.2",
-    "gulp-sass": "^2.3.2",
-    "gulp-shell": "^0.5.2",
-    "gulp-size": "^2.1.0",
-    "gulp-sourcemaps": "^1.6.0",
-    "gulp-util": "^3.0.7",
-    "hyperlink": "^3.0.0",
-    "rikki-patterns": "^0.4.0",
-    "sass-module-importer": "^1.4.0",
-    "vinyl-buffer": "^1.0.0",
-    "vinyl-source-stream": "^1.1.0"
-  },
-  "dependencies": {},
-  "scripts": {
-    "start": "npm run lint:versions -s && npm run watch -s",
-    "lint:versions": "NVM_VERSION=$(cat .nvmrc); NODE_VERSION=$(node --version); echo $NODE_VERSION | grep -q $NVM_VERSION && echo \"✓ running node $NODE_VERSION - all clear\" || (echo \"✗ running node $NODE_VERSION - expected $NVM_VERSION. Use nvm to install the right version.\" && exit 1)",
-    "lint": "npm run lint:versions -s",
-    "css": "gulp css",
-    "content": "gulp content",
-    "build": "gulp build",
-    "dist": "NODE_ENV=production npm run build",
-    "watch": "gulp watch",
-    "patterns:start": "rikki start",
-    "test": "npm run test:ci -s",
-    "test:ci": "./bin/ci-test.sh",
-    "deploy": "npm run dist -s && gulp deploy"
-  }
+    "name": "email-starter-kit",
+    "version": "0.1.0",
+    "private": true,
+    "license": "MIT",
+    "description": "Campaign Monitor EDM templates starter kit",
+    "main": "README.md",
+    "author": "Springload",
+    "keywords": [],
+    "homepage": "https://github.com/springload/email-starter-kit#readme",
+    "bugs": {
+        "url": "https://github.com/springload/email-starter-kit/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/springload/email-starter-kit.git"
+    },
+    "rikki": {
+        "name": "EDM pattern library",
+        "rootDir": "src",
+        "staticDir": "dist/patterns"
+    },
+    "devDependencies": {
+        "browser-sync": "^2.18.13",
+        "gulp": "^3.9.1",
+        "gulp-inline-css": "^3.1.0",
+        "gulp-pleeease": "^2.0.2",
+        "gulp-rename": "^1.2.2",
+        "gulp-sass": "^2.3.2",
+        "gulp-shell": "^0.5.2",
+        "gulp-size": "^2.1.0",
+        "gulp-sourcemaps": "^1.6.0",
+        "gulp-util": "^3.0.7",
+        "hyperlink": "^3.0.0",
+        "rikki-patterns": "^0.4.0",
+        "sass-module-importer": "^1.4.0",
+        "vinyl-buffer": "^1.0.0",
+        "vinyl-source-stream": "^1.1.0"
+    },
+    "dependencies": {},
+    "scripts": {
+        "start": "npm run lint:versions -s && npm run watch -s",
+        "lint:versions": "NVM_VERSION=$(cat .nvmrc); NODE_VERSION=$(node --version); echo $NODE_VERSION | grep -q $NVM_VERSION && echo \"✓ running node $NODE_VERSION - all clear\" || (echo \"✗ running node $NODE_VERSION - expected $NVM_VERSION. Use nvm to install the right version.\" && exit 1)",
+        "lint": "npm run lint:versions -s",
+        "css": "gulp css",
+        "content": "gulp content",
+        "build": "gulp build",
+        "dist": "NODE_ENV=production npm run build",
+        "watch": "gulp watch",
+        "patterns:start": "rikki start",
+        "test": "npm run test:ci -s",
+        "test:ci": "./bin/ci-test.sh",
+        "deploy": "npm run dist -s && gulp deploy"
+    }
 }

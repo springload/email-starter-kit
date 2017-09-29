@@ -4,7 +4,6 @@ Coding for HTML emails is like coding for Internet browsers from 10 years ago.
 Picture a website from a decade ago: that’s the level of design complexity we can reasonably shoot for.
 Tables Are Your Best Friend
 
-
 |Important links|
 |---------------|
 |[template building documentation](https://www.campaignmonitor.com/create/)|
@@ -24,6 +23,7 @@ cd email_starter_kit
 nvm install
 # Then, install all project dependencies.
 npm install
+pip install wrangler
 ```
 
 ## Working on the project
@@ -40,11 +40,13 @@ npm run start
 npm run deploy
 ```
 
-# For designers
+## Documentation
+
+### For designers
 
 if you want your email to render well in every email client, stick to using a width of 600px. Plus this is what our default starter kit uses.
 
-# For developers
+### For developers
 
 Please if you come across any of your own please document them here 
 
@@ -71,7 +73,7 @@ Some versions of Microsoft Outlook still display the retina images at their full
 
 DO NOT USE * it can cause all sorts of mess
 
-# Email client support
+### Email client support
 
 > Email client support is informed by analytics on existing campaigns of comparable audiences.
 
@@ -91,4 +93,3 @@ DO NOT USE * it can cause all sorts of mess
 | Android | Android 7 | No – Use Android 4 instead |
 | Yahoo! Mail | Yahoo! Mail | Yes |
 | Thunderbird | Thunderbird | Yes |
-| Microsoft Outlook | Outlook 2007 | Yes |
