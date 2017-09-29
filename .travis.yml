@@ -1,0 +1,28 @@
+language: python
+cache:
+  pip: true
+  directories:
+  - node_modules
+install:
+- nvm install
+- npm install
+- pip install wrangler
+script: npm run test:ci
+notifications:
+  email: false
+  slack:
+    rooms:
+      secure: JCzlYCGwETFr4BCb0xa/QJ5FC8Z4rCxOUbXZqq5cHmaUE/Ce2gA5fldnNxWcrpCvoYdPEHRscE4py6YGKJz/c/mMJEasZ6mTgjSblCP1NgQQQ6RoWfJBCH3w4u7Vo3LIn/0TRNYtms7zyD+8orn3HsoLY9VAfFh6zKT1aUGTYf0xaIMq5ZWJWeM+XRCj4/PjC0JCpVZrhhsksDhBIIOeIyNTRTIBGu8D9OVIj8doW16rkYw4upqO5Vi1zRCgUQIb34sN6bL2uQWqkl+Nu0mQabbN5/Eg/b1OfZEYHJkXKcnJrMOkdNBLFLSVCyr5sCv9RdNpVJiNDt5KPRYFc2Gc6DgdTv79xbH9yEdjr/8Kt3bQpugIZ0UxxR1KM2YOI7H4It57iaseumbVpmI22Q3BPMVeCQsDxFQRxVgzqNr2QG9INTZrj2BMIAR85qh7DzGIUqfpDcsxaXRmJfL4u9TAXLHGJisLNzuQEFOiQwy8clalZzEosnNYzmRu/j47y/5xNHX70jH09eBrxlQw/gDGzOup5idR12wUs8sDB1mUaJPyssgbdrqSczciHg6p2mlPOC1zcJhsSv5RLbGCie+Eub7bdX5w0zhqoJShWSl+19PBhqYo9dnGUDlNzlapDtjLj4NXhEK6oJ8/xfNU1rBPEjP7qoCdIGd/U9SpKSYYROs=
+branches:
+  except:
+  - gh-pages
+deploy:
+  provider: pages
+  skip_cleanup: true
+  local_dir: dist
+  github_token: "$GITHUB_TOKEN"
+  on:
+    branch: master
+env:
+  global:
+    secure: mwCLaOnT0uwBN0DQZ8w9KW8Fg3aFN+P63FmyT6zn2ZsZt4/mzMp2ydNKObzDLXruxrp/gCW7B+XK/S9NzOdWwttAEe/A6C8RuLavmrbyW2OH5RrDp7+vkZQtsGr4hA+0AKE14XqhKe10GfCXPOXdJXrbyDRaWC+xApA40aWkHn29NPgC39ttfJw/mAUI86gd156D/SFJy9JHQVfL24QvFDWDjUycUMYZaxtjCWo4mzTNwIQxb+XL0elOkMq/msdZElBRJ+sBATXE6YAKbtXBfkDeijClhXB76VqcXTfLGD/w5p53sieo8ghLZt09mjAJsCq5MK5x13ToDlRfPibpIEuSG1QArMa1HXlHNDaihj35CATYyCzKRrCwRJLoBhmIVTs5SjNNZcY9WoYsEXaXLPdR/0w33rO7sEWzwwFA31eJf9git3p5lKFkTLJdhGxA/F86gDjOPocDh9RDDT95rq1S/zBaJhhACy+MJjkoRIN0If+7NsY8VXaILzuEF89F3duWeMdM6v+aLYnvAX2OlXDWLKui9eYmqXOkoyz9kLUJE85HJ4QLV7RwOW/Ir6g+LyILXsN6PPSRU46om5cKwnxcRucZ6Yw/uoNV2cNbyUUNnwQsjmuTWs79ft5i38Hobq9XCYu8Y+azr8phibuzZKDnBiXQM7jxtM4TFy196a0=
