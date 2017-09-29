@@ -1,4 +1,4 @@
-> Email starter kit 
+# Email starter kit 
 
 Coding for HTML emails is like coding for Internet browsers from 10 years ago. 
 Picture a website from a decade ago: that’s the level of design complexity we can reasonably shoot for.
@@ -40,11 +40,11 @@ npm run start
 npm run deploy
 ```
 
-#For designers
+# For designers
 
 if you want your email to render well in every email client, stick to using a width of 600px. Plus this is what our default starter kit uses.
 
-#For developers
+# For developers
 
 Please if you come across any of your own please document them here 
 
@@ -52,7 +52,7 @@ Please if you come across any of your own please document them here
 
 Divs have positioning and box model issues in different clients, in particular those that use Microsoft Word (Outlook) to render. You can use divs if you want but safer to code like it’s the 90's and stick to tables.
 
-#ffffff instead of #fff
+`#ffffff` instead of `#fff`
 
 In general it’s easier to stick with standard system fonts. That includes Helvetica, Arial etc.
 
@@ -71,10 +71,24 @@ Some versions of Microsoft Outlook still display the retina images at their full
 
 DO NOT USE * it can cause all sorts of mess
 
-browser support that this starter kit has been tested in: 
+# Email client support
 
-| x             | x           | x  |
-| ------------- |:-------------:| -----:|
-| x             | x             |       |
-| x             | x             |       |
-| x             | x             |       |
+> Email client support is informed by analytics on existing campaigns of comparable audiences.
+
+| Email client | Version | Testing in Campaign Monitor |
+|---------|-----------|---------|
+| Gmail | Gmail | Yes |
+| iOS Devices | iPhone | Yes |
+| iOS Devices | iPad | Yes |
+| Apple Mail | Apple Mail 10 | No – Use Apple Mail 9 instead |
+| Apple Mail | Apple Mail 9 | Yes |
+| Outlook.com | Outlook.com | Yes |
+| Microsoft Outlook | Outlook 2016 | Yes |
+| Microsoft Outlook | Outlook 2013 | Yes |
+| Microsoft Outlook | Outlook 2010 | Yes |
+| Spark.co.nz | Spark.co.nz | No – Uses the user's browser's rendering? |
+| Windows Live Desktop | Windows Live Desktop | No – Discontinued. Probably using the same underlying engine as Outlook |
+| Android | Android 7 | No – Use Android 4 instead |
+| Yahoo! Mail | Yahoo! Mail | Yes |
+| Thunderbird | Thunderbird | Yes |
+| Microsoft Outlook | Outlook 2007 | Yes |
