@@ -1,0 +1,274 @@
+/* What it does: Remove spaces around the email design added by some email clients. */
+/* Beware: It can remove the padding / margin and add a background color to the compose a reply window. */
+html, body {
+  margin: 0 !important;
+  padding: 0 !important;
+  height: 100% !important;
+  width: 100% !important; }
+
+/* What it does: Stops email clients resizing small text. */
+* {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; }
+
+/* Prevent Webkit and Windows Mobile platforms from changing default font sizes.*/
+/* Force Hotmail to display emails at full width */
+.ExternalClass {
+  width: 100%; }
+
+.ExternalClass,
+.ExternalClass p,
+.ExternalClass span,
+.ExternalClass font,
+.ExternalClass td,
+.ExternalClass div {
+  line-height: 100%; }
+
+/* What it does: Centers email on Android 4.4 */
+div[style*="margin: 16px 0"] {
+  margin: 0 !important; }
+
+/* What it does: Stops Outlook from adding extra spacing to tables. */
+table, td {
+  mso-table-lspace: 0pt !important;
+  mso-table-rspace: 0pt !important; }
+
+/* What it does: Fixes webkit padding issue. Fix for Yahoo mail table alignment bug. Applies table-layout to the first 2 tables then removes for anything nested deeper. */
+table {
+  border-spacing: 0 !important;
+  border-collapse: collapse !important;
+  table-layout: fixed !important;
+  margin: 0 auto !important;
+  mso-table-lspace: 0pt;
+  mso-table-rspace: 0pt; }
+
+table table table {
+  table-layout: auto; }
+
+/** Outlook 07, 10 Padding issue: These "newer" versions of Outlook add some padding around table cells potentially throwing off your perfectly pixeled table.  The issue can cause added space and also throw off borders completely.  Use this fix in your header or inline to safely fix your table woes.
+    More info: http://www.ianhoar.com/2008/04/29/outlook-2007-borders-and-1px-padding-on-table-cells/
+    http://www.campaignmonitor.com/blog/post/3392/1px-borders-padding-on-table-cells-in-outlook-07/
+    H/T @edmelly
+    Bring inline: No.
+    **/
+table td {
+  border-collapse: collapse; }
+
+td {
+  padding: 0; }
+
+/* What it does: Uses a better rendering method when resizing images in IE. */
+img {
+  outline: none;
+  text-decoration: none;
+  -ms-interpolation-mode: bicubic; }
+
+img {
+  display: block;
+  width: 100%;
+  max-width: 100%; }
+
+a img {
+  border: none; }
+
+/* What it does: Overrides styles added when Yahoo's auto-senses a link. */
+.yshortcuts a {
+  border-bottom: none !important; }
+
+/* What it does: A work-around for iOS meddling in triggered links. */
+.mobile-link--footer a, a[x-apple-data-detectors] {
+  color: inherit !important;
+  text-decoration: underline !important; }
+
+/* stylelint-disable */
+.t-twentyeighteen-green .u-current-color {
+  color: #2bbc8b; }
+
+.t-twentyeighteen-green.t-twentyeighteen-green--bg,
+.t-twentyeighteen-green .u-current-bg-color {
+  background-color: #2bbc8b; }
+
+.t-twentyeighteen-green .u-current-bg {
+  background-color: white; }
+
+.t-twentyeighteen-green .u-current-text-color {
+  color: #333; }
+
+.t-twentyeighteen-green a,
+.t-twentyeighteen-green a:link,
+.t-twentyeighteen-green a:visited,
+.t-twentyeighteen-green a:active,
+.t-twentyeighteen-green a:hover {
+  color: #2bbc8b; }
+
+.u-color-twentyeighteen-green {
+  color: #2bbc8b; }
+
+.u-bg-color-twentyeighteen-green {
+  background-color: #2bbc8b; }
+
+.u-text-color-twentyeighteen-green {
+  color: #333; }
+
+.t-twentyeighteen-red .u-current-color {
+  color: #ed1c24; }
+
+.t-twentyeighteen-red.t-twentyeighteen-red--bg,
+.t-twentyeighteen-red .u-current-bg-color {
+  background-color: #ed1c24; }
+
+.t-twentyeighteen-red .u-current-bg {
+  background-color: white; }
+
+.t-twentyeighteen-red .u-current-text-color {
+  color: #333; }
+
+.t-twentyeighteen-red a,
+.t-twentyeighteen-red a:link,
+.t-twentyeighteen-red a:visited,
+.t-twentyeighteen-red a:active,
+.t-twentyeighteen-red a:hover {
+  color: #ed1c24; }
+
+.u-color-twentyeighteen-red {
+  color: #ed1c24; }
+
+.u-bg-color-twentyeighteen-red {
+  background-color: #ed1c24; }
+
+.u-text-color-twentyeighteen-red {
+  color: #333; }
+
+.t-twentyeighteen-tccgreen .u-current-color {
+  color: #7bb585; }
+
+.t-twentyeighteen-tccgreen.t-twentyeighteen-tccgreen--bg,
+.t-twentyeighteen-tccgreen .u-current-bg-color {
+  background-color: #7bb585; }
+
+.t-twentyeighteen-tccgreen .u-current-bg {
+  background-color: #f0f0e6; }
+
+.t-twentyeighteen-tccgreen .u-current-text-color {
+  color: #333; }
+
+.t-twentyeighteen-tccgreen a,
+.t-twentyeighteen-tccgreen a:link,
+.t-twentyeighteen-tccgreen a:visited,
+.t-twentyeighteen-tccgreen a:active,
+.t-twentyeighteen-tccgreen a:hover {
+  color: #7bb585; }
+
+.u-color-twentyeighteen-tccgreen {
+  color: #7bb585; }
+
+.u-bg-color-twentyeighteen-tccgreen {
+  background-color: #7bb585; }
+
+.u-text-color-twentyeighteen-tccgreen {
+  color: #333; }
+
+.t-article .u-current-color {
+  color: #41c89f; }
+
+.t-article.t-article--bg,
+.t-article .u-current-bg-color {
+  background-color: #41c89f; }
+
+.t-article .u-current-bg {
+  background-color: #282e2f; }
+
+.t-article .u-current-text-color {
+  color: #ffffff; }
+
+.t-article a,
+.t-article a:link,
+.t-article a:visited,
+.t-article a:active,
+.t-article a:hover {
+  color: #41c89f; }
+
+.u-color-article {
+  color: #41c89f; }
+
+.u-bg-color-article {
+  background-color: #41c89f; }
+
+.u-text-color-article {
+  color: #ffffff; }
+
+.btn a {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #e5b748;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+  border-left: 22px solid #e5b748;
+  border-right: 22px solid #e5b748;
+  border-top: 14px solid #e5b748;
+  border-bottom: 14px solid #e5b748; }
+
+.media h3, .media h4 {
+  margin-top: 0; }
+
+.tile__img {
+  display: block; }
+
+.tile__content {
+  margin-bottom: 10px;
+  background-color: #F0F0F1;
+  border-top: 8px solid #F0F0F1;
+  border-bottom: 8px solid #F0F0F1;
+  border-left: 10px solid #F0F0F1;
+  border-right: 10px solid #F0F0F1; }
+
+html {
+  background-color: #dddddd; }
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  padding: 0; }
+
+hr {
+  width: 100%; }
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 600px; }
+
+/* Typography */
+p:empty {
+  display: none; }
+
+h1, h2, h3, h4, h5, h6, p, li {
+  margin-top: 0; }
+
+h1 {
+  font-size: 30px; }
+
+h2 {
+  font-size: 28px; }
+
+h3 {
+  font-size: 24px; }
+
+h4 {
+  font-size: 20px; }
+
+h5 {
+  font-size: 18px; }
+
+h6 {
+  font-size: 16px; }
+
+p {
+  line-height: 26px; }
+
+.u-text-uppercase {
+  text-transform: uppercase !important; }
+
+.u-circle {
+  border-radius: 50%; }

@@ -1,0 +1,901 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+   <meta charset="utf-8" />
+    <!-- utf-8 works for most cases -->
+    <meta name="viewport" content="width=device-width" />
+    <!-- Forcing initial-scale shouldn't be necessary -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Use the latest (edge) version of IE rendering engine -->
+    <title></title>
+    <!-- The title tag shows in email notifications, like Android 4.4. -->
+    <!-- Web Font / @font-face : BEGIN -->
+    <!-- NOTE: If web fonts are not required, lines 16 - 31 can be safely removed. -->
+
+    <!-- Desktop Outlook chokes on web font references and defaults to Times New Roman, so we force a safe fallback font. -->
+    <!--[if mso]>
+    <style>
+      * {
+        font-family: sans-serif !important;
+      }
+    </style>
+  <![endif]-->
+
+    <!-- All other clients get the webfont reference; some will render the font and others will silently fail to the fallbacks. More on that here: http://stylecampaign.com/blog/2015/02/webfont-support-in-email/ -->
+    <!--[if !mso]><!-->
+    <!-- insert web font reference, eg: <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'> -->
+  <!--<![endif]-->
+
+  <!-- Web Font / @font-face : END -->
+  <!-- CSS Reset -->
+  <style type="text/css">
+    /* What it does: Remove spaces around the email design added by some email clients. */
+    /* Beware: It can remove the padding / margin and add a background color to the compose a reply window. */
+    html, body {
+      Margin: 0 !important;
+      padding: 0 !important;
+      height: 100% !important;
+      width: 100% !important;
+    }
+    /* What it does: Stops email clients resizing small text. */
+    * {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    }
+    /* What it does: Forces Outlook.com to display emails full width. */
+    .ExternalClass {
+      width: 100%;
+    }
+    /* What it does: Centers email on Android 4.4 */
+    div[style*="margin: 16px 0"] {
+      Margin:0 !important;
+    }
+    /* What it does: Stops Outlook from adding extra spacing to tables. */
+    table, td {
+      mso-table-lspace: 0pt !important;
+      mso-table-rspace: 0pt !important;
+    }
+    /* What it does: Fixes webkit padding issue. Fix for Yahoo mail table alignment bug. Applies table-layout to the first 2 tables then removes for anything nested deeper. */
+    table {
+      border-spacing: 0 !important;
+      border-collapse: collapse !important;
+      table-layout: fixed !important;
+      Margin: 0 auto !important;
+    }
+    table table table {
+      table-layout: auto;
+    }
+    /* What it does: Uses a better rendering method when resizing images in IE. */
+    img {
+    -ms-interpolation-mode:bicubic;
+    }
+    /* What it does: Overrides styles added when Yahoo's auto-senses a link. */
+    .yshortcuts a {
+      border-bottom: none !important;
+    }
+    /* What it does: A work-around for iOS meddling in triggered links. */
+    .mobile-link--footer a, a[x-apple-data-detectors] {
+      color:inherit !important;
+      text-decoration: underline !important;
+    }
+  </style>
+  <link rel="stylesheet" href="/styles.css">
+    <!-- Progressive Enhancements -->
+  <style>
+      .u-hidden\@desktop {
+        display: none;
+      }
+    /*Use @media queries with care.  You should not bring these styles inline -- so it's recommended to apply them AFTER you bring the other stlying inline. */
+    /* Media Queries */
+    @media screen and (max-width: 480px) {
+    
+      /* What it does: Forces elements to resize to the full width of their container. Useful for resizing images beyond their max-width. */
+      .fluid,  .fluid-centered {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        Margin-left: auto !important;
+        Margin-right: auto !important;
+      }
+      /* And center justify these ones. */
+      .fluid-centered {
+        Margin-left: auto !important;
+        Margin-right: auto !important;
+      }
+      
+      /* What it does: Forces table cells into full-width rows. */
+      .stack-column,  .stack-column-center {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        direction: ltr !important;
+      }
+      /* And center justify these ones. */
+      .stack-column-center {
+        text-align: center !important;
+      }
+      tr, td {
+        display:block; 
+      }
+      /* What it does: Generic utility class for centering. Useful for images, buttons, and nested tables. */
+      .center-on-narrow {
+        text-align: center !important;
+        display: block !important;
+        Margin-left: auto !important;
+        Margin-right: auto !important;
+        float: none !important;
+      }
+      table.center-on-narrow {
+        display: inline-block !important;
+      }
+      .u-hidden\@desktop {
+        display:block;
+      }
+      table {
+        width:100% !important;
+      }
+      .gutters {
+        width: 90%!important;
+      }
+    }
+    </style>
+  </head>
+  <body class="">
+    
+
+
+    <center style="">
+
+    <table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#efefef" >
+      <tr valign="top">
+        <td align="center">
+           
+      
+            <div style="display:none;font-size:1px;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;mso-hide:all;font-family: sans-serif;"> (Optional) This text will appear in the inbox preview, but not the email body. </div>
+         
+          
+
+            <!--<table width="600" cellpadding="0" cellspacing="0" border="0"  bgcolor="#fffffe"  class=" " style="max-width: 600px;">
+    <tbody>
+        <tr>
+            <td valign="top" height="10" style="font-size: 1px;" class='section-height'>
+                &nbsp; 
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                <table width=" 75% " cellpadding="0" cellspacing="0" border="0" class='gutters'>
+                    <tbody>
+                        <tr>
+                                          <td>
+                  <webversion style="color:#cccccc; text-decoration:underline;">View as a Web Page</webversion>
+              </td>
+
+
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td valign="top" height="10" style="font-size: 1px;" class='section-height'>
+                &nbsp; 
+            </td>
+        </tr>
+    </tbody>
+</table>-->
+
+
+            <p style='background-color:#dddddd; font-weight:bold;margin:0;text-align:center'>header:</p>
+
+<table width="600" cellpadding="0" cellspacing="0" border="0"  bgcolor="#e5b748" class=" " style="max-width: 600px;">
+    <tbody>
+        <tr>
+            <td valign="top" height="45" style="font-size: 1px;" class='section-height'>
+                &nbsp; 
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                <table width=" 75% " cellpadding="0" cellspacing="0" border="0" class='gutters'>
+                    <tbody>
+                        <tr>
+                                <td width="30%">
+    	<img editable class="" label=" image " class="" src="/willsmith.png" alt="" width="100 " style="border:0; outline:none; text-decoration:none; display:block;">
+    </td>
+    
+    
+<td valign="top" width="5%" style="font-size: 0px;"  height="30" class='u-stacked-space '>
+    &nbsp;
+</td>
+    
+    <td align='left' >
+    	<h1 ><singleline label="Title">Email Templates hello</singleline></h1>
+    		<singleline label="Code like it's the 90's">Code like it's the 90's</singleline>
+
+    </td>
+
+
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td valign="top" height="45" style="font-size: 1px;" class='section-height'>
+                &nbsp; 
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+          <repeater>
+
+             
+	
+<p style='background-color:#dddddd; font-weight:bold;margin:0;text-align:center'>Multiline:</p>
+
+<layout label="Multiline " >
+<table width="600" cellpadding="0" cellspacing="0" border="0"  bgcolor="#fffffe"  class=" " style="max-width: 600px;">
+    <tbody>
+        <tr>
+            <td valign="top" height="45" style="font-size: 1px;" class='section-height'>
+                &nbsp; 
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                <table width=" 75% " cellpadding="0" cellspacing="0" border="0" class='gutters'>
+                    <tbody>
+                        <tr>
+                                    <td>
+        	
+<multiline label="Excerpt">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi hendrerit lectus erat. Mauris dolor nunc, cursus id erat in, mollis posuere dui. Sed imperdiet cursus est, ut lacinia magna varius et. Praesent placerat tempor orci, nec efficitur nisl porta eget. Cras elementum mattis mauris, vel blandit est imperdiet vitae. </p>
+</multiline>
+		
+		</td>
+
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td valign="top" height="45" style="font-size: 1px;" class='section-height'>
+                &nbsp; 
+            </td>
+        </tr>
+    </tbody>
+</table></layout>
+
+	
+<p style='background-color:#dddddd; font-weight:bold;margin:0;text-align:center'>h2 heading block:</p>
+
+<layout label="h2 heading">
+<table width="600" cellpadding="0" cellspacing="0" border="0"  bgcolor="#fffffe"  class=" " style="max-width: 600px;">
+    <tbody>
+        <tr>
+            <td valign="top" height="45" style="font-size: 1px;" class='section-height'>
+                &nbsp; 
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                <table width=" 75% " cellpadding="0" cellspacing="0" border="0" class='gutters'>
+                    <tbody>
+                        <tr>
+                            	    <td>
+	    	<h2 class='u-text-uppercase' ><singleline label="Title"> h2 Heading </singleline></h2>
+		</td>
+
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td valign="top" height="45" style="font-size: 1px;" class='section-height'>
+                &nbsp; 
+            </td>
+        </tr>
+    </tbody>
+</table></layout>
+          
+	
+<p style='background-color:#dddddd; font-weight:bold;margin:0;text-align:center'>button:</p>
+
+<layout label="button">
+
+<table width="600" cellpadding="0" cellspacing="0" border="0"  bgcolor="#fffffe"  class=" " style="max-width: 600px;">
+    <tbody>
+        <tr>
+            <td valign="top" height="45" style="font-size: 1px;" class='section-height'>
+                &nbsp; 
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                <table width=" 75% " cellpadding="0" cellspacing="0" border="0" class='gutters'>
+                    <tbody>
+                        <tr>
+                            		<td>
+			<div class="btn">
+    <singleline label="Link"><a href="">Read more </a></singleline>
+</div>
+		</td>
+
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td valign="top" height="45" style="font-size: 1px;" class='section-height'>
+                &nbsp; 
+            </td>
+        </tr>
+    </tbody>
+</table>
+</layout>
+
+	
+<p style='background-color:#dddddd; font-weight:bold;margin:0;text-align:center'>Heading and content:</p>
+
+<layout label="Heading and content">
+<table width="600" cellpadding="0" cellspacing="0" border="0"  bgcolor="#fffffe"  class=" " style="max-width: 600px;">
+    <tbody>
+        <tr>
+            <td valign="top" height="45" style="font-size: 1px;" class='section-height'>
+                &nbsp; 
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                <table width=" 75% " cellpadding="0" cellspacing="0" border="0" class='gutters'>
+                    <tbody>
+                        <tr>
+                            	    <td>  
+	    	<h3 ><singleline label="Title"> h3 Heading </singleline></h3>
+		    
+<multiline label="Excerpt">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi hendrerit lectus erat. Mauris dolor nunc, cursus id erat in, mollis posuere dui. Sed imperdiet cursus est, ut lacinia magna varius et. Praesent placerat tempor orci, nec efficitur nisl porta eget. Cras elementum mattis mauris, vel blandit est imperdiet vitae. </p>
+</multiline>
+		
+		</td>
+
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td valign="top" height="45" style="font-size: 1px;" class='section-height'>
+                &nbsp; 
+            </td>
+        </tr>
+    </tbody>
+</table></layout>
+  
+	
+<p style='background-color:#dddddd; font-weight:bold;margin:0;text-align:center'>image block:</p>
+
+<layout label="image block">
+
+<table width="600" cellpadding="0" cellspacing="0" border="0"  bgcolor="#fffffe"  class=" " style="max-width: 600px;">
+    <tbody>
+        <tr>
+            <td valign="top" height="45" style="font-size: 1px;" class='section-height'>
+                &nbsp; 
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                <table width=" 75% " cellpadding="0" cellspacing="0" border="0" class='gutters'>
+                    <tbody>
+                        <tr>
+                            		<td>
+			<img editable class="" label="Picture (560px wide)" class="" src="/placeholder.jpg" alt="" width=" 560" style="border:0; outline:none; text-decoration:none; display:block;">
+		</td>
+
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td valign="top" height="45" style="font-size: 1px;" class='section-height'>
+                &nbsp; 
+            </td>
+        </tr>
+    </tbody>
+</table>
+</layout>
+
+	
+<p style='background-color:#dddddd; font-weight:bold;margin:0;text-align:center'>profile block:</p>
+
+<layout label="profile block">
+<table width="600" cellpadding="0" cellspacing="0" border="0"  bgcolor="#fffffe"  class="profile " style="max-width: 600px;">
+    <tbody>
+        <tr>
+            <td valign="top" height="45" style="font-size: 1px;" class='section-height'>
+                &nbsp; 
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                <table width=" 75% " cellpadding="0" cellspacing="0" border="0" class='gutters'>
+                    <tbody>
+                        <tr>
+                            		<td>
+		
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0" class="">
+    <tbody>
+        <tr>
+            	
+    <td valign="top" width="20%">
+    	
+    	<img editable class="u-circle" label=" image " class="u-circle" src="/placeholder.jpg" alt="" width="100 " style="border:0; outline:none; text-decoration:none; display:block;">
+
+    </td>
+
+    <td valign="top" width="5%" style="font-size: 0px;"  height=''>
+    &nbsp;
+</td>
+				
+	<td class="middle">
+	    
+        <strong>	<singleline label="profile name">profile name</singleline>
+</strong>
+        <br>
+        	<singleline label="profile title">profile title</singleline>
+
+	   
+	</td>
+		       
+
+        </tr>
+    </tbody>
+</table>
+
+            
+		</td>
+
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td valign="top" height="45" style="font-size: 1px;" class='section-height'>
+                &nbsp; 
+            </td>
+        </tr>
+    </tbody>
+</table></layout>
+
+
+
+        
+	
+<p style='background-color:#dddddd; font-weight:bold;margin:0;text-align:center'>stacked block with full-width image:</p>
+
+<layout label="stacked block with full-width image" >
+<table width="600" cellpadding="0" cellspacing="0" border="0"  bgcolor="#e5b748" class="t-featured " style="max-width: 600px;">
+    <tbody>
+        <tr>
+            <td valign="top" height="45" style="font-size: 1px;" class='section-height'>
+                &nbsp; 
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                <table width=" 75% " cellpadding="0" cellspacing="0" border="0" class='gutters'>
+                    <tbody>
+                        <tr>
+                                    <td>
+        	
+<table  cellpadding="0" cellspacing="0" border="0" class="">
+    <tbody>
+        <tr>
+            <td>
+		    	<img editable class="" label="Picture" class="" src="/placeholder.jpg" alt="" width=" 560" style="border:0; outline:none; text-decoration:none; display:block;">
+			</td>
+        </tr>
+        <tr>
+		    <td valign="top" width="" style="font-size: 0px;"  height="30" class='u-stacked-space '>
+    &nbsp;
+</td>
+        </tr>
+        <tr>
+            <td>
+		   		<h3 ><singleline label="Title"> h3 Heading </singleline></h3>
+
+			    
+<multiline label="Excerpt">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi hendrerit lectus erat. Mauris dolor nunc, cursus id erat in, mollis posuere dui. Sed imperdiet cursus est, ut lacinia magna varius et. Praesent placerat tempor orci, nec efficitur nisl porta eget. Cras elementum mattis mauris, vel blandit est imperdiet vitae. </p>
+</multiline>
+		
+
+			    <div class="btn">
+    <singleline label="Link"><a href="">Read more </a></singleline>
+</div>
+			</td>
+            
+<td valign="top" width="" style="font-size: 0px;"  height="30" class='u-stacked-space u-hidden@desktop'>
+    &nbsp;
+</td>
+        </tr>
+    </tbody>
+</table>
+		</td>
+
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td valign="top" height="45" style="font-size: 1px;" class='section-height'>
+                &nbsp; 
+            </td>
+        </tr>
+    </tbody>
+</table></layout>
+          
+	
+<p style='background-color:#dddddd; font-weight:bold;margin:0;text-align:center'>two column stacked visual block:</p>
+
+<layout label="two column stacked visual block ">
+
+<table width="600" cellpadding="0" cellspacing="0" border="0"  bgcolor="#fffffe"  class=" " style="max-width: 600px;">
+    <tbody>
+        <tr>
+            <td valign="top" height="45" style="font-size: 1px;" class='section-height'>
+                &nbsp; 
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                <table width=" 75% " cellpadding="0" cellspacing="0" border="0" class='gutters'>
+                    <tbody>
+                        <tr>
+                                    <td >
+<table width="100%" cellpadding="0" cellspacing="0" border="0" class="">
+    <tbody>
+        <tr>
+            
+                <td valign="top" width="47.5%" class='stack-column'>
+                   
+<table  cellpadding="0" cellspacing="0" border="0" class="">
+    <tbody>
+        <tr>
+            <td>
+		    	<img editable class="" label="Picture" class="" src="/placeholder.jpg" alt="" width="220 " style="border:0; outline:none; text-decoration:none; display:block;">
+			</td>
+        </tr>
+        <tr>
+		    <td valign="top" width="" style="font-size: 0px;"  height="30" class='u-stacked-space '>
+    &nbsp;
+</td>
+        </tr>
+        <tr>
+            <td>
+		   		<h3 ><singleline label="Title"> h3 Heading </singleline></h3>
+
+			    
+<multiline label="Excerpt">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi hendrerit lectus erat. Mauris dolor nunc, cursus id erat in, mollis posuere dui. Sed imperdiet cursus est, ut lacinia magna varius et. Praesent placerat tempor orci, nec efficitur nisl porta eget. Cras elementum mattis mauris, vel blandit est imperdiet vitae. </p>
+</multiline>
+		
+
+			    <div class="btn">
+    <singleline label="Link"><a href="">Read more </a></singleline>
+</div>
+			</td>
+            
+<td valign="top" width="" style="font-size: 0px;"  height="30" class='u-stacked-space u-hidden@desktop'>
+    &nbsp;
+</td>
+        </tr>
+    </tbody>
+</table>
+                </td>
+
+                
+<td valign="top" width="5%" style="font-size: 0px;"  height="30" class='u-stacked-space '>
+    &nbsp;
+</td>
+
+                
+<td valign="top" width="" style="font-size: 0px;"  height="30" class='u-stacked-space u-hidden@desktop'>
+    &nbsp;
+</td>
+
+                <td valign="top" width="47.5%" class='stack-column'>
+                    
+<table  cellpadding="0" cellspacing="0" border="0" class="">
+    <tbody>
+        <tr>
+            <td>
+		    	<img editable class="" label="Picture" class="" src="/placeholder.jpg" alt="" width="220 " style="border:0; outline:none; text-decoration:none; display:block;">
+			</td>
+        </tr>
+        <tr>
+		    <td valign="top" width="" style="font-size: 0px;"  height="30" class='u-stacked-space '>
+    &nbsp;
+</td>
+        </tr>
+        <tr>
+            <td>
+		   		<h3 ><singleline label="Title"> h3 Heading </singleline></h3>
+
+			    
+<multiline label="Excerpt">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi hendrerit lectus erat. Mauris dolor nunc, cursus id erat in, mollis posuere dui. Sed imperdiet cursus est, ut lacinia magna varius et. Praesent placerat tempor orci, nec efficitur nisl porta eget. Cras elementum mattis mauris, vel blandit est imperdiet vitae. </p>
+</multiline>
+		
+
+			    <div class="btn">
+    <singleline label="Link"><a href="">Read more </a></singleline>
+</div>
+			</td>
+            
+<td valign="top" width="" style="font-size: 0px;"  height="30" class='u-stacked-space u-hidden@desktop'>
+    &nbsp;
+</td>
+        </tr>
+    </tbody>
+</table>
+                </td>
+
+                
+<td valign="top" width="" style="font-size: 0px;"  height="30" class='u-stacked-space u-hidden@desktop'>
+    &nbsp;
+</td>
+
+
+        </tr>
+    </tbody>
+</table>           
+        </td>
+
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td valign="top" height="45" style="font-size: 1px;" class='section-height'>
+                &nbsp; 
+            </td>
+        </tr>
+    </tbody>
+</table>     
+ </layout>
+
+	
+<p style='background-color:#dddddd; font-weight:bold;margin:0;text-align:center'>divider:</p>
+
+<layout label="Divider">
+<table width="600" cellpadding="0" cellspacing="0" border="0"  bgcolor="#fffffe"  class=" " style="max-width: 600px;">
+    <tbody>
+        <tr>
+            <td valign="top" height="0" style="font-size: 1px;" class='section-height'>
+                &nbsp; 
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                <table width=" 75% " cellpadding="0" cellspacing="0" border="0" class='gutters'>
+                    <tbody>
+                        <tr>
+                            	    <td>
+			<hr>
+			<p style="display: none"><singleline label="Add some text"></singleline>&nbsp;</p>
+		</td>
+
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td valign="top" height="0" style="font-size: 1px;" class='section-height'>
+                &nbsp; 
+            </td>
+        </tr>
+    </tbody>
+</table></layout>
+
+	
+<p style='background-color:#dddddd; font-weight:bold;margin:0;text-align:center'>media block (small image):</p>
+
+<layout label="media block (small image) " >
+<table width="600" cellpadding="0" cellspacing="0" border="0"  bgcolor="#fffffe"  class=" " style="max-width: 600px;">
+    <tbody>
+        <tr>
+            <td valign="top" height="45" style="font-size: 1px;" class='section-height'>
+                &nbsp; 
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                <table width=" 75% " cellpadding="0" cellspacing="0" border="0" class='gutters'>
+                    <tbody>
+                        <tr>
+                                    <td>
+
+<table class="media " cellpadding="0" cellspacing="0" border="0">
+    <tbody>
+        <tr>
+            <td valign="top" class="media-picture stack-column" width="30%">
+                <img editable class="" label=" image " class="" src="/placeholder.jpg" alt="" width="150 " style="border:0; outline:none; text-decoration:none; display:block;">
+            </td>
+
+                            
+                
+<td valign="top" width="5%" style="font-size: 0px;"  height="30" class='u-stacked-space '>
+    &nbsp;
+</td>
+
+                
+<td valign="top" width="" style="font-size: 0px;"  height="30" class='u-stacked-space u-hidden@desktop'>
+    &nbsp;
+</td>
+
+                <td valign="top" width="65%" class='stack-column'>
+               
+                    <h3 ><singleline label="Title"> h3 Heading </singleline></h3>
+
+                    
+<multiline label="Excerpt">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi hendrerit lectus erat. Mauris dolor nunc, cursus id erat in, mollis posuere dui. Sed imperdiet cursus est, ut lacinia magna varius et. Praesent placerat tempor orci, nec efficitur nisl porta eget. Cras elementum mattis mauris, vel blandit est imperdiet vitae. </p>
+</multiline>
+		
+                    
+                    <div class="btn">
+    <singleline label="Link"><a href="">Read more </a></singleline>
+</div>
+                 
+                </td>
+
+                
+<td valign="top" width="" style="font-size: 0px;"  height="30" class='u-stacked-space u-hidden@desktop'>
+    &nbsp;
+</td>
+                
+
+        </tr>
+    </tbody>
+</table>        </td>
+
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td valign="top" height="45" style="font-size: 1px;" class='section-height'>
+                &nbsp; 
+            </td>
+        </tr>
+    </tbody>
+</table> </layout>
+
+
+          </repeater>
+
+<table width="600" cellpadding="0" cellspacing="0" border="0"  bgcolor="#fffffe"  class=" " style="max-width: 600px;">
+    <tbody>
+        <tr>
+            <td valign="top" height="0" style="font-size: 1px;" class='section-height'>
+                &nbsp; 
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                <table width=" 75% " cellpadding="0" cellspacing="0" border="0" class='gutters'>
+                    <tbody>
+                        <tr>
+                                              <td>
+                      <hr>
+                  </td>
+
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td valign="top" height="0" style="font-size: 1px;" class='section-height'>
+                &nbsp; 
+            </td>
+        </tr>
+    </tbody>
+</table>
+<table width="600" cellpadding="0" cellspacing="0" border="0"  bgcolor="#fffffe"  class=" " style="max-width: 600px;">
+    <tbody>
+        <tr>
+            <td valign="top" height="24" style="font-size: 1px;" class='section-height'>
+                &nbsp; 
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                <table width=" 75% " cellpadding="0" cellspacing="0" border="0" class='gutters'>
+                    <tbody>
+                        <tr>
+                                              <td class='mt28'>
+                      <unsubscribe>
+                          Unsubscribe
+                      </unsubscribe>
+                  </td>
+
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td valign="top" height="24" style="font-size: 1px;" class='section-height'>
+                &nbsp; 
+            </td>
+        </tr>
+    </tbody>
+</table>
+<table width="600" cellpadding="0" cellspacing="0" border="0"  bgcolor="#e5b748" class=" " style="max-width: 600px;">
+    <tbody>
+        <tr>
+            <td valign="top" height="24" style="font-size: 1px;" class='section-height'>
+                &nbsp; 
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                <table width=" 75% " cellpadding="0" cellspacing="0" border="0" class='gutters'>
+                    <tbody>
+                        <tr>
+                                              <td style="color: #ffffff; u-font-size-14">
+                      <p style="color: #ffffff;">P<a href="tel:+6448018205" style='color: #ffffff;' class='link'><span style='color: #ffffff;'>+64 4 801 8205</span></a>  |  E <a href="mailto:hello@springload.co.nz" style='color: #ffffff;' class='link'><span style='color: #ffffff;'>hello@springload.co.nz</span></a></p>
+
+                      <multiline label="address">
+                          <p>
+                          Springload
+                          <br/>
+                          Level 7, Hope Gibbons Building.
+                          <br/>
+                          7 Dixon Street, 
+                          <br/>
+                          Te Aro,
+                          <br/>
+                          Wellington 6011</p>
+                      </multiline>
+                  </td>
+
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td valign="top" height="24" style="font-size: 1px;" class='section-height'>
+                &nbsp; 
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+           
+        </td>
+      </tr>
+    </table>
+ 
+  </center>
+
+     
+  
+</body></html>
